@@ -1,0 +1,420 @@
+\hypertarget{class_d_f___a_d_d_r}{}\doxysection{DF\+\_\+\+ADDR Class Reference}
+\label{class_d_f___a_d_d_r}\index{DF\_ADDR@{DF\_ADDR}}
+
+
+Data Flash addresses.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+flash\+\_\+access.\+h$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_d_f___a_d_d_r_ac7792c6c6ab1e88c96bdc9f202eaca44}\label{class_d_f___a_d_d_r_ac7792c6c6ab1e88c96bdc9f202eaca44}} 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_ac7792c6c6ab1e88c96bdc9f202eaca44}{MIN}} = 0x4000
+\begin{DoxyCompactList}\small\item\em Minimum Data Flash address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a190c01d6b7c9e9b0b8e8b41466e9c7b8}\label{class_d_f___a_d_d_r_a190c01d6b7c9e9b0b8e8b41466e9c7b8}} 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a190c01d6b7c9e9b0b8e8b41466e9c7b8}{MAX}} = 0x5\+FFF
+\begin{DoxyCompactList}\small\item\em Maximum Data Flash address. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a069c3792644787ae0593fdfdeaad0f52}{MANUFACTURER\+\_\+\+NAME}} = 0x406B
+\begin{DoxyCompactList}\small\item\em I2C Configuration; Data; Manufacturer Name; S21. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a72a87b46b1cf905929191fc7dc2426de}{DEVICE\+\_\+\+NAME}} = 0x4080
+\begin{DoxyCompactList}\small\item\em I2C Configuration; Data; Device Name; S21. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a6fedfa1adf552f55e09d3255d67593ad}{DEVICE\+\_\+\+CHEMISTRY}} = 0x4095
+\begin{DoxyCompactList}\small\item\em I2C Configuration; Data; Device Chemistry; S5. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_d_f___a_d_d_r_aeafe001319b36d008ab28c2c775067fe}\label{class_d_f___a_d_d_r_aeafe001319b36d008ab28c2c775067fe}} 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_aeafe001319b36d008ab28c2c775067fe}{GAS\+\_\+\+GAUGING\+\_\+\+CYCLE\+\_\+\+COUNT}} = 0x4240
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; Cycle Count; U2. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a973742bbcca79dc4072ce34c9150fdb0}{GAS\+\_\+\+GAUGING\+\_\+\+UPDATE\+\_\+\+STATUS}} = 0x420E
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; Update Status; H1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a713b5182ffda33f2a79b83a4953dadf3}\label{class_d_f___a_d_d_r_a713b5182ffda33f2a79b83a4953dadf3}} 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a713b5182ffda33f2a79b83a4953dadf3}{FET\+\_\+\+OPTIONS}} = 0x4600
+\begin{DoxyCompactList}\small\item\em Settings; Configuration; FET Options; H1. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a54e907aaba4a4d14c6612b392ddda2db}{DESIGN\+\_\+\+CAPACITY\+\_\+\+MAH}} = 0x462A
+\begin{DoxyCompactList}\small\item\em Gas Gauging; Design; Design Capacity m\+Ah; I2. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_aaab25f3b2cd8b3259d61a5c7bbb31451}{DESIGN\+\_\+\+CAPACITY\+\_\+\+CWH}} = 0x462C
+\begin{DoxyCompactList}\small\item\em Gas Gauging; Design; Design Capacity c\+Wh; I2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_d_f___a_d_d_r_ac455eb44438eba4c0d926ecc76c931a8}\label{class_d_f___a_d_d_r_ac455eb44438eba4c0d926ecc76c931a8}} 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_ac455eb44438eba4c0d926ecc76c931a8}{SOC\+\_\+\+FLAG\+\_\+\+CONFIG\+\_\+A}} = 0x4632
+\begin{DoxyCompactList}\small\item\em Settings; Configuration; 0x4632; SOC \mbox{\hyperlink{struct_flag}{Flag}} Config A; H2. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a55df95a1f11c4c87fda567bb0c1a6b0e}{TC\+\_\+\+SET\+\_\+\+RSOC\+\_\+\+THRESHOLD}} = 0x464B
+\begin{DoxyCompactList}\small\item\em Gas Gauging; TC; Set \% RSOC Threshold; U1. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a84659cf3fdedf5613fb1f6c5d797d3a8}{TC\+\_\+\+CLEAR\+\_\+\+RSOC\+\_\+\+THRESHOLD}} = 0x464C
+\begin{DoxyCompactList}\small\item\em Gas Gauging; TC; Clear \% RSOC Threshold; U1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a1b1ff2fceba3c3e110465fd46926c622}\label{class_d_f___a_d_d_r_a1b1ff2fceba3c3e110465fd46926c622}} 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a1b1ff2fceba3c3e110465fd46926c622}{DA\+\_\+\+CONFIGURATION}} = 0x469B
+\begin{DoxyCompactList}\small\item\em Settings; Configuration; DA Configuration; H1. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_afcc327c6929a4cae32687ca4fdb9ec22}{CHARGE\+\_\+\+TERM\+\_\+\+TAPER\+\_\+\+CURRENT}} = 0x4693
+\begin{DoxyCompactList}\small\item\em Advanced Charge Algorithm; Termination Config; Charge Term Taper Current; I2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_d_f___a_d_d_r_ac51bca2c8c191b7f6dad366cf8400943}\label{class_d_f___a_d_d_r_ac51bca2c8c191b7f6dad366cf8400943}} 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_ac51bca2c8c191b7f6dad366cf8400943}{OCC\+\_\+\+THRESHOLD}} = 0x46\+C9
+\begin{DoxyCompactList}\small\item\em 13.\+10.\+3 OCC-\/ Overcurrent In Charge\+: Protections; OCC; 0x46\+C9; Threshold; I2 \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_afe26ddb2eef6699c0f33b4c5eef54e99}{OTC\+\_\+\+THRESHOLD}} = 0x46\+D8
+\begin{DoxyCompactList}\small\item\em 13.\+10.\+8 OTC -\/ Overtemperature in Charge\+: Protections; OTC; 0x46\+D8; Threshold; I2 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a73994277198a09fb4e837b6d7c2e36f6}\label{class_d_f___a_d_d_r_a73994277198a09fb4e837b6d7c2e36f6}} 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a73994277198a09fb4e837b6d7c2e36f6}{OTC\+\_\+\+RECOVERY}} = 0x46\+DB
+\begin{DoxyCompactList}\small\item\em 13.\+10.\+8 OTC -\/ Overtemperature in Charge\+: Protections; OTC; 0x46\+DB; Recovery; I2 \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_ad88fc0c0b2a4c198b9fec3c0b323a10f}{Q\+\_\+\+MAX\+\_\+\+CELL\+\_\+1}} = 0x4206
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; Qmax Cell 1; I2. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a9996dac4ed162308aba436142680c0cc}{Q\+\_\+\+MAX\+\_\+\+CELL\+\_\+2}} = 0x4208
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; Qmax Cell 2; I2. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_aafdbad86eb0fa7d5a8ad3f3c84c48733}{Q\+\_\+\+MAX\+\_\+\+PACK}} = 0x420A
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; Qmax Pack; I2. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_ac6a5ca7a53f32aecaaa34b109415b062}{CELL0\+\_\+\+RA\+\_\+\+FLAG}} = 0x4100
+\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_ac3126ad2d3507ffeb16cc232948e684f}{CELL1\+\_\+\+RA\+\_\+\+FLAG}} = 0x4140
+\begin{DoxyCompactList}\small\item\em Ra Table; R\+\_\+a1; 0x4140; Cell1 R\+\_\+a flag; H2. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_ab7c5b0b9483459c16933511cfbbf4ed5}{X\+\_\+\+CELL0\+\_\+\+RA\+\_\+\+FLAG}} = 0x4180
+\begin{DoxyCompactList}\small\item\em Ra Table; R\+\_\+a0x; 0x4180; x\+Cell0 R\+\_\+a flag; H2. \end{DoxyCompactList}\item 
+static const word \mbox{\hyperlink{class_d_f___a_d_d_r_a9517e2a2576e1e89daa96e58c2da3059}{X\+\_\+\+CELL1\+\_\+\+RA\+\_\+\+FLAG}} = 0x41\+C0
+\begin{DoxyCompactList}\small\item\em Ra Table; R\+\_\+a1x; 0x41\+C0; x\+Cell1 R\+\_\+a flag; H2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Flash addresses. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_ac6a5ca7a53f32aecaaa34b109415b062}\label{class_d_f___a_d_d_r_ac6a5ca7a53f32aecaaa34b109415b062}} 
+\index{DF\_ADDR@{DF\_ADDR}!CELL0\_RA\_FLAG@{CELL0\_RA\_FLAG}}
+\index{CELL0\_RA\_FLAG@{CELL0\_RA\_FLAG}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{CELL0\_RA\_FLAG}{CELL0\_RA\_FLAG}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+CELL0\+\_\+\+RA\+\_\+\+FLAG = 0x4100\hspace{0.3cm}{\ttfamily [static]}}
+
+Ra Table; R\+\_\+a0; 0x4100; Cell0 R\+\_\+a flag; H2
+
+High Byte\+:
+\begin{DoxyItemize}
+\item 0x00 -\/ Cell impedance and QMax updated
+\item 0x05 -\/ RELAX mode and QMax update in progress
+\item 0x55 -\/ DISCHARGE mode and cell impedance updated
+\item 0x\+FF -\/ Cell impedance never updated
+\end{DoxyItemize}
+
+Low Byte\+:
+\begin{DoxyItemize}
+\item 0x00 -\/ Table not used and QMax updated
+\item 0x55 -\/ Table being used
+\item 0x\+FF -\/ Table never used, neither QMax nor cell impedance updated
+\end{DoxyItemize}
+
+Following it are 15 two-\/byte (I2) values of the corresponding row of the table.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Default} & 0x\+FF55 \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+6.\+4.\+5 Ra Table Initial Values 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_ac3126ad2d3507ffeb16cc232948e684f}\label{class_d_f___a_d_d_r_ac3126ad2d3507ffeb16cc232948e684f}} 
+\index{DF\_ADDR@{DF\_ADDR}!CELL1\_RA\_FLAG@{CELL1\_RA\_FLAG}}
+\index{CELL1\_RA\_FLAG@{CELL1\_RA\_FLAG}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{CELL1\_RA\_FLAG}{CELL1\_RA\_FLAG}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+CELL1\+\_\+\+RA\+\_\+\+FLAG = 0x4140\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ra Table; R\+\_\+a1; 0x4140; Cell1 R\+\_\+a flag; H2. 
+
+High Byte\+:
+\begin{DoxyItemize}
+\item 0x00 -\/ Cell impedance and QMax updated
+\item 0x05 -\/ RELAX mode and QMax update in progress
+\item 0x55 -\/ DISCHARGE mode and cell impedance updated
+\item 0x\+FF -\/ Cell impedance never updated
+\end{DoxyItemize}
+
+Low Byte\+:
+\begin{DoxyItemize}
+\item 0x00 -\/ Table not used and QMax updated
+\item 0x55 -\/ Table being used
+\item 0x\+FF -\/ Table never used, neither QMax nor cell impedance updated
+\end{DoxyItemize}
+
+Following it are 15 two-\/byte (I2) values of the corresponding row of the table.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Default} & 0x\+FF55 \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+6.\+4.\+5 Ra Table Initial Values 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_afcc327c6929a4cae32687ca4fdb9ec22}\label{class_d_f___a_d_d_r_afcc327c6929a4cae32687ca4fdb9ec22}} 
+\index{DF\_ADDR@{DF\_ADDR}!CHARGE\_TERM\_TAPER\_CURRENT@{CHARGE\_TERM\_TAPER\_CURRENT}}
+\index{CHARGE\_TERM\_TAPER\_CURRENT@{CHARGE\_TERM\_TAPER\_CURRENT}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{CHARGE\_TERM\_TAPER\_CURRENT}{CHARGE\_TERM\_TAPER\_CURRENT}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+CHARGE\+\_\+\+TERM\+\_\+\+TAPER\+\_\+\+CURRENT = 0x4693\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Advanced Charge Algorithm; Termination Config; Charge Term Taper Current; I2. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 330 (mA) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_aaab25f3b2cd8b3259d61a5c7bbb31451}\label{class_d_f___a_d_d_r_aaab25f3b2cd8b3259d61a5c7bbb31451}} 
+\index{DF\_ADDR@{DF\_ADDR}!DESIGN\_CAPACITY\_CWH@{DESIGN\_CAPACITY\_CWH}}
+\index{DESIGN\_CAPACITY\_CWH@{DESIGN\_CAPACITY\_CWH}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{DESIGN\_CAPACITY\_CWH}{DESIGN\_CAPACITY\_CWH}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+DESIGN\+\_\+\+CAPACITY\+\_\+\+CWH = 0x462C\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gas Gauging; Design; Design Capacity c\+Wh; I2. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 3672 (c\+Wh) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a54e907aaba4a4d14c6612b392ddda2db}\label{class_d_f___a_d_d_r_a54e907aaba4a4d14c6612b392ddda2db}} 
+\index{DF\_ADDR@{DF\_ADDR}!DESIGN\_CAPACITY\_MAH@{DESIGN\_CAPACITY\_MAH}}
+\index{DESIGN\_CAPACITY\_MAH@{DESIGN\_CAPACITY\_MAH}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{DESIGN\_CAPACITY\_MAH}{DESIGN\_CAPACITY\_MAH}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+DESIGN\+\_\+\+CAPACITY\+\_\+\+MAH = 0x462A\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gas Gauging; Design; Design Capacity m\+Ah; I2. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 5100 (m\+Ah) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a6fedfa1adf552f55e09d3255d67593ad}\label{class_d_f___a_d_d_r_a6fedfa1adf552f55e09d3255d67593ad}} 
+\index{DF\_ADDR@{DF\_ADDR}!DEVICE\_CHEMISTRY@{DEVICE\_CHEMISTRY}}
+\index{DEVICE\_CHEMISTRY@{DEVICE\_CHEMISTRY}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{DEVICE\_CHEMISTRY}{DEVICE\_CHEMISTRY}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+DEVICE\+\_\+\+CHEMISTRY = 0x4095\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+I2C Configuration; Data; Device Chemistry; S5. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 1352 -\/ this is ID of the type for the Li-\/\+Ion battery \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a72a87b46b1cf905929191fc7dc2426de}\label{class_d_f___a_d_d_r_a72a87b46b1cf905929191fc7dc2426de}} 
+\index{DF\_ADDR@{DF\_ADDR}!DEVICE\_NAME@{DEVICE\_NAME}}
+\index{DEVICE\_NAME@{DEVICE\_NAME}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{DEVICE\_NAME}{DEVICE\_NAME}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+DEVICE\+\_\+\+NAME = 0x4080\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+I2C Configuration; Data; Device Name; S21. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & ID1019-\/\+A-\/\+M26-\/28z610 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a973742bbcca79dc4072ce34c9150fdb0}\label{class_d_f___a_d_d_r_a973742bbcca79dc4072ce34c9150fdb0}} 
+\index{DF\_ADDR@{DF\_ADDR}!GAS\_GAUGING\_UPDATE\_STATUS@{GAS\_GAUGING\_UPDATE\_STATUS}}
+\index{GAS\_GAUGING\_UPDATE\_STATUS@{GAS\_GAUGING\_UPDATE\_STATUS}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{GAS\_GAUGING\_UPDATE\_STATUS}{GAS\_GAUGING\_UPDATE\_STATUS}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+GAS\+\_\+\+GAUGING\+\_\+\+UPDATE\+\_\+\+STATUS = 0x420E\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gas Gauging; State; Update Status; H1. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Default} & 0x0E \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a069c3792644787ae0593fdfdeaad0f52}\label{class_d_f___a_d_d_r_a069c3792644787ae0593fdfdeaad0f52}} 
+\index{DF\_ADDR@{DF\_ADDR}!MANUFACTURER\_NAME@{MANUFACTURER\_NAME}}
+\index{MANUFACTURER\_NAME@{MANUFACTURER\_NAME}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{MANUFACTURER\_NAME}{MANUFACTURER\_NAME}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+MANUFACTURER\+\_\+\+NAME = 0x406B\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+I2C Configuration; Data; Manufacturer Name; S21. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & XTREME2 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_afe26ddb2eef6699c0f33b4c5eef54e99}\label{class_d_f___a_d_d_r_afe26ddb2eef6699c0f33b4c5eef54e99}} 
+\index{DF\_ADDR@{DF\_ADDR}!OTC\_THRESHOLD@{OTC\_THRESHOLD}}
+\index{OTC\_THRESHOLD@{OTC\_THRESHOLD}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{OTC\_THRESHOLD}{OTC\_THRESHOLD}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+OTC\+\_\+\+THRESHOLD = 0x46\+D8\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+13.\+10.\+8 OTC -\/ Overtemperature in Charge\+: Protections; OTC; 0x46\+D8; Threshold; I2 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 46.\+0 °C \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_ad88fc0c0b2a4c198b9fec3c0b323a10f}\label{class_d_f___a_d_d_r_ad88fc0c0b2a4c198b9fec3c0b323a10f}} 
+\index{DF\_ADDR@{DF\_ADDR}!Q\_MAX\_CELL\_1@{Q\_MAX\_CELL\_1}}
+\index{Q\_MAX\_CELL\_1@{Q\_MAX\_CELL\_1}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{Q\_MAX\_CELL\_1}{Q\_MAX\_CELL\_1}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+CELL\+\_\+1 = 0x4206\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gas Gauging; State; Qmax Cell 1; I2. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 4965 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a9996dac4ed162308aba436142680c0cc}\label{class_d_f___a_d_d_r_a9996dac4ed162308aba436142680c0cc}} 
+\index{DF\_ADDR@{DF\_ADDR}!Q\_MAX\_CELL\_2@{Q\_MAX\_CELL\_2}}
+\index{Q\_MAX\_CELL\_2@{Q\_MAX\_CELL\_2}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{Q\_MAX\_CELL\_2}{Q\_MAX\_CELL\_2}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+CELL\+\_\+2 = 0x4208\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gas Gauging; State; Qmax Cell 2; I2. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 4931 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_aafdbad86eb0fa7d5a8ad3f3c84c48733}\label{class_d_f___a_d_d_r_aafdbad86eb0fa7d5a8ad3f3c84c48733}} 
+\index{DF\_ADDR@{DF\_ADDR}!Q\_MAX\_PACK@{Q\_MAX\_PACK}}
+\index{Q\_MAX\_PACK@{Q\_MAX\_PACK}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{Q\_MAX\_PACK}{Q\_MAX\_PACK}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+PACK = 0x420A\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gas Gauging; State; Qmax Pack; I2. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 4931 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a84659cf3fdedf5613fb1f6c5d797d3a8}\label{class_d_f___a_d_d_r_a84659cf3fdedf5613fb1f6c5d797d3a8}} 
+\index{DF\_ADDR@{DF\_ADDR}!TC\_CLEAR\_RSOC\_THRESHOLD@{TC\_CLEAR\_RSOC\_THRESHOLD}}
+\index{TC\_CLEAR\_RSOC\_THRESHOLD@{TC\_CLEAR\_RSOC\_THRESHOLD}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{TC\_CLEAR\_RSOC\_THRESHOLD}{TC\_CLEAR\_RSOC\_THRESHOLD}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+TC\+\_\+\+CLEAR\+\_\+\+RSOC\+\_\+\+THRESHOLD = 0x464C\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gas Gauging; TC; Clear \% RSOC Threshold; U1. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Default} & 95 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a55df95a1f11c4c87fda567bb0c1a6b0e}\label{class_d_f___a_d_d_r_a55df95a1f11c4c87fda567bb0c1a6b0e}} 
+\index{DF\_ADDR@{DF\_ADDR}!TC\_SET\_RSOC\_THRESHOLD@{TC\_SET\_RSOC\_THRESHOLD}}
+\index{TC\_SET\_RSOC\_THRESHOLD@{TC\_SET\_RSOC\_THRESHOLD}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{TC\_SET\_RSOC\_THRESHOLD}{TC\_SET\_RSOC\_THRESHOLD}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+TC\+\_\+\+SET\+\_\+\+RSOC\+\_\+\+THRESHOLD = 0x464B\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gas Gauging; TC; Set \% RSOC Threshold; U1. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Default} & 100 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_ab7c5b0b9483459c16933511cfbbf4ed5}\label{class_d_f___a_d_d_r_ab7c5b0b9483459c16933511cfbbf4ed5}} 
+\index{DF\_ADDR@{DF\_ADDR}!X\_CELL0\_RA\_FLAG@{X\_CELL0\_RA\_FLAG}}
+\index{X\_CELL0\_RA\_FLAG@{X\_CELL0\_RA\_FLAG}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{X\_CELL0\_RA\_FLAG}{X\_CELL0\_RA\_FLAG}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+X\+\_\+\+CELL0\+\_\+\+RA\+\_\+\+FLAG = 0x4180\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ra Table; R\+\_\+a0x; 0x4180; x\+Cell0 R\+\_\+a flag; H2. 
+
+The initial x-\/values are a copy of the non-\/x data set. Two sets of Ra tables are used alternatively when gauging is enabled to prevent wearing out the data flash.
+
+High Byte\+:
+\begin{DoxyItemize}
+\item 0x00 -\/ Cell impedance and QMax updated
+\item 0x05 -\/ RELAX mode and QMax update in progress
+\item 0x55 -\/ DISCHARGE mode and cell impedance updated
+\item 0x\+FF -\/ Cell impedance never updated
+\end{DoxyItemize}
+
+Low Byte\+:
+\begin{DoxyItemize}
+\item 0x00 -\/ Table not used and QMax updated
+\item 0x55 -\/ Table being used
+\item 0x\+FF -\/ Table never used, neither QMax nor cell impedance updated
+\end{DoxyItemize}
+
+Following it are 15 two-\/byte (I2) values of the corresponding row of the table.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Default} & 0x\+FFFF \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+6.\+4.\+5 Ra Table Initial Values 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_d_f___a_d_d_r_a9517e2a2576e1e89daa96e58c2da3059}\label{class_d_f___a_d_d_r_a9517e2a2576e1e89daa96e58c2da3059}} 
+\index{DF\_ADDR@{DF\_ADDR}!X\_CELL1\_RA\_FLAG@{X\_CELL1\_RA\_FLAG}}
+\index{X\_CELL1\_RA\_FLAG@{X\_CELL1\_RA\_FLAG}!DF\_ADDR@{DF\_ADDR}}
+\doxysubsubsection{\texorpdfstring{X\_CELL1\_RA\_FLAG}{X\_CELL1\_RA\_FLAG}}
+{\footnotesize\ttfamily const word DF\+\_\+\+ADDR\+::\+X\+\_\+\+CELL1\+\_\+\+RA\+\_\+\+FLAG = 0x41\+C0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ra Table; R\+\_\+a1x; 0x41\+C0; x\+Cell1 R\+\_\+a flag; H2. 
+
+The initial x-\/values are a copy of the non-\/x data set. Two sets of Ra tables are used alternatively when gauging is enabled to prevent wearing out the data flash.
+
+High Byte\+:
+\begin{DoxyItemize}
+\item 0x00 -\/ Cell impedance and QMax updated
+\item 0x05 -\/ RELAX mode and QMax update in progress
+\item 0x55 -\/ DISCHARGE mode and cell impedance updated
+\item 0x\+FF -\/ Cell impedance never updated
+\end{DoxyItemize}
+
+Low Byte\+:
+\begin{DoxyItemize}
+\item 0x00 -\/ Table not used and QMax updated
+\item 0x55 -\/ Table being used
+\item 0x\+FF -\/ Table never used, neither QMax nor cell impedance updated
+\end{DoxyItemize}
+
+Following it are 15 two-\/byte (I2) values of the corresponding row of the table.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Default} & 0x\+FFFF \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+6.\+4.\+5 Ra Table Initial Values 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data__flash__access_8h}{data\+\_\+flash\+\_\+access.\+h}}\end{DoxyCompactItemize}

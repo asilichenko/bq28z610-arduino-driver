@@ -1,0 +1,959 @@
+\hypertarget{data__flash__access_8h}{}\doxysection{data\+\_\+flash\+\_\+access.\+h File Reference}
+\label{data__flash__access_8h}\index{data\_flash\_access.h@{data\_flash\_access.h}}
+
+
+12.\+2.\+45 Data Flash Access() 0x4000–0x5\+FFF headers  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}alt\+\_\+manufacturer\+\_\+access.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_d_f___a_d_d_r}{DF\+\_\+\+ADDR}}
+\begin{DoxyCompactList}\small\item\em Data Flash addresses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{data__flash__access_8h_a878e49364b168fb2b614b6019c2cb7d7}{df\+Read\+Bytes}} (word addr, byte $\ast$retval, int len)
+\begin{DoxyCompactList}\small\item\em Read array of bytes from the Data Flash by address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_ad0df77403287b164dbb0c3be2e3ff5a0}{df\+Write\+Bytes}} (word addr, byte $\ast$data, int len)
+\begin{DoxyCompactList}\small\item\em Write array of data to the Data Flash. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{data__flash__access_8h_a24bbc6b2f64ce99e27c59c28d8020803}{df\+Read\+Byte}} (word addr)
+\item 
+byte \mbox{\hyperlink{data__flash__access_8h_a3bf68f63f9f37eb40a778e9ddb84f59a}{df\+Read\+U1}} (word addr)
+\item 
+void \mbox{\hyperlink{data__flash__access_8h_a5eab2e5f73f5e4f79510af52c3d1c391}{df\+Write\+Byte}} (word addr, byte value)
+\item 
+word \mbox{\hyperlink{data__flash__access_8h_a13f2c378ba52940e7953edd601c72ae1}{df\+Read\+Word}} (word addr)
+\begin{DoxyCompactList}\small\item\em Read a word value (two bytes) from the Data Flash by address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a473a03f20a18e9158d3b8e5f949e2152}{df\+Write\+Word}} (word addr, word value)
+\begin{DoxyCompactList}\small\item\em Write a word value (two bytes) to the Data Flash by address. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{data__flash__access_8h_a01a904c651db6d75fec8bfa5a9bbe844}{df\+Read\+I2}} (word addr)
+\begin{DoxyCompactList}\small\item\em Read Two-\/byte Integer value from the Data Flash by address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a874bcf10b182399b8b9d85de6b9d2c9e}{df\+Write\+I2}} (word addr, int value)
+\begin{DoxyCompactList}\small\item\em Write int value to the Data Flash by address. \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{data__flash__access_8h_a6c1e600191c011305f761d19f1720f01}{df\+Read\+U2}} (word addr)
+\begin{DoxyCompactList}\small\item\em Read Two-\/byte unsigned integer value from the Data Flash by address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_abff740626901e2ab4866111f02557c1c}{df\+Write\+U2}} (word addr, word value)
+\begin{DoxyCompactList}\small\item\em Write unsigned int value to the Data Flash by address. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{data__flash__access_8h_a2dd7e80921a855119686ace8e8db9d62}{df\+Read\+String}} (word addr)
+\begin{DoxyCompactList}\small\item\em Read String value from the Data Flash by address. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{data__flash__access_8h_a1a447fefdabc350f8b16d61447cac3f7}{df\+Device\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Read the Device Name from the Data Flash. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{data__flash__access_8h_a45ca8bd387b144e9c889a7642defecd4}{df\+Read\+Design\+Capacity\+Mah}} ()
+\begin{DoxyCompactList}\small\item\em Read the Design Capacity in m\+Ah from the Data Flash. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a7e7d7a097b1d18b9ffa8ce132e4d4a8e}{df\+Write\+Design\+Capacity\+Mah}} (int design\+Capacity\+Mah)
+\begin{DoxyCompactList}\small\item\em Write Design Capacity in m\+Ah to the Data Flash. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{data__flash__access_8h_a61c5845c6d9e8398d8c2db493b6af6c1}{df\+Read\+Design\+Capacity\+Cwh}} ()
+\begin{DoxyCompactList}\small\item\em Read the Design Energy in c\+Wh from the Data Flash. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a5bbf910f873b8154b6da35eeaf59bda2}{df\+Write\+Design\+Capacity\+Cwh}} (int design\+Capacity\+Cwh)
+\begin{DoxyCompactList}\small\item\em Write Design Energy in c\+Wh to the Data Flash. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{data__flash__access_8h_aa084a7a06c551cf138045bbbfc64f169}{df\+Read\+Fet\+Options}} ()
+\begin{DoxyCompactList}\small\item\em Settings; Configuration; 0x4600; FET Options; H1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a34d4ed5252a8dc20a9e73ae8c31d529f}{df\+Write\+Fet\+Options\+CHGFET}} (bool chg\+Fet\+Bit\+Value)
+\begin{DoxyCompactList}\small\item\em Settings; Configuration; FET Options; H1. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{data__flash__access_8h_a814bd7d2b701dd42865fba829699c3b8}{df\+Read\+Da\+Configuration}} ()
+\begin{DoxyCompactList}\small\item\em Settings; Configuration; 0x469B; DA Configuration; H1. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{data__flash__access_8h_a8de36963065eb19be14644c9ff431c7a}{df\+Read\+Gas\+Gauging\+Update\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Gas Gauging; Update Status; 0x420E; H1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_abd611f6d1a1931e17a8f6c35a05e70eb}{df\+Write\+Gas\+Gauging\+Update\+Status}} (byte update\+Status)
+\begin{DoxyCompactList}\small\item\em Gas Gauging; Update Status; 0x420E; H1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a53df2e91dcbf99f3321d64300700912c}{df\+Read\+All\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Read and print all data from the Data Flash. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a6503ccbedd0127e1d9e653bc7fb19137}{df\+Print\+Ra\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Print data from R\+\_\+a table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{data__flash__access_8h_ad63f4eeec6bae41d632146408b0cee58}{df\+Read\+Taper\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Advanced Charge Algorithm; Termination Config; 0x4693; Charge Term Taper Current; I2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a55f7dcc4941adcef5865abb2a0f980c7}{df\+Write\+Taper\+Current}} (int taper\+Current)
+\begin{DoxyCompactList}\small\item\em Advanced Charge Algorithm; Termination Config; 0x4693; Charge Term Taper Current; I2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a1a143106b2138e4a0b213310eee9d042}{df\+Reset\+Ra\+Table\+Flags}} ()
+\begin{DoxyCompactList}\small\item\em Reset \char`\"{}\+R\+\_\+a flags\char`\"{} in the Data Flash to the Default values\+: \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{data__flash__access_8h_aade8fbc61ff76c0f3f86c595d839e057}{df\+Read\+Soc\+Flag\+ConfigA}} ()
+\begin{DoxyCompactList}\small\item\em Settings; Configuration; 0x4632; SOC \mbox{\hyperlink{struct_flag}{Flag}} Config A; H2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a98b062ad9aec55bb7899bc77b0c273b4}{df\+Write\+Soc\+Flag\+ConfigA}} (word soc\+Flag\+ConfigA)
+\begin{DoxyCompactList}\small\item\em Settings; Configuration; 0x4632; SOC \mbox{\hyperlink{struct_flag}{Flag}} Config A; H2. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{data__flash__access_8h_a109016522aec79e5af552fafeea38dce}{df\+Read\+Tc\+Set\+Rsoc\+Threshold}} ()
+\begin{DoxyCompactList}\small\item\em Gas Gauging; TC; 0x464B; Set \% RSOC Threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a10ff4359e0c928b8a3064668c38cd65c}{df\+Write\+Tc\+Set\+Rsoc\+Threshold}} (byte set\+Threshold)
+\begin{DoxyCompactList}\small\item\em Gas Gauging; TC; 0x464B; Set \% RSOC Threshold. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{data__flash__access_8h_a8e64d28671d4c9bb2311c6ee0582fa63}{df\+Read\+Tc\+Clear\+Rsoc\+Threshold}} ()
+\begin{DoxyCompactList}\small\item\em Gas Gauging; TC; 0x464C; Clear \% RSOC Threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a9c0d91c1d40630e00880cad8bdfc3d15}{df\+Write\+Tc\+Clear\+Rsoc\+Threshold}} (byte clear\+Threshold)
+\begin{DoxyCompactList}\small\item\em Gas Gauging; TC; 0x464C; Clear \% RSOC Threshold. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{data__flash__access_8h_a615a4efcc29d363f565b081afc292740}{df\+Read\+Qmax\+Cell1}} ()
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; 0x4206; Qmax Cell 1; I2. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{data__flash__access_8h_aaffd77468f352af6ea681949afc5d279}{df\+Read\+Qmax\+Cell2}} ()
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; 0x4208; Qmax Cell 2; I2. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{data__flash__access_8h_a1ca0b6e1e2e84c85a8801208922be1e6}{df\+Read\+Qmax\+Pack}} ()
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; 0x420A; Qmax Pack; I2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_ae090d0fad05709916624af35995ca7c9}{df\+Write\+Qmax}} (word q\+Max\+Cell0, word q\+Max\+Cell1)
+\begin{DoxyCompactList}\small\item\em Qmax Pack = min(\+Qmax Cell 1, Qmax Cell 2) \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{data__flash__access_8h_a812d71a5635e926215306048790408a3}{df\+Read\+Cycle\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; 0x4240; Cycle Count; U2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data__flash__access_8h_a36b4ff7870e31d1faed74c06685cb10e}{df\+Write\+Cycle\+Count}} (word cycle\+Count)
+\begin{DoxyCompactList}\small\item\em Gas Gauging; State; 0x4240; Cycle Count; U2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+12.\+2.\+45 Data Flash Access() 0x4000–0x5\+FFF headers 
+
+Accessing data flash (DF) is only supported by the \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} by addressing the physical address.
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} Not Available in SEALED Mode. UNSEALED Mode is enough for both\+: reading and writing. If you try to read the DF in SEALED mode, you\textquotesingle{}ll just get an array of zeros.
+\end{DoxyWarning}
+
+\begin{DoxyPre}
+BQ28Z610
+Technical Reference Manual
+(c) Texas Instruments
+Literature Number: SLUUA65E
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.ti.com/lit/ug/sluua65e/sluua65e.pdf}{\texttt{ https\+://www.\+ti.\+com/lit/ug/sluua65e/sluua65e.\+pdf}} 
+
+13 Data Flash Values 
+
+14 Data Flash Summary
+\end{DoxySeeAlso}
+MIT License
+
+Copyright (c) 2024 Oleksii Sylichenko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \char`\"{}\+AS IS\char`\"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{data__flash__access_8h_a1a447fefdabc350f8b16d61447cac3f7}\label{data__flash__access_8h_a1a447fefdabc350f8b16d61447cac3f7}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfDeviceName@{dfDeviceName}}
+\index{dfDeviceName@{dfDeviceName}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfDeviceName()}{dfDeviceName()}}
+{\footnotesize\ttfamily String df\+Device\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the Device Name from the Data Flash. 
+
+I2C Configuration; Data; 0x4080; Device Name; S21
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a72a87b46b1cf905929191fc7dc2426de}{DF\+\_\+\+ADDR\+::\+DEVICE\+\_\+\+NAME}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a6503ccbedd0127e1d9e653bc7fb19137}\label{data__flash__access_8h_a6503ccbedd0127e1d9e653bc7fb19137}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfPrintRaTable@{dfPrintRaTable}}
+\index{dfPrintRaTable@{dfPrintRaTable}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfPrintRaTable()}{dfPrintRaTable()}}
+{\footnotesize\ttfamily void df\+Print\+Ra\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print data from R\+\_\+a table. 
+
+Cell 0, Cell 1, x\+Cell 0, x\+Cell 1\+:
+\begin{DoxyItemize}
+\item R\+\_\+a flag
+\item 15 rows
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_ac6a5ca7a53f32aecaaa34b109415b062}{DF\+\_\+\+ADDR\+::\+CELL0\+\_\+\+RA\+\_\+\+FLAG}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_ac3126ad2d3507ffeb16cc232948e684f}{DF\+\_\+\+ADDR\+::\+CELL1\+\_\+\+RA\+\_\+\+FLAG}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_ab7c5b0b9483459c16933511cfbbf4ed5}{DF\+\_\+\+ADDR\+::\+X\+\_\+\+CELL0\+\_\+\+RA\+\_\+\+FLAG}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_a9517e2a2576e1e89daa96e58c2da3059}{DF\+\_\+\+ADDR\+::\+X\+\_\+\+CELL1\+\_\+\+RA\+\_\+\+FLAG}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a53df2e91dcbf99f3321d64300700912c}\label{data__flash__access_8h_a53df2e91dcbf99f3321d64300700912c}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadAllData@{dfReadAllData}}
+\index{dfReadAllData@{dfReadAllData}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadAllData()}{dfReadAllData()}}
+{\footnotesize\ttfamily void df\+Read\+All\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read and print all data from the Data Flash. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_ac7792c6c6ab1e88c96bdc9f202eaca44}{DF\+\_\+\+ADDR\+::\+MIN}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_a190c01d6b7c9e9b0b8e8b41466e9c7b8}{DF\+\_\+\+ADDR\+::\+MAX}} 
+
+\mbox{\hyperlink{class_block_protocol_a08bb15b0141bac118d1f061b56ef0025}{Block\+Protocol\+::\+PAYLOAD\+\_\+\+MAX\+\_\+\+SIZE}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a24bbc6b2f64ce99e27c59c28d8020803}\label{data__flash__access_8h_a24bbc6b2f64ce99e27c59c28d8020803}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadByte@{dfReadByte}}
+\index{dfReadByte@{dfReadByte}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadByte()}{dfReadByte()}}
+{\footnotesize\ttfamily byte df\+Read\+Byte (\begin{DoxyParamCaption}\item[{word}]{addr }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_a878e49364b168fb2b614b6019c2cb7d7}{df\+Read\+Bytes()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a878e49364b168fb2b614b6019c2cb7d7}\label{data__flash__access_8h_a878e49364b168fb2b614b6019c2cb7d7}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadBytes@{dfReadBytes}}
+\index{dfReadBytes@{dfReadBytes}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadBytes()}{dfReadBytes()}}
+{\footnotesize\ttfamily void df\+Read\+Bytes (\begin{DoxyParamCaption}\item[{word}]{addr,  }\item[{byte $\ast$}]{retval,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Read array of bytes from the Data Flash by address. 
+
+Address should be fit into Data Flash addresses region, otherwise error message will be printed.
+
+Requested length should be in the range \mbox{[}1; 32\mbox{]}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_ac7792c6c6ab1e88c96bdc9f202eaca44}{DF\+\_\+\+ADDR\+::\+MIN}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_a190c01d6b7c9e9b0b8e8b41466e9c7b8}{DF\+\_\+\+ADDR\+::\+MAX}} 
+
+\mbox{\hyperlink{class_block_protocol}{Block\+Protocol}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a812d71a5635e926215306048790408a3}\label{data__flash__access_8h_a812d71a5635e926215306048790408a3}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadCycleCount@{dfReadCycleCount}}
+\index{dfReadCycleCount@{dfReadCycleCount}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadCycleCount()}{dfReadCycleCount()}}
+{\footnotesize\ttfamily word df\+Read\+Cycle\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; State; 0x4240; Cycle Count; U2. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_aeafe001319b36d008ab28c2c775067fe}{DF\+\_\+\+ADDR\+::\+GAS\+\_\+\+GAUGING\+\_\+\+CYCLE\+\_\+\+COUNT}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a814bd7d2b701dd42865fba829699c3b8}\label{data__flash__access_8h_a814bd7d2b701dd42865fba829699c3b8}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadDaConfiguration@{dfReadDaConfiguration}}
+\index{dfReadDaConfiguration@{dfReadDaConfiguration}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadDaConfiguration()}{dfReadDaConfiguration()}}
+{\footnotesize\ttfamily byte df\+Read\+Da\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Settings; Configuration; 0x469B; DA Configuration; H1. 
+
+
+\begin{DoxyPre}
+Bit 0: CC0—Cell Count
+  0 = 1 cell
+  1 = 2 cell
+Bit 1: Reserved
+Bit 2: Reserved
+Bit 3: IN\_SYSTEM\_SLEEP—In-\/system SLEEP mode
+  0 = Disables (default)
+  1 = Enables
+Bit 4: SLEEP—SLEEP Mode
+  0 = Disables SLEEP mode
+  1 = Enables SLEEP mode (default)
+Bit 5: Reserved
+Bit 6: CTEMP—Cell Temperature protection source
+  0 = MAX (default)
+  1 = Average
+Bit 7: Reserved
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a1b1ff2fceba3c3e110465fd46926c622}{DF\+\_\+\+ADDR\+::\+DA\+\_\+\+CONFIGURATION}} 
+
+\mbox{\hyperlink{class_da_configuration_flags}{Da\+Configuration\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a61c5845c6d9e8398d8c2db493b6af6c1}\label{data__flash__access_8h_a61c5845c6d9e8398d8c2db493b6af6c1}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadDesignCapacityCwh@{dfReadDesignCapacityCwh}}
+\index{dfReadDesignCapacityCwh@{dfReadDesignCapacityCwh}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadDesignCapacityCwh()}{dfReadDesignCapacityCwh()}}
+{\footnotesize\ttfamily int df\+Read\+Design\+Capacity\+Cwh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the Design Energy in c\+Wh from the Data Flash. 
+
+Gas Gauging; Design; 0x462C; Design Capacity c\+Wh; I2
+
+Is used for LOAD mode = Constant Power.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_aaab25f3b2cd8b3259d61a5c7bbb31451}{DF\+\_\+\+ADDR\+::\+DESIGN\+\_\+\+CAPACITY\+\_\+\+CWH}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a45ca8bd387b144e9c889a7642defecd4}\label{data__flash__access_8h_a45ca8bd387b144e9c889a7642defecd4}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadDesignCapacityMah@{dfReadDesignCapacityMah}}
+\index{dfReadDesignCapacityMah@{dfReadDesignCapacityMah}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadDesignCapacityMah()}{dfReadDesignCapacityMah()}}
+{\footnotesize\ttfamily int df\+Read\+Design\+Capacity\+Mah (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the Design Capacity in m\+Ah from the Data Flash. 
+
+Gas Gauging; Design; 0x462A; Design Capacity m\+Ah; I2
+
+Is used for LOAD mode = Constant Current.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a54e907aaba4a4d14c6612b392ddda2db}{DF\+\_\+\+ADDR\+::\+DESIGN\+\_\+\+CAPACITY\+\_\+\+MAH}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_aa084a7a06c551cf138045bbbfc64f169}\label{data__flash__access_8h_aa084a7a06c551cf138045bbbfc64f169}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadFetOptions@{dfReadFetOptions}}
+\index{dfReadFetOptions@{dfReadFetOptions}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadFetOptions()}{dfReadFetOptions()}}
+{\footnotesize\ttfamily byte df\+Read\+Fet\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Settings; Configuration; 0x4600; FET Options; H1. 
+
+
+\begin{DoxyPre}
+Bit 0: Reserved
+Bit 1: Reserved
+Bit 2: OTFET—FET action in OVERTEMPERATURE mode
+  0 = No FET action for overtemperature condition
+  1 = CHG and DSG FETs will be turned off for overtemperature conditions.
+Bit 3: CHGSU—FET action in CHARGE SUSPEND mode
+  0 = FET active
+  1 = Charging or precharging disabled, FET off
+Bit 4: CHGIN—FET action in CHARGE INHIBIT mode
+  0 = FET active
+  1 = Charging or precharging disabled, FET off
+Bit 5: CHGFET—FET action on valid charge termination
+  0 = FET active
+  1 = Charging or precharging disabled, FET off
+Bit 6: SLEEPCHG—CHG FET enabled during sleep
+  0 = CHG FET off during sleep
+  1 = CHG FET remains on during sleep.
+Bit 7: Reserved
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a713b5182ffda33f2a79b83a4953dadf3}{DF\+\_\+\+ADDR\+::\+FET\+\_\+\+OPTIONS}} 
+
+\mbox{\hyperlink{class_fet_options_flags}{Fet\+Options\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a8de36963065eb19be14644c9ff431c7a}\label{data__flash__access_8h_a8de36963065eb19be14644c9ff431c7a}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadGasGaugingUpdateStatus@{dfReadGasGaugingUpdateStatus}}
+\index{dfReadGasGaugingUpdateStatus@{dfReadGasGaugingUpdateStatus}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadGasGaugingUpdateStatus()}{dfReadGasGaugingUpdateStatus()}}
+{\footnotesize\ttfamily byte df\+Read\+Gas\+Gauging\+Update\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; Update Status; 0x420E; H1. 
+
+
+\begin{DoxyPre}
+Bit 1:0: Update1, Update0 -\/ Update Status:
+  0,0 = Impedance Track gauging and lifetime updating is disabled.
+  0,1 = QMax updated
+  1,0 = QMax and Ra table have been updated
+Bit 2: Impedance Track gauging and lifetime updating:
+  0 = Disabled
+  1 = Enabled
+Bit 3: QMax update:
+  0 = Not updated
+  1 = Updated
+Bit 7:4: Reserved
+\end{DoxyPre}
+
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} If any Reserved bit is set then check whether security mode is Unsealed, otherwise Unseal the Device.
+\end{DoxyWarning}
+
+\begin{DoxyItemize}
+\item 0x00 = 0000 -\/ Impedance Track gauging and lifetime updating is disabled.
+\item 0x01 = 0001
+\item 0x02 = 0010
+\item 0x04 = 0100 -\/ Neither QMax nor Ra table are updated. Learning is in progress.
+\item 0x05 = 0101 -\/ QMax is updated.
+\item 0x06 = 0110 -\/ QMax and Ra table are updated.
+\item 0x0E = 1110 -\/ QMax is updated in field (in real conditions).
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a973742bbcca79dc4072ce34c9150fdb0}{DF\+\_\+\+ADDR\+::\+GAS\+\_\+\+GAUGING\+\_\+\+UPDATE\+\_\+\+STATUS}} 
+
+\mbox{\hyperlink{class_gas_gauging_update_status_flags}{Gas\+Gauging\+Update\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a01a904c651db6d75fec8bfa5a9bbe844}\label{data__flash__access_8h_a01a904c651db6d75fec8bfa5a9bbe844}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadI2@{dfReadI2}}
+\index{dfReadI2@{dfReadI2}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadI2()}{dfReadI2()}}
+{\footnotesize\ttfamily int df\+Read\+I2 (\begin{DoxyParamCaption}\item[{word}]{addr }\end{DoxyParamCaption})}
+
+
+
+Read Two-\/byte Integer value from the Data Flash by address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_a13f2c378ba52940e7953edd601c72ae1}{df\+Read\+Word()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a615a4efcc29d363f565b081afc292740}\label{data__flash__access_8h_a615a4efcc29d363f565b081afc292740}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadQmaxCell1@{dfReadQmaxCell1}}
+\index{dfReadQmaxCell1@{dfReadQmaxCell1}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadQmaxCell1()}{dfReadQmaxCell1()}}
+{\footnotesize\ttfamily int df\+Read\+Qmax\+Cell1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; State; 0x4206; Qmax Cell 1; I2. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_ad88fc0c0b2a4c198b9fec3c0b323a10f}{DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+CELL\+\_\+1}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_aaffd77468f352af6ea681949afc5d279}\label{data__flash__access_8h_aaffd77468f352af6ea681949afc5d279}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadQmaxCell2@{dfReadQmaxCell2}}
+\index{dfReadQmaxCell2@{dfReadQmaxCell2}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadQmaxCell2()}{dfReadQmaxCell2()}}
+{\footnotesize\ttfamily int df\+Read\+Qmax\+Cell2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; State; 0x4208; Qmax Cell 2; I2. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a9996dac4ed162308aba436142680c0cc}{DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+CELL\+\_\+2}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a1ca0b6e1e2e84c85a8801208922be1e6}\label{data__flash__access_8h_a1ca0b6e1e2e84c85a8801208922be1e6}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadQmaxPack@{dfReadQmaxPack}}
+\index{dfReadQmaxPack@{dfReadQmaxPack}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadQmaxPack()}{dfReadQmaxPack()}}
+{\footnotesize\ttfamily int df\+Read\+Qmax\+Pack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; State; 0x420A; Qmax Pack; I2. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_aafdbad86eb0fa7d5a8ad3f3c84c48733}{DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+PACK}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_aade8fbc61ff76c0f3f86c595d839e057}\label{data__flash__access_8h_aade8fbc61ff76c0f3f86c595d839e057}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadSocFlagConfigA@{dfReadSocFlagConfigA}}
+\index{dfReadSocFlagConfigA@{dfReadSocFlagConfigA}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadSocFlagConfigA()}{dfReadSocFlagConfigA()}}
+{\footnotesize\ttfamily word df\+Read\+Soc\+Flag\+ConfigA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Settings; Configuration; 0x4632; SOC \mbox{\hyperlink{struct_flag}{Flag}} Config A; H2. 
+
+
+\begin{DoxyPre}
+Bit 0: TDSETV—Enables the TD flag set by the cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 1: TDCLEARV—Enables the TD flag clear by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 2: TDSETRSOC—Enables the TD flag set by RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 3: TDCLEARRSOC—Enables the TD flag cleared by the RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 4: TCSETV—Enables the TC flag set by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 5: TCCLEARV—Enables the TC flag clear by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 6: TCSETRSOC—Enables the TC flag set by the RSOC threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 7: TCCLEARRSOC—Enables the TC flag cleared by the RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 8: Reserved
+Bit 9: Reserved
+Bit 10: FCSETVCT—Enables the FC flag set by primary charge termination
+  0 = Disabled
+  1 = Enabled (default)
+Bit 11: TCSETVCT—Enables the TC flag set by primary charge termination
+  0 = Disabled
+  1 = Enabled (default)
+Bit 15: 12: Reserved
+\end{DoxyPre}
+
+
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Default\+: 0x0\+C8C;
+\item JBL\+: 0001 0011 1000 0011;
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_ac455eb44438eba4c0d926ecc76c931a8}{DF\+\_\+\+ADDR\+::\+SOC\+\_\+\+FLAG\+\_\+\+CONFIG\+\_\+A}} 
+
+\mbox{\hyperlink{class_s_o_c_flag_config_a_flags}{SOCFlag\+Config\+AFlags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a2dd7e80921a855119686ace8e8db9d62}\label{data__flash__access_8h_a2dd7e80921a855119686ace8e8db9d62}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadString@{dfReadString}}
+\index{dfReadString@{dfReadString}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadString()}{dfReadString()}}
+{\footnotesize\ttfamily String df\+Read\+String (\begin{DoxyParamCaption}\item[{word}]{addr }\end{DoxyParamCaption})}
+
+
+
+Read String value from the Data Flash by address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_ad63f4eeec6bae41d632146408b0cee58}\label{data__flash__access_8h_ad63f4eeec6bae41d632146408b0cee58}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadTaperCurrent@{dfReadTaperCurrent}}
+\index{dfReadTaperCurrent@{dfReadTaperCurrent}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadTaperCurrent()}{dfReadTaperCurrent()}}
+{\footnotesize\ttfamily int df\+Read\+Taper\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Advanced Charge Algorithm; Termination Config; 0x4693; Charge Term Taper Current; I2. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_afcc327c6929a4cae32687ca4fdb9ec22}{DF\+\_\+\+ADDR\+::\+CHARGE\+\_\+\+TERM\+\_\+\+TAPER\+\_\+\+CURRENT}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a8e64d28671d4c9bb2311c6ee0582fa63}\label{data__flash__access_8h_a8e64d28671d4c9bb2311c6ee0582fa63}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadTcClearRsocThreshold@{dfReadTcClearRsocThreshold}}
+\index{dfReadTcClearRsocThreshold@{dfReadTcClearRsocThreshold}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadTcClearRsocThreshold()}{dfReadTcClearRsocThreshold()}}
+{\footnotesize\ttfamily byte df\+Read\+Tc\+Clear\+Rsoc\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; TC; 0x464C; Clear \% RSOC Threshold. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a84659cf3fdedf5613fb1f6c5d797d3a8}{DF\+\_\+\+ADDR\+::\+TC\+\_\+\+CLEAR\+\_\+\+RSOC\+\_\+\+THRESHOLD}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a109016522aec79e5af552fafeea38dce}\label{data__flash__access_8h_a109016522aec79e5af552fafeea38dce}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadTcSetRsocThreshold@{dfReadTcSetRsocThreshold}}
+\index{dfReadTcSetRsocThreshold@{dfReadTcSetRsocThreshold}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadTcSetRsocThreshold()}{dfReadTcSetRsocThreshold()}}
+{\footnotesize\ttfamily byte df\+Read\+Tc\+Set\+Rsoc\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; TC; 0x464B; Set \% RSOC Threshold. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a55df95a1f11c4c87fda567bb0c1a6b0e}{DF\+\_\+\+ADDR\+::\+TC\+\_\+\+SET\+\_\+\+RSOC\+\_\+\+THRESHOLD}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a3bf68f63f9f37eb40a778e9ddb84f59a}\label{data__flash__access_8h_a3bf68f63f9f37eb40a778e9ddb84f59a}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadU1@{dfReadU1}}
+\index{dfReadU1@{dfReadU1}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadU1()}{dfReadU1()}}
+{\footnotesize\ttfamily byte df\+Read\+U1 (\begin{DoxyParamCaption}\item[{word}]{addr }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_a24bbc6b2f64ce99e27c59c28d8020803}{df\+Read\+Byte()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a6c1e600191c011305f761d19f1720f01}\label{data__flash__access_8h_a6c1e600191c011305f761d19f1720f01}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadU2@{dfReadU2}}
+\index{dfReadU2@{dfReadU2}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadU2()}{dfReadU2()}}
+{\footnotesize\ttfamily word df\+Read\+U2 (\begin{DoxyParamCaption}\item[{word}]{addr }\end{DoxyParamCaption})}
+
+
+
+Read Two-\/byte unsigned integer value from the Data Flash by address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_a13f2c378ba52940e7953edd601c72ae1}{df\+Read\+Word()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a13f2c378ba52940e7953edd601c72ae1}\label{data__flash__access_8h_a13f2c378ba52940e7953edd601c72ae1}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfReadWord@{dfReadWord}}
+\index{dfReadWord@{dfReadWord}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfReadWord()}{dfReadWord()}}
+{\footnotesize\ttfamily word df\+Read\+Word (\begin{DoxyParamCaption}\item[{word}]{addr }\end{DoxyParamCaption})}
+
+
+
+Read a word value (two bytes) from the Data Flash by address. 
+
+Result is in the Normal Order.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ two-\/byte address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+two byte in normal order\+: 0x4321
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_a878e49364b168fb2b614b6019c2cb7d7}{df\+Read\+Bytes()}} 
+
+\mbox{\hyperlink{utils_8cpp_a9f627591b1859e4dc00bf6dc727c3b55}{compose\+Word()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a1a143106b2138e4a0b213310eee9d042}\label{data__flash__access_8h_a1a143106b2138e4a0b213310eee9d042}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfResetRaTableFlags@{dfResetRaTableFlags}}
+\index{dfResetRaTableFlags@{dfResetRaTableFlags}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfResetRaTableFlags()}{dfResetRaTableFlags()}}
+{\footnotesize\ttfamily void df\+Reset\+Ra\+Table\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset \char`\"{}\+R\+\_\+a flags\char`\"{} in the Data Flash to the Default values\+: 
+
+
+\begin{DoxyItemize}
+\item Cell0 R\+\_\+a flag\+: addr = 0x4100, data = 0x\+FF55 -\/ Cell impedance never updated; Table being used;
+\item Cell1 R\+\_\+a flag\+: addr = 0x4140, data = 0x\+FF55 -\/ Cell impedance never updated; Table being used;
+\item x\+Cell0 R\+\_\+a flag\+: addr = 0x4180, data = 0x\+FFFF -\/ Cell impedance never updated; Table never used;
+\item x\+Cell0 R\+\_\+a flag\+: addr = 0x41\+C0, data = 0x\+FFFF -\/ Cell impedance never updated; Table never used;
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_ac6a5ca7a53f32aecaaa34b109415b062}{DF\+\_\+\+ADDR\+::\+CELL0\+\_\+\+RA\+\_\+\+FLAG}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_ac3126ad2d3507ffeb16cc232948e684f}{DF\+\_\+\+ADDR\+::\+CELL1\+\_\+\+RA\+\_\+\+FLAG}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_ab7c5b0b9483459c16933511cfbbf4ed5}{DF\+\_\+\+ADDR\+::\+X\+\_\+\+CELL0\+\_\+\+RA\+\_\+\+FLAG}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_a9517e2a2576e1e89daa96e58c2da3059}{DF\+\_\+\+ADDR\+::\+X\+\_\+\+CELL1\+\_\+\+RA\+\_\+\+FLAG}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a5eab2e5f73f5e4f79510af52c3d1c391}\label{data__flash__access_8h_a5eab2e5f73f5e4f79510af52c3d1c391}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteByte@{dfWriteByte}}
+\index{dfWriteByte@{dfWriteByte}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteByte()}{dfWriteByte()}}
+{\footnotesize\ttfamily void df\+Write\+Byte (\begin{DoxyParamCaption}\item[{word}]{addr,  }\item[{byte}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_ad0df77403287b164dbb0c3be2e3ff5a0}{df\+Write\+Bytes()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_ad0df77403287b164dbb0c3be2e3ff5a0}\label{data__flash__access_8h_ad0df77403287b164dbb0c3be2e3ff5a0}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteBytes@{dfWriteBytes}}
+\index{dfWriteBytes@{dfWriteBytes}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteBytes()}{dfWriteBytes()}}
+{\footnotesize\ttfamily void df\+Write\+Bytes (\begin{DoxyParamCaption}\item[{word}]{addr,  }\item[{byte $\ast$}]{data,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Write array of data to the Data Flash. 
+
+The byte order should be as it should be written in the data flash.
+
+The Data length should be in the range \mbox{[}1; 32\mbox{]}
+
+Some addresses within the standard region are prohibited from writing, I am not sure about the exact ranges of such addresses.
+
+For example, around the address 0x5\+A5A, there are data 0x\+FF and they cannot be overwritten.
+
+Special thanks for providing the accurate definition of the DF writing algorithm to the user \char`\"{}silomilo\char`\"{} from the Texas Intruments forum\+:
+\begin{DoxyItemize}
+\item \href{https://e2e.ti.com/support/power-management-group/power-management/f/power-management-forum/738029/bq28z610-data-flash-access-issues/2726302\#2726302}{\texttt{ https\+://e2e.\+ti.\+com/support/power-\/management-\/group/power-\/management/f/power-\/management-\/forum/738029/bq28z610-\/data-\/flash-\/access-\/issues/2726302\#2726302}}
+\end{DoxyItemize}
+
+\begin{quote}
+Write to 0x3E ( Alt\+Manufacturing\+Access) the MAC address (little endian) followed by the data to write ( Note\+: Minimum data is 1 and maximum is 32 )
+
+Write to 0x60 ( Mac\+Data\+Checksum ) the checksum calculated as per below
+
+Write to 0x61 ( Mac\+Data\+Length ) the total number of bytes written including the MAC address, data bytes, checksum, and MACData\+Length itself
+
+Read back from MAC address to verify (Write address to read to 0x3E and read back desired number of bytes) \end{quote}
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ Address of the Data Flash to write data. \\
+\hline
+{\em data} & -\/ Array of data bytes. \\
+\hline
+{\em len} & -\/ Length of the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_std_commands_a0efff1326633d02d9673784d6eb63195}{Std\+Commands\+::\+ALT\+\_\+\+MANUFACTURER\+\_\+\+ACCESS}} 
+
+\mbox{\hyperlink{class_std_commands_abe429a1d7681ea92ce9c0d38bac4439b}{Std\+Commands\+::\+MAC\+\_\+\+DATA\+\_\+\+CHECKSUM}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a36b4ff7870e31d1faed74c06685cb10e}\label{data__flash__access_8h_a36b4ff7870e31d1faed74c06685cb10e}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteCycleCount@{dfWriteCycleCount}}
+\index{dfWriteCycleCount@{dfWriteCycleCount}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteCycleCount()}{dfWriteCycleCount()}}
+{\footnotesize\ttfamily void df\+Write\+Cycle\+Count (\begin{DoxyParamCaption}\item[{word}]{cycle\+Count }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; State; 0x4240; Cycle Count; U2. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_aeafe001319b36d008ab28c2c775067fe}{DF\+\_\+\+ADDR\+::\+GAS\+\_\+\+GAUGING\+\_\+\+CYCLE\+\_\+\+COUNT}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a5bbf910f873b8154b6da35eeaf59bda2}\label{data__flash__access_8h_a5bbf910f873b8154b6da35eeaf59bda2}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteDesignCapacityCwh@{dfWriteDesignCapacityCwh}}
+\index{dfWriteDesignCapacityCwh@{dfWriteDesignCapacityCwh}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteDesignCapacityCwh()}{dfWriteDesignCapacityCwh()}}
+{\footnotesize\ttfamily void df\+Write\+Design\+Capacity\+Cwh (\begin{DoxyParamCaption}\item[{int}]{design\+Capacity\+Cwh }\end{DoxyParamCaption})}
+
+
+
+Write Design Energy in c\+Wh to the Data Flash. 
+
+Gas Gauging; Design; 0x462C; Design Capacity c\+Wh; I2
+\begin{DoxyItemize}
+\item JBL\+: 3672
+\end{DoxyItemize}
+
+Design Energy = Nominal Voltage $\ast$ Capacity 7.\+2 V $\ast$ 5100 m\+Ah = 36\textquotesingle{}720 m\+Wh = 3672 c\+Wh
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_aaab25f3b2cd8b3259d61a5c7bbb31451}{DF\+\_\+\+ADDR\+::\+DESIGN\+\_\+\+CAPACITY\+\_\+\+CWH}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a7e7d7a097b1d18b9ffa8ce132e4d4a8e}\label{data__flash__access_8h_a7e7d7a097b1d18b9ffa8ce132e4d4a8e}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteDesignCapacityMah@{dfWriteDesignCapacityMah}}
+\index{dfWriteDesignCapacityMah@{dfWriteDesignCapacityMah}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteDesignCapacityMah()}{dfWriteDesignCapacityMah()}}
+{\footnotesize\ttfamily void df\+Write\+Design\+Capacity\+Mah (\begin{DoxyParamCaption}\item[{int}]{design\+Capacity\+Mah }\end{DoxyParamCaption})}
+
+
+
+Write Design Capacity in m\+Ah to the Data Flash. 
+
+Gas Gauging; Design; 0x462A; Design Capacity m\+Ah; I2
+\begin{DoxyItemize}
+\item JBL\+: 5100
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a54e907aaba4a4d14c6612b392ddda2db}{DF\+\_\+\+ADDR\+::\+DESIGN\+\_\+\+CAPACITY\+\_\+\+MAH}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a34d4ed5252a8dc20a9e73ae8c31d529f}\label{data__flash__access_8h_a34d4ed5252a8dc20a9e73ae8c31d529f}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteFetOptionsCHGFET@{dfWriteFetOptionsCHGFET}}
+\index{dfWriteFetOptionsCHGFET@{dfWriteFetOptionsCHGFET}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteFetOptionsCHGFET()}{dfWriteFetOptionsCHGFET()}}
+{\footnotesize\ttfamily void df\+Write\+Fet\+Options\+CHGFET (\begin{DoxyParamCaption}\item[{bool}]{chg\+Fet\+Bit\+Value }\end{DoxyParamCaption})}
+
+
+
+Settings; Configuration; FET Options; H1. 
+
+Bit 5\+: CHGFET -\/ FET action on valid charge termination
+\begin{DoxyItemize}
+\item 0 = FET active
+\item 1 = Charging or precharging disabled, FET off
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a713b5182ffda33f2a79b83a4953dadf3}{DF\+\_\+\+ADDR\+::\+FET\+\_\+\+OPTIONS}} 
+
+\mbox{\hyperlink{class_fet_options_flags_a6c0a97d1eb672054059768acc3e686e4}{Fet\+Options\+Flags\+::\+CHGFET()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_abd611f6d1a1931e17a8f6c35a05e70eb}\label{data__flash__access_8h_abd611f6d1a1931e17a8f6c35a05e70eb}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteGasGaugingUpdateStatus@{dfWriteGasGaugingUpdateStatus}}
+\index{dfWriteGasGaugingUpdateStatus@{dfWriteGasGaugingUpdateStatus}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteGasGaugingUpdateStatus()}{dfWriteGasGaugingUpdateStatus()}}
+{\footnotesize\ttfamily void df\+Write\+Gas\+Gauging\+Update\+Status (\begin{DoxyParamCaption}\item[{byte}]{update\+Status }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; Update Status; 0x420E; H1. 
+
+
+\begin{DoxyPre}
+Bit 1:0: Update1, Update0 -\/ Update Status:
+  0,0 = Impedance Track gauging and lifetime updating is disabled.
+  0,1 = QMax updated
+  1,0 = QMax and Ra table have been updated
+Bit 2: Impedance Track gauging and lifetime updating:
+  0 = Disabled
+  1 = Enabled
+Bit 3: QMax update:
+  0 = Not updated
+  1 = Updated
+Bit 7:4: Reserved
+\end{DoxyPre}
+
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} If any Reserved bit is set then check whether security mode is Unsealed, otherwise Unseal the Device.
+\end{DoxyWarning}
+
+\begin{DoxyItemize}
+\item 0x00 = 0000 -\/ Impedance Track gauging and lifetime updating is disabled.
+\item 0x01 = 0001
+\item 0x02 = 0010
+\item 0x04 = 0100 -\/ Neither QMax nor Ra table are updated. Learning is in progress.
+\item 0x05 = 0101 -\/ QMax is updated.
+\item 0x06 = 0110 -\/ QMax and Ra table are updated.
+\item 0x0E = 1110 -\/ QMax is updated in field (in real conditions).
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a973742bbcca79dc4072ce34c9150fdb0}{DF\+\_\+\+ADDR\+::\+GAS\+\_\+\+GAUGING\+\_\+\+UPDATE\+\_\+\+STATUS}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a874bcf10b182399b8b9d85de6b9d2c9e}\label{data__flash__access_8h_a874bcf10b182399b8b9d85de6b9d2c9e}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteI2@{dfWriteI2}}
+\index{dfWriteI2@{dfWriteI2}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteI2()}{dfWriteI2()}}
+{\footnotesize\ttfamily void df\+Write\+I2 (\begin{DoxyParamCaption}\item[{word}]{addr,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Write int value to the Data Flash by address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_a473a03f20a18e9158d3b8e5f949e2152}{df\+Write\+Word()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_ae090d0fad05709916624af35995ca7c9}\label{data__flash__access_8h_ae090d0fad05709916624af35995ca7c9}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteQmax@{dfWriteQmax}}
+\index{dfWriteQmax@{dfWriteQmax}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteQmax()}{dfWriteQmax()}}
+{\footnotesize\ttfamily void df\+Write\+Qmax (\begin{DoxyParamCaption}\item[{word}]{q\+Max\+Cell1,  }\item[{word}]{q\+Max\+Cell2 }\end{DoxyParamCaption})}
+
+
+
+Qmax Pack = min(\+Qmax Cell 1, Qmax Cell 2) 
+
+
+\begin{DoxyItemize}
+\item Gas Gauging; State; 0x4206; Qmax Cell 1; I2
+\item Gas Gauging; State; 0x4208; Qmax Cell 2; I2
+\item Gas Gauging; State; 0x420A; Qmax Pack; I2
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_ad88fc0c0b2a4c198b9fec3c0b323a10f}{DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+CELL\+\_\+1}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_a9996dac4ed162308aba436142680c0cc}{DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+CELL\+\_\+2}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_aafdbad86eb0fa7d5a8ad3f3c84c48733}{DF\+\_\+\+ADDR\+::\+Q\+\_\+\+MAX\+\_\+\+PACK}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a98b062ad9aec55bb7899bc77b0c273b4}\label{data__flash__access_8h_a98b062ad9aec55bb7899bc77b0c273b4}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteSocFlagConfigA@{dfWriteSocFlagConfigA}}
+\index{dfWriteSocFlagConfigA@{dfWriteSocFlagConfigA}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteSocFlagConfigA()}{dfWriteSocFlagConfigA()}}
+{\footnotesize\ttfamily void df\+Write\+Soc\+Flag\+ConfigA (\begin{DoxyParamCaption}\item[{word}]{soc\+Flag\+ConfigA }\end{DoxyParamCaption})}
+
+
+
+Settings; Configuration; 0x4632; SOC \mbox{\hyperlink{struct_flag}{Flag}} Config A; H2. 
+
+
+\begin{DoxyPre}
+Bit 0: TDSETV—Enables the TD flag set by the cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 1: TDCLEARV—Enables the TD flag clear by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 2: TDSETRSOC—Enables the TD flag set by RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 3: TDCLEARRSOC—Enables the TD flag cleared by the RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 4: TCSETV—Enables the TC flag set by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 5: TCCLEARV—Enables the TC flag clear by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 6: TCSETRSOC—Enables the TC flag set by the RSOC threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 7: TCCLEARRSOC—Enables the TC flag cleared by the RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 8: Reserved
+Bit 9: Reserved
+Bit 10: FCSETVCT—Enables the FC flag set by primary charge termination
+  0 = Disabled
+  1 = Enabled (default)
+Bit 11: TCSETVCT—Enables the TC flag set by primary charge termination
+  0 = Disabled
+  1 = Enabled (default)
+Bit 15: 12: Reserved
+\end{DoxyPre}
+
+
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Default\+: 0x0\+C8C;
+\item JBL\+: 0001 0011 1000 0011;
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_ac455eb44438eba4c0d926ecc76c931a8}{DF\+\_\+\+ADDR\+::\+SOC\+\_\+\+FLAG\+\_\+\+CONFIG\+\_\+A}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a55f7dcc4941adcef5865abb2a0f980c7}\label{data__flash__access_8h_a55f7dcc4941adcef5865abb2a0f980c7}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteTaperCurrent@{dfWriteTaperCurrent}}
+\index{dfWriteTaperCurrent@{dfWriteTaperCurrent}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteTaperCurrent()}{dfWriteTaperCurrent()}}
+{\footnotesize\ttfamily void df\+Write\+Taper\+Current (\begin{DoxyParamCaption}\item[{int}]{taper\+Current }\end{DoxyParamCaption})}
+
+
+
+Advanced Charge Algorithm; Termination Config; 0x4693; Charge Term Taper Current; I2. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_afcc327c6929a4cae32687ca4fdb9ec22}{DF\+\_\+\+ADDR\+::\+CHARGE\+\_\+\+TERM\+\_\+\+TAPER\+\_\+\+CURRENT}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a9c0d91c1d40630e00880cad8bdfc3d15}\label{data__flash__access_8h_a9c0d91c1d40630e00880cad8bdfc3d15}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteTcClearRsocThreshold@{dfWriteTcClearRsocThreshold}}
+\index{dfWriteTcClearRsocThreshold@{dfWriteTcClearRsocThreshold}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteTcClearRsocThreshold()}{dfWriteTcClearRsocThreshold()}}
+{\footnotesize\ttfamily void df\+Write\+Tc\+Clear\+Rsoc\+Threshold (\begin{DoxyParamCaption}\item[{byte}]{clear\+Threshold }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; TC; 0x464C; Clear \% RSOC Threshold. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a84659cf3fdedf5613fb1f6c5d797d3a8}{DF\+\_\+\+ADDR\+::\+TC\+\_\+\+CLEAR\+\_\+\+RSOC\+\_\+\+THRESHOLD}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a10ff4359e0c928b8a3064668c38cd65c}\label{data__flash__access_8h_a10ff4359e0c928b8a3064668c38cd65c}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteTcSetRsocThreshold@{dfWriteTcSetRsocThreshold}}
+\index{dfWriteTcSetRsocThreshold@{dfWriteTcSetRsocThreshold}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteTcSetRsocThreshold()}{dfWriteTcSetRsocThreshold()}}
+{\footnotesize\ttfamily void df\+Write\+Tc\+Set\+Rsoc\+Threshold (\begin{DoxyParamCaption}\item[{byte}]{set\+Threshold }\end{DoxyParamCaption})}
+
+
+
+Gas Gauging; TC; 0x464B; Set \% RSOC Threshold. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_f___a_d_d_r_a55df95a1f11c4c87fda567bb0c1a6b0e}{DF\+\_\+\+ADDR\+::\+TC\+\_\+\+SET\+\_\+\+RSOC\+\_\+\+THRESHOLD}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_abff740626901e2ab4866111f02557c1c}\label{data__flash__access_8h_abff740626901e2ab4866111f02557c1c}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteU2@{dfWriteU2}}
+\index{dfWriteU2@{dfWriteU2}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteU2()}{dfWriteU2()}}
+{\footnotesize\ttfamily void df\+Write\+U2 (\begin{DoxyParamCaption}\item[{word}]{addr,  }\item[{word}]{value }\end{DoxyParamCaption})}
+
+
+
+Write unsigned int value to the Data Flash by address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_a473a03f20a18e9158d3b8e5f949e2152}{df\+Write\+Word()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{data__flash__access_8h_a473a03f20a18e9158d3b8e5f949e2152}\label{data__flash__access_8h_a473a03f20a18e9158d3b8e5f949e2152}} 
+\index{data\_flash\_access.h@{data\_flash\_access.h}!dfWriteWord@{dfWriteWord}}
+\index{dfWriteWord@{dfWriteWord}!data\_flash\_access.h@{data\_flash\_access.h}}
+\doxysubsubsection{\texorpdfstring{dfWriteWord()}{dfWriteWord()}}
+{\footnotesize\ttfamily void df\+Write\+Word (\begin{DoxyParamCaption}\item[{word}]{addr,  }\item[{word}]{value }\end{DoxyParamCaption})}
+
+
+
+Write a word value (two bytes) to the Data Flash by address. 
+
+Order of bytes should be Normal.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8h_ad0df77403287b164dbb0c3be2e3ff5a0}{df\+Write\+Bytes()}} 
+\end{DoxySeeAlso}

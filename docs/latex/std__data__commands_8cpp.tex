@@ -1,0 +1,315 @@
+\hypertarget{std__data__commands_8cpp}{}\doxysection{std\+\_\+data\+\_\+commands.\+cpp File Reference}
+\label{std__data__commands_8cpp}\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+
+
+12.\+1 Standard Data Commands implementation  
+
+
+{\ttfamily \#include \char`\"{}std\+\_\+data\+\_\+commands.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_a8f46c7d707496662eaeb16ac99da5823}{Manufacturer\+Access\+Control}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+1 0x00/01 Manufacturer\+Access\+Control \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{std__data__commands_8cpp_a46c82120b621c4a0f268646f6bc4ef49}{Temperature}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+4 0x06/07 Temperature \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}{Voltage}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+5 0x08/09 Voltage \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}{Battery\+Status}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+6 0x0\+A/0B Battery\+Status \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{std__data__commands_8cpp_ac56c1d075bdc355c84d8a341676a92c1}{Current}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+7 0x0\+C/0D Current \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_a3129870e862bc7e7cfe911559689ff80}{Remaining\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+9 0x10/11 Remaining\+Capacity \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_a1ad98dba5c1618cbd5ef973095df6dff}{Full\+Charge\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+10 0x12/13 Full\+Charge\+Capacity \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{std__data__commands_8cpp_ad2ecff5053257e61c28fbf42a48fff3e}{Average\+Current}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+11 0x14/15 Average\+Current The value is updated every 1s. \mbox{\hyperlink{class_units}{Units}} are mA. \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_a1f5283a0454a9c6fc179ace1406c8379}{Cycle\+Count}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+22 0x2\+A/2B Cycle\+Count \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_a99e1df3aff21e73c4bd84365ef490cf1}{Relative\+State\+Of\+Charge}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+23 0x2\+C/2D Relative\+State\+Of\+Charge \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_a831b9b535ed3ef436d1fd1950a3c3e9e}{State\+Of\+Health}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+24 0x2\+E/2F State-\/of-\/\+Health (SOH) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{std__data__commands_8cpp_a9272fd6e5e20a5a3c2d511fcce2ada67}{Charging\+Voltage}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+25 0x30/31 Charging\+Voltage \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_a3377442e26888b879b3e9b727d907b16}{Charging\+Current}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+26 0x32/33 Charging\+Current \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{std__data__commands_8cpp_ada28a22bb2c6314b5a9c0ac0655a4f2c}{Design\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+27 0x3\+C/3D Design\+Capacity \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+12.\+1 Standard Data Commands implementation 
+
+The host controller communicates with the gauge through gauge commands. A gauge command is the equivalent to a register. For example, reading the state of charge is accomplished through the State\+Of\+Charge() gauge command, which has the command codes 0x1C and 0x1D. So if the interface is I2C, reading from device register 0x1C and 0x1D returns the current state of charge of the battery as calculated by the gauge.
+
+To enable the system to read and write battery information, the BQ28\+Z610 uses a series of 2-\/byte standard I2C commands with a 7-\/bit device address of 0x55 (8 bits = 0x\+AA to write and 0x\+AB to read). Each standard command has an associated command code pair, as indicated in Table 12-\/1, Standard Commands. Each protocol has specific means to access the data at each command code. Data RAM is updated and read by the gauge once per second.
+
+
+\begin{DoxyPre}
+BQ28Z610
+Technical Reference Manual
+(c) Texas Instruments
+Literature Number: SLUUA65E
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.ti.com/lit/ug/sluua65e/sluua65e.pdf}{\texttt{ https\+://www.\+ti.\+com/lit/ug/sluua65e/sluua65e.\+pdf}}
+\end{DoxySeeAlso}
+MIT License
+
+Copyright (c) 2024 Oleksii Sylichenko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \char`\"{}\+AS IS\char`\"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{std__data__commands_8cpp_ad2ecff5053257e61c28fbf42a48fff3e}\label{std__data__commands_8cpp_ad2ecff5053257e61c28fbf42a48fff3e}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!AverageCurrent@{AverageCurrent}}
+\index{AverageCurrent@{AverageCurrent}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{AverageCurrent()}{AverageCurrent()}}
+{\footnotesize\ttfamily int Average\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+11 0x14/15 Average\+Current The value is updated every 1s. \mbox{\hyperlink{class_units}{Units}} are mA. 
+
+12.\+1.\+11 0x14/15 Average\+Current
+
+\begin{DoxyReturn}{Returns}
+a signed integer value that is the average current flow through the sense resistor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}\label{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!BatteryStatus@{BatteryStatus}}
+\index{BatteryStatus@{BatteryStatus}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{BatteryStatus()}{BatteryStatus()}}
+{\footnotesize\ttfamily word Battery\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+6 0x0\+A/0B Battery\+Status 
+
+
+\begin{DoxyPre}
+Bits 3:0: EC3,EC2,EC1,EC0 -\/ Error Code:
+  0x00 = OK
+  0x1 = Busy
+  0x2 = Reserved Command
+  0x3 = Unsupported Command
+  0x4 = AccessDenied
+  0x5 = Overflow/Underflow
+  0x6 = BadSize
+  0x7 = UnknownError
+Bit 4: FD—Fully Discharged
+  0 = Battery ok
+  1 = Battery fully depleted
+Bit 5: FC—Fully Charged
+  0 = Battery not fully charged
+  1 = Battery fully charged
+Bit 6: DSG—Discharging
+  0 = Battery is charging.
+  1 = Battery is discharging.
+Bit 7: INIT—Initialization
+  0 = Inactive
+  1 = Active
+Bit 8: RTA—Remaining Time Alarm
+  0 = Inactive
+  1 = Active
+Bit 9: RCA—Remaining Capacity Alarm
+  0 = Inactive
+  1 = Active
+Bit 10: Reserved
+Bit 11: TDA—Terminate Discharge Alarm
+  0 = Inactive
+  1 = Active
+Bit 12: OTA—Overtemperature Alarm
+  0 = Inactive
+  1 = Active
+Bit 13: Reserved
+Bit 14: TCA—Terminate Charge Alarm
+  0 = Inactive
+  1 = Active
+Bit 15: OCA—Overcharged Alarm
+  0 = Inactive
+  1 = Active
+\end{DoxyPre}
+ \mbox{\Hypertarget{std__data__commands_8cpp_a3377442e26888b879b3e9b727d907b16}\label{std__data__commands_8cpp_a3377442e26888b879b3e9b727d907b16}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!ChargingCurrent@{ChargingCurrent}}
+\index{ChargingCurrent@{ChargingCurrent}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{ChargingCurrent()}{ChargingCurrent()}}
+{\footnotesize\ttfamily word Charging\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+26 0x32/33 Charging\+Current 
+
+\begin{DoxyReturn}{Returns}
+the desired charging current. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_a9272fd6e5e20a5a3c2d511fcce2ada67}\label{std__data__commands_8cpp_a9272fd6e5e20a5a3c2d511fcce2ada67}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!ChargingVoltage@{ChargingVoltage}}
+\index{ChargingVoltage@{ChargingVoltage}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{ChargingVoltage()}{ChargingVoltage()}}
+{\footnotesize\ttfamily float Charging\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+25 0x30/31 Charging\+Voltage 
+
+\begin{DoxyReturn}{Returns}
+the desired charging voltage. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_ac56c1d075bdc355c84d8a341676a92c1}\label{std__data__commands_8cpp_ac56c1d075bdc355c84d8a341676a92c1}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!Current@{Current}}
+\index{Current@{Current}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{Current()}{Current()}}
+{\footnotesize\ttfamily int Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+7 0x0\+C/0D Current 
+
+\begin{DoxyReturn}{Returns}
+the measured current from the coulomb counter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_a1f5283a0454a9c6fc179ace1406c8379}\label{std__data__commands_8cpp_a1f5283a0454a9c6fc179ace1406c8379}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!CycleCount@{CycleCount}}
+\index{CycleCount@{CycleCount}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{CycleCount()}{CycleCount()}}
+{\footnotesize\ttfamily word Cycle\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+22 0x2\+A/2B Cycle\+Count 
+
+\begin{DoxyReturn}{Returns}
+the number of discharge cycles the battery has experienced. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_ada28a22bb2c6314b5a9c0ac0655a4f2c}\label{std__data__commands_8cpp_ada28a22bb2c6314b5a9c0ac0655a4f2c}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!DesignCapacity@{DesignCapacity}}
+\index{DesignCapacity@{DesignCapacity}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{DesignCapacity()}{DesignCapacity()}}
+{\footnotesize\ttfamily word Design\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+27 0x3\+C/3D Design\+Capacity 
+
+\begin{DoxyReturn}{Returns}
+the theoretical maximum pack capacity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_a1ad98dba5c1618cbd5ef973095df6dff}\label{std__data__commands_8cpp_a1ad98dba5c1618cbd5ef973095df6dff}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!FullChargeCapacity@{FullChargeCapacity}}
+\index{FullChargeCapacity@{FullChargeCapacity}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{FullChargeCapacity()}{FullChargeCapacity()}}
+{\footnotesize\ttfamily word Full\+Charge\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+10 0x12/13 Full\+Charge\+Capacity 
+
+\begin{DoxyReturn}{Returns}
+the predicted battery capacity when fully charged. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_a8f46c7d707496662eaeb16ac99da5823}\label{std__data__commands_8cpp_a8f46c7d707496662eaeb16ac99da5823}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!ManufacturerAccessControl@{ManufacturerAccessControl}}
+\index{ManufacturerAccessControl@{ManufacturerAccessControl}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{ManufacturerAccessControl()}{ManufacturerAccessControl()}}
+{\footnotesize\ttfamily word Manufacturer\+Access\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+1 0x00/01 Manufacturer\+Access\+Control 
+
+A read on this register returns the Control bits.
+
+This Control Register is an I2C register, and the control bits are read back on register 0x00/0x01. These control bits are provided for backward compatibility/ease-\/of-\/use.
+
+
+\begin{DoxyItemize}
+\item SEC1 (Bit 14)\+: SECURITY Mode
+\item SEC0 (Bit 13)\+: SECURITY Mode
+\item AUTHCALM (Bit 12)\+: Automatic CALIBRATION mode
+\item Check\+Sum\+Valid (Bit 9)\+: Checksum Valid
+\item BTP\+\_\+\+INT (Bit 7)\+: Battery Trip Point Interrupt
+\item LDMD (Bit 3)\+: LOAD Mode
+\item R\+\_\+\+DIS (Bit 2)\+: Resistance Updates
+\item VOK (Bit 1)\+: Voltage OK for QMax Update
+\item QMax (Bit 0)\+: QMax Updates. This bit toggles after every QMax update
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} SEC1, SEC0 (Bits 14, 13)\+: SECURITY Mode -\/ doesn\textquotesingle{}t work correct!~\newline
+ It\textquotesingle{}s (0, 0) for Full Access but should be (1, 0).~\newline
+ Use function \char`\"{}12.\+2.\+30 Alt\+Manufacturer\+Access() 0x0054 Operation\+Status()\char`\"{} instead. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{std__data__commands_8cpp_a99e1df3aff21e73c4bd84365ef490cf1}\label{std__data__commands_8cpp_a99e1df3aff21e73c4bd84365ef490cf1}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!RelativeStateOfCharge@{RelativeStateOfCharge}}
+\index{RelativeStateOfCharge@{RelativeStateOfCharge}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{RelativeStateOfCharge()}{RelativeStateOfCharge()}}
+{\footnotesize\ttfamily word Relative\+State\+Of\+Charge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+23 0x2\+C/2D Relative\+State\+Of\+Charge 
+
+\begin{DoxyReturn}{Returns}
+the predicted remaining battery capacity as a percentage of \mbox{\hyperlink{std__data__commands_8cpp_a1ad98dba5c1618cbd5ef973095df6dff}{Full\+Charge\+Capacity()}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_a3129870e862bc7e7cfe911559689ff80}\label{std__data__commands_8cpp_a3129870e862bc7e7cfe911559689ff80}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!RemainingCapacity@{RemainingCapacity}}
+\index{RemainingCapacity@{RemainingCapacity}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{RemainingCapacity()}{RemainingCapacity()}}
+{\footnotesize\ttfamily word Remaining\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+9 0x10/11 Remaining\+Capacity 
+
+\begin{DoxyReturn}{Returns}
+the predicted remaining battery capacity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_a831b9b535ed3ef436d1fd1950a3c3e9e}\label{std__data__commands_8cpp_a831b9b535ed3ef436d1fd1950a3c3e9e}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!StateOfHealth@{StateOfHealth}}
+\index{StateOfHealth@{StateOfHealth}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{StateOfHealth()}{StateOfHealth()}}
+{\footnotesize\ttfamily word State\+Of\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+24 0x2\+E/2F State-\/of-\/\+Health (SOH) 
+
+\begin{DoxyReturn}{Returns}
+the state-\/of-\/health (SOH) information of the battery in percentage of design capacity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_a46c82120b621c4a0f268646f6bc4ef49}\label{std__data__commands_8cpp_a46c82120b621c4a0f268646f6bc4ef49}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{Temperature()}{Temperature()}}
+{\footnotesize\ttfamily float Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+4 0x06/07 Temperature 
+
+\begin{DoxyReturn}{Returns}
+an unsigned integer value of temperature in units ( 0.\+1 k) measured by the gas gauge, and is used for the gauging algorithm. It reports either Internal\+Temperature() or external thermistor temperature, depending on the setting of the \mbox{[}TEMPS\mbox{]} bit in Pack configuration. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}\label{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}} 
+\index{std\_data\_commands.cpp@{std\_data\_commands.cpp}!Voltage@{Voltage}}
+\index{Voltage@{Voltage}!std\_data\_commands.cpp@{std\_data\_commands.cpp}}
+\doxysubsubsection{\texorpdfstring{Voltage()}{Voltage()}}
+{\footnotesize\ttfamily float Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+1.\+5 0x08/09 Voltage 
+
+\begin{DoxyReturn}{Returns}
+the sum of the measured cell voltages. 
+\end{DoxyReturn}

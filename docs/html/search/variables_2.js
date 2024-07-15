@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['caption_447',['caption',['../struct_flag.html#ad0a0d7216099e80113154f40c09fca33',1,'Flag']]],
+  ['cell0_5fra_5fflag_448',['CELL0_RA_FLAG',['../class_d_f___a_d_d_r.html#ac6a5ca7a53f32aecaaa34b109415b062',1,'DF_ADDR']]],
+  ['cell1_5fra_5fflag_449',['CELL1_RA_FLAG',['../class_d_f___a_d_d_r.html#ac3126ad2d3507ffeb16cc232948e684f',1,'DF_ADDR']]],
+  ['cell_5fcurrent_5f1_450',['CELL_CURRENT_1',['../class_d_a___s_t_a_t_u_s__1.html#ad999b4aec3c11df27e6fc2143f6095e5',1,'DA_STATUS_1']]],
+  ['cell_5fcurrent_5f2_451',['CELL_CURRENT_2',['../class_d_a___s_t_a_t_u_s__1.html#abd797c62510d13b183ec638cd38b4f83',1,'DA_STATUS_1']]],
+  ['cell_5fpower_5f1_452',['CELL_POWER_1',['../class_d_a___s_t_a_t_u_s__1.html#a13f9bd1d6b0d043a0d6d9d23639655b6',1,'DA_STATUS_1']]],
+  ['cell_5fpower_5f2_453',['CELL_POWER_2',['../class_d_a___s_t_a_t_u_s__1.html#acd3422a3724cfa155101c1536ce37ec4',1,'DA_STATUS_1']]],
+  ['cell_5fvoltage_5f1_454',['CELL_VOLTAGE_1',['../class_d_a___s_t_a_t_u_s__1.html#a86ec103f08083fa500b1ea421d9f8e01',1,'DA_STATUS_1']]],
+  ['cell_5fvoltage_5f2_455',['CELL_VOLTAGE_2',['../class_d_a___s_t_a_t_u_s__1.html#ad0998dec972f5c7e49bfcd7b4965ebc5',1,'DA_STATUS_1']]],
+  ['charge_5fterm_5ftaper_5fcurrent_456',['CHARGE_TERM_TAPER_CURRENT',['../class_d_f___a_d_d_r.html#afcc327c6929a4cae32687ca4fdb9ec22',1,'DF_ADDR']]],
+  ['charging_5fcurrent_457',['CHARGING_CURRENT',['../class_std_commands.html#a40adac5c31172458d3809d557628bb0c',1,'StdCommands']]],
+  ['charging_5fstatus_458',['CHARGING_STATUS',['../class_alt_manufacturer_commands.html#a8b4769628755c6b39773aad5a8344cb9',1,'AltManufacturerCommands']]],
+  ['charging_5fvoltage_459',['CHARGING_VOLTAGE',['../class_std_commands.html#ab2eb9b44ab2cd4c040e4ed4488242bc7',1,'StdCommands']]],
+  ['checksum_5fand_5flength_5fsize_460',['CHECKSUM_AND_LENGTH_SIZE',['../class_block_protocol.html#aad4aed50ff3771149294937d45d6e4ed',1,'BlockProtocol']]],
+  ['checksum_5findex_461',['CHECKSUM_INDEX',['../class_block_protocol.html#afdd5441b96c571779b235534bbd72920',1,'BlockProtocol']]],
+  ['checksum_5fsize_462',['CHECKSUM_SIZE',['../class_block_protocol.html#a819c7269bd613e2552a7622bfe48483a',1,'BlockProtocol']]],
+  ['chemical_5fid_463',['CHEMICAL_ID',['../class_alt_manufacturer_commands.html#ab60fa13c8211296e4a8bdf998d33af2d',1,'AltManufacturerCommands']]],
+  ['chg_5ffet_464',['CHG_FET',['../class_alt_manufacturer_commands.html#aa4937eb062e83838f3445e959e00e9b1',1,'AltManufacturerCommands']]],
+  ['current_465',['CURRENT',['../class_std_commands.html#a004695335b4f35aa4864ce0a365cbf6e',1,'StdCommands']]],
+  ['cycle_5fcount_466',['CYCLE_COUNT',['../class_std_commands.html#aa900f9e2fa28dcda033239a38ae23caa',1,'StdCommands']]]
+];

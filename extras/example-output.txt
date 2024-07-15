@@ -1,0 +1,347 @@
+
+============ START: [BQ28Z610 Driver] ============
+License: MIT License
+Copyright (c) 2024 Oleksii Sylichenko
+==================================================
+
+=== Security mode: Unsealed
+
+Permanent Fail: Not detected
+=== 12.1.5 0x08/09 Voltage(): 7.476 V
+=== 12.1.7 0x0C/0D Current(): 0 mA
+=== 12.1.4 0x06/07 Temperature(): 32.0 °C
+=== 12.1.25 0x30/31 ChargingVoltage(): 0.000 V
+=== 12.1.26 0x32/33 ChargingCurrent(): 0 mA
+=== 12.1.27 0x3C/3D DesignCapacity(): 3400 mAh
+=== 12.1.10 0x12/13 FullChargeCapacity(): 2678 mAh
+=== 12.1.9 0x10/11 RemainingCapacity(): 1581 mAh
+=== 12.1.23 0x2C/2D RelativeStateOfCharge(): 60 %
+=== 12.1.6 0x0A/0B BatteryStatus()
+Bit 3:0: EC3,EC2,EC1,EC0: Error Code: OK
+FD (Bit 4): Fully Discharged: [Battery ok; Battery fully depleted]: 0
+FC (Bit 5): Fully Charged: [Battery not fully charged; Battery fully charged]: 0
+DSG (Bit 6): Discharging: [Battery is charging; Battery is discharging]: 1
+INIT (Bit 7): Initialization: [Inactive; Active]: 1
+RTA (Bit 8): Remaining Time Alarm: [Inactive; Active]: 0
+RCA (Bit 9): Remaining Capacity Alarm: [Inactive; Active]: 0
+TDA (Bit 11): Terminate Discharge Alarm: [Inactive; Active]: 0
+OTA (Bit 12): Overtemperature Alarm: [Inactive; Active]: 0
+TCA (Bit 14): Terminate Charge Alarm: [Inactive; Active]: 0
+OCA (Bit 15): Overcharged Alarm: [Inactive; Active]: 0
+
+=== 12.2.37 AltManufacturerAccess() 0x0071 DAStatus1
+Cell Voltage 1: 3.736 V
+Cell Voltage 2: 3.739 V
+BAT Voltage. Voltage at the VC2 (BAT) terminal: 7.476 V
+PACK Voltage: 7.225 V
+Cell Current 1. Simultaneous current measured during Cell Voltage1 measurement: 0 mA
+Cell Current 2. Simultaneous current measured during Cell Voltage2 measurement: 0 mA
+Cell Power 1. Calculated using Cell Voltage1 and Cell Current 1 data: 0 mW
+Cell Power 2. Calculated using Cell Voltage2 and Cell Current 2 data: 0 mW
+Power calculated by Voltage() × Current(): 0 mW
+Average Power. Calculated by Voltage() × AverageCurrent(): 0 mW
+
+=== 12.2.39 AltManufacturerAccess() 0x0073 ITStatus1
+AAaa: True Rem Q: 1593
+BBbb: True Rem E: 1094
+CCcc: Initial Q: 990
+DDdd: Initial E: 757
+EEee: TrueFullChgQ: 2583
+FFff: TrueFullChgE: 1851
+GGgg: T_sim: 3052
+HHhh: T_ambient: 3052
+IIii: RaScale 0: 1000
+JJjj: RaScale 1: 1000
+KKkk: CompRes1: 0
+LLll: CompRes2: 0
+
+=== 12.2.40 AltManufacturerAccess() 0x0074 ITStatus2
+AA: Pack Grid. Active pack grid point (only valid in discharge): 4
+BB: LStatus—Learned status of resistance table: 00001110
+= QMax Status: QMax and resistance table updated in learning cycle.
+= ITEN: IT enable: 1
+= QMax: QMax field updates: 1
+CC: Cell Grid 1. Active grid point of Cell1: 0
+DD: Cell Grid 2. Active grid point of Cell2: 0
+HHhhGGgg: State Time. Time passed since last state change (Discharge, Charge, Rest): 343905
+IIii: DOD0_1. Depth of discharge for Cell1: 6689
+JJjj: DOD0_2. Depth of discharge for Cell2: 6600
+KKkk: DOD0 Passed Q. Passed charge since DOD0: 0
+LLll: DOD0 Passed Energy. Passed energy since the last DOD0 update: 0
+MMmm: DOD0 Time. Time passed since the last DOD0 update: 8
+NNnn: DODEOC_1. Cell 1 DOD@EOC: 1344
+OOoo: DODEOC_2. Cell 2 DOD@EOC: 1200
+
+=== 12.2.41 AltManufacturerAccess() 0x0075 ITStatus3
+QMax 1. QMax of Cell 1: 3034 mAh
+QMax 2. QMax of Cell 2: 3039 mAh
+QMaxDOD0_1. Cell 1 DOD for Qmax: 14278
+QMaxDOD0_2. Cell 2 DOD for Qmax: 13965
+QMaxPassedQ. Passed charge since DOD for Qmax recorded (mAh): -1197
+QMaxTime. Time since DOD for Qmax recorded (hour / 16 units): 1911
+Tk. Thermal model 'k': 423
+Ta. Thermal model 'a': 6462
+RawDOD0_1. Cell 1 raw DOD0 measurement: 6704
+RawDOD0_2. Cell 2 raw DOD0 measurement: 6624
+
+=== 12.2.32 AltManufacturerAccess() 0x0056 GaugingStatus
+OCVFR (Bit 20): Open Circuit Voltage in Flat Region (during RELAX): 0
+LDMD (Bit 19): LOAD mode: 1
+RX (Bit 18): Resistance Update (Toggles after every resistance update): 0
+QMax (Bit 17): QMax Update (Toggles after every QMax update): 1
+VDQ (Bit 16): Discharge Qualified for Learning (based on RU flag): 1
+NSFM (Bit 15): Negative Scale Factor Mode: 0
+SLPQMax (Bit 13): QMax Update During Sleep: 0
+QEN (Bit 12): Impedance Track Gauging (Ra and QMax updates are enabled): 1
+VOK (Bit 11): Voltage OK for QMax Update: 1
+RDIS (Bit 10): Resistance Updates: 0
+REST (Bit 8): Rest: 1
+CF (Bit 7): Condition Flag: 0
+DSG (Bit 6): Discharge/Relax: 1
+EDV (Bit 5): End-of-Discharge Termination Voltage: 0
+BAL_EN (Bit 4): Cell Balancing: 1
+TC (Bit 3): Terminate Charge: 1
+TD (Bit 2): Terminate Discharge: 0
+FC (Bit 1): Fully Charged: 0
+FD (Bit 0): Fully Discharged: 0
+=== Device Name: ID1019-A-M26-28z610
+=== Design Capacity: 3400 mAh
+=== Design Capacity: 2448 cWh
+
+=== 12.1.4 0x06/07 Temperature(): 32.1 °C
+=== 12.1.5 0x08/09 Voltage(): 7.475 V
+=== 12.1.6 0x0A/0B BatteryStatus()
+Bit 3:0: EC3,EC2,EC1,EC0: Error Code: OK
+FD (Bit 4): Fully Discharged: [Battery ok; Battery fully depleted]: 0
+FC (Bit 5): Fully Charged: [Battery not fully charged; Battery fully charged]: 0
+DSG (Bit 6): Discharging: [Battery is charging; Battery is discharging]: 1
+INIT (Bit 7): Initialization: [Inactive; Active]: 1
+RTA (Bit 8): Remaining Time Alarm: [Inactive; Active]: 0
+RCA (Bit 9): Remaining Capacity Alarm: [Inactive; Active]: 0
+TDA (Bit 11): Terminate Discharge Alarm: [Inactive; Active]: 0
+OTA (Bit 12): Overtemperature Alarm: [Inactive; Active]: 0
+TCA (Bit 14): Terminate Charge Alarm: [Inactive; Active]: 0
+OCA (Bit 15): Overcharged Alarm: [Inactive; Active]: 0
+=== 12.1.7 0x0C/0D Current(): 0 mA
+=== 12.1.9 0x10/11 RemainingCapacity(): 1581 mAh
+=== 12.1.10 0x12/13 FullChargeCapacity(): 2678 mAh
+=== 12.1.11 0x14/15 AverageCurrent(): 0 mA
+=== 12.1.22 0x2A/2B CycleCount(): 103
+=== 12.1.23 0x2C/2D RelativeStateOfCharge(): 60 %
+=== 12.1.24 0x2E/2F State-of-Health (SOH): 76 %
+=== 12.1.25 0x30/31 ChargingVoltage(): 0.000 V
+=== 12.1.26 0x32/33 ChargingCurrent(): 0 mA
+=== 12.1.27 0x3C/3D DesignCapacity(): 3400 mAh
+
+=== 12.2.1 AltManufacturerAccess() 0x0001 Device Type: 0x2610
+
+=== 12.2.2 AltManufacturerAccess() 0x0002 Firmware Version
+Device Number: 0x2610
+Version: 0x0017
+Build number: 0x0016
+Firmware type: 0x00
+Impedance Track Version: 0x0385
+=== 12.2.3 AltManufacturerAccess() 0x0003 Hardware Version: 0x0006
+=== 12.2.6 AltManufacturerAccess() 0x0006 Chemical ID: 0x1352
+
+=== 12.2.26 AltManufacturerAccess() 0x0050 SafetyAlert
+0000000000100000
+0000000000000000
+
+=== 12.2.27 AltManufacturerAccess() 0x0051 SafetyStatus
+0000000000000000
+0000000000000000
+
+=== 12.2.28 AltManufacturerAccess() 0x0052 PFAlert
+0000000000000000
+0000000000000000
+
+=== 12.2.28 AltManufacturerAccess() 0x0052 PFAlert
+0000000000000000
+0000000000000000
+
+=== 12.2.30 AltManufacturerAccess() 0x0054 OperationStatus
+0000000000000000
+0100001010000010
+EMSHUT (Bit 29): Emergency FET Shutdown: 0
+CB (Bit 28): Cell Balancing: 0
+SLPCC (Bit 27): CC Measurement in SLEEP mode: 0
+SLPAD (Bit 26): ADC Measurement in SLEEP mode: 0
+SMBLCAL (Bit 25): Auto-offset calibration when Bus low is detected: 0
+INIT (Bit 24): Initialization after full reset: 0
+SLEEPM (Bit 23): SLEEP mode: 0
+XL (Bit 22): 400-kHz mode: 0
+CAL_OFFSET (Bit 21): Calibration Output (raw CC Offset data): 0
+CAL (Bit 20): Calibration Output (raw ADC and CC data): 0
+AUTHCALM (Bit 19): Auto CC Offset Calibration by MAC AutoCCOffset: 0
+AUTH (Bit 18): Authentication in progress: 0
+SDM (Bit 16): SHUTDOWN triggered via command: 0
+SLEEP (Bit 15): SLEEP mode conditions met: 0
+XCHG (Bit 14): Charging disabled: 1
+XDSG (Bit 13): Discharging disabled: 0
+PF (Bit 12): PERMANENT FAILURE mode status: 0
+SS (Bit 11): SAFETY mode status: 0
+SDV (Bit 10): SHUTDOWN triggered via low pack voltage: 0
+SEC1 (Bit 9): 1
+SEC0 (Bit 8): 0
+BTP_INT (Bit 7): Battery Trip Point (BTP) Interrupt output: 1
+CHG (Bit 2): CHG FET status: 0
+DSG (Bit 1): DSG FET status: 1
+
+=== 12.2.31 AltManufacturerAccess() 0x0055 ChargingStatus
+0100010000010000
+VCT (Bit 15): Charge Termination: 0
+MCHG (Bit 14): Maintenance Charge: 1
+SU (Bit 13): Charge Suspend: 0
+IN (Bit 12): Charge Inhibit: 0
+HV (Bit 11): High Voltage Region: 0
+MV (Bit 10): Mid Voltage Region: 1
+LV (Bit 9): Low Voltage Region: 0
+PV (Bit 8): Precharge Voltage Region: 0
+OT (Bit 6): Over Temperature Region: 0
+HT (Bit 5): High Temperature Region: 0
+STH (Bit 4): Standard Temperature High Region: 1
+RT (Bit 3): Room Temperature Region: 0
+STL (Bit 2): Standard Temperature Low Region: 0
+LT (Bit 1): Low Temperature Region: 0
+UT (Bit 0): Under Temperature Region: 0
+
+=== 12.2.32 AltManufacturerAccess() 0x0056 GaugingStatus
+OCVFR (Bit 20): Open Circuit Voltage in Flat Region (during RELAX): 0
+LDMD (Bit 19): LOAD mode: 1
+RX (Bit 18): Resistance Update (Toggles after every resistance update): 0
+QMax (Bit 17): QMax Update (Toggles after every QMax update): 1
+VDQ (Bit 16): Discharge Qualified for Learning (based on RU flag): 1
+NSFM (Bit 15): Negative Scale Factor Mode: 0
+SLPQMax (Bit 13): QMax Update During Sleep: 0
+QEN (Bit 12): Impedance Track Gauging (Ra and QMax updates are enabled): 1
+VOK (Bit 11): Voltage OK for QMax Update: 1
+RDIS (Bit 10): Resistance Updates: 0
+REST (Bit 8): Rest: 1
+CF (Bit 7): Condition Flag: 0
+DSG (Bit 6): Discharge/Relax: 1
+EDV (Bit 5): End-of-Discharge Termination Voltage: 0
+BAL_EN (Bit 4): Cell Balancing: 1
+TC (Bit 3): Terminate Charge: 1
+TD (Bit 2): Terminate Discharge: 0
+FC (Bit 1): Fully Charged: 0
+FD (Bit 0): Fully Discharged: 0
+
+=== 12.2.33 AltManufacturerAccess() 0x0057 ManufacturingStatus
+CAL_EN (Bit 15) CALIBRATION Mode: 0
+PF_EN (Bit 6) Permanent Failure Mode: 1
+LF_EN (Bit 5) Lifetime Data Collection Mode: 1
+FET_EN (Bit 4) All FET Action Mode: 1
+GAUGE_EN (Bit 3) Gas Gauging Mode: 1
+DSG_TEST (Bit 2)Discharge FET Test: 0
+CHG_TEST (Bit 1) Charge FET Test: 0
+
+=== 12.2.37 AltManufacturerAccess() 0x0071 DAStatus1
+Cell Voltage 1: 3.736 V
+Cell Voltage 2: 3.739 V
+BAT Voltage. Voltage at the VC2 (BAT) terminal: 7.478 V
+PACK Voltage: 7.225 V
+Cell Current 1. Simultaneous current measured during Cell Voltage1 measurement: 0 mA
+Cell Current 2. Simultaneous current measured during Cell Voltage2 measurement: 0 mA
+Cell Power 1. Calculated using Cell Voltage1 and Cell Current 1 data: 0 mW
+Cell Power 2. Calculated using Cell Voltage2 and Cell Current 2 data: 0 mW
+Power calculated by Voltage() × Current(): 0 mW
+Average Power. Calculated by Voltage() × AverageCurrent(): 0 mW
+
+=== 12.2.39 AltManufacturerAccess() 0x0073 ITStatus1
+AAaa: True Rem Q: 1593
+BBbb: True Rem E: 1094
+CCcc: Initial Q: 990
+DDdd: Initial E: 757
+EEee: TrueFullChgQ: 2583
+FFff: TrueFullChgE: 1851
+GGgg: T_sim: 3052
+HHhh: T_ambient: 3051
+IIii: RaScale 0: 1000
+JJjj: RaScale 1: 1000
+KKkk: CompRes1: 0
+LLll: CompRes2: 0
+
+=== 12.2.40 AltManufacturerAccess() 0x0074 ITStatus2
+AA: Pack Grid. Active pack grid point (only valid in discharge): 4
+BB: LStatus—Learned status of resistance table: 00001110
+= QMax Status: QMax and resistance table updated in learning cycle.
+= ITEN: IT enable: 1
+= QMax: QMax field updates: 1
+CC: Cell Grid 1. Active grid point of Cell1: 0
+DD: Cell Grid 2. Active grid point of Cell2: 0
+HHhhGGgg: State Time. Time passed since last state change (Discharge, Charge, Rest): 343914
+IIii: DOD0_1. Depth of discharge for Cell1: 6689
+JJjj: DOD0_2. Depth of discharge for Cell2: 6600
+KKkk: DOD0 Passed Q. Passed charge since DOD0: 0
+LLll: DOD0 Passed Energy. Passed energy since the last DOD0 update: 0
+MMmm: DOD0 Time. Time passed since the last DOD0 update: 8
+NNnn: DODEOC_1. Cell 1 DOD@EOC: 1344
+OOoo: DODEOC_2. Cell 2 DOD@EOC: 1200
+
+=== 12.2.41 AltManufacturerAccess() 0x0075 ITStatus3
+QMax 1. QMax of Cell 1: 3034 mAh
+QMax 2. QMax of Cell 2: 3039 mAh
+QMaxDOD0_1. Cell 1 DOD for Qmax: 14278
+QMaxDOD0_2. Cell 2 DOD for Qmax: 13965
+QMaxPassedQ. Passed charge since DOD for Qmax recorded (mAh): -1197
+QMaxTime. Time since DOD for Qmax recorded (hour / 16 units): 1911
+Tk. Thermal model 'k': 423
+Ta. Thermal model 'a': 6462
+RawDOD0_1. Cell 1 raw DOD0 measurement: 6704
+RawDOD0_2. Cell 2 raw DOD0 measurement: 6624
+
+
+=== 2.2 Cell Undervoltage Protection:
+SafetyAlert()[CUV]: 0
+SafetyStatus()[CUV]: 0
+BatteryStatus()[TDA]: 0
+BatteryStatus()[FD]: 0
+BatteryStatus()[TDA]: 0
+OperationStatus()[XDSG]: 0
+
+=== 2.6.2 Short Circuit in Charge Protection:
+SafetyAlert()[ASCC]: 0
+SafetyStatus()[ASCC]: 0
+BatteryStatus()[TCA]: 0
+OperationStatus()[XCHG]: 1
+
+=== 2.6.3 Short Circuit in Discharge Protection:
+SafetyAlert()[ASCD]: 0
+SafetyStatus()[ASCD]: 0
+OperationStatus()[XDSG]: 0
+
+=== 2.8 Overtemperature in Charge Protection
+=== 12.1.4 0x06/07 Temperature(): 32.0 °C
+=== 12.1.25 0x30/31 ChargingVoltage(): 0.000 V
+=== 12.1.26 0x32/33 ChargingCurrent(): 0 mA
+SafetyAlert()[OTC]: 0
+SafetyStatus()[OTC]: 0
+BatteryStatus()[OTA]: 0
+BatteryStatus()[TCA]: 0
+OperationStatus()[XCHG]: 1
+
+OTCThreshold: 46.0 °C
+OTCRecovery: 37.0 °C
+
+=== 3 Permanent Fail
+OperationStatus()[PF]: 0
+BatteryStatus()[TCA]: 0
+BatteryStatus()[TDA]: 0
+ChargingCurrent(): 0 mA
+ChargingVoltage(): 0.000 V
+
+Permanent Fail: Not detected
+batteryStatus: 192
+manufacturingStatus: 120
+operationStatus: 17026
+safetyStatus: 0
+safetyAlert: 2097152
+controlRegister: 16907
+chargingCurrent: 0
+chargingVoltage: 0.00
+fullChargeCapacity: 2678.00
+designCapacity: 3400.00
+
+DONE #####################
+

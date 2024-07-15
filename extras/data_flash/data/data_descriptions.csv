@@ -1,0 +1,404 @@
+Address;Data format;Description
+0x4000;I2;Calibration / Voltage / Cell Gain
+0x4002;U2;Calibration / Voltage / Pack Gain
+0x4004;U2;Calibration / Voltage / BAT Gain
+0x4006;F4;Calibration / Current / CC Gain
+0x400A;F4;Calibration / Current / Capacity Gain
+0x400E;I2;Calibration / Current Offset / CC Offset
+0x4010;U2;Calibration / Current Offset / Coulomb Counter Offset Samples
+0x4012;I2;Calibration / Current Offset / Board Offset
+0x40C0;H1;Calibration / Current Offset / CC Auto Config
+0x40C1;I2;Calibration / Current Offset / CC Auto Offset
+0x4014;I1;Calibration / Temperature / Internal Temp Offset
+0x4015;I1;Calibration / Temperature / External1 Temp Offset
+0x4400;I2;Calibration / Internal Temp Model / Int Gain
+0x4402;I2;Calibration / Internal Temp Model / Int base offset
+0x4404;I2;Calibration / Internal Temp Model / Int Minimum AD
+0x4406;I2;Calibration / Internal Temp Model / Int Maximum Temp
+0x4408;I2;Calibration / Cell Temperature Model / Coeff a1
+0x440A;I2;Calibration / Cell Temperature Model / Coeff a2
+0x440C;I2;Calibration / Cell Temperature Model / Coeff a3
+0x440E;I2;Calibration / Cell Temperature Model / Coeff a4
+0x4410;I2;Calibration / Cell Temperature Model / Coeff a5
+0x4412;I2;Calibration / Cell Temperature Model / Coeff b1
+0x4414;I2;Calibration / Cell Temperature Model / Coeff b2
+0x4416;I2;Calibration / Cell Temperature Model / Coeff b3
+0x4418;I2;Calibration / Cell Temperature Model / Coeff b4
+0x441A;I2;Calibration / Cell Temperature Model / Rc0
+0x441C;I2;Calibration / Cell Temperature Model / Adc0
+0x441E;I2;Calibration / Cell Temperature Model / Rpad
+0x4420;I2;Calibration / Cell Temperature Model / Rint
+0x4446;U1;Calibration / Current Deadband / Deadband
+0x4447;U1;Calibration / Current Deadband / Coulomb Counter Deadband
+0x46AE;H1;Settings / Protection / Protection Configuration
+0x46AF;H1;Settings / Protection / Enabled Protections A
+0x46B0;H1;Settings / Protection / Enabled Protections B
+0x46B1;H1;Settings / Protection / Enabled Protections C
+0x46B2;H1;Settings / Protection / Enabled Protections D
+0x46FC;H1;Settings / Permanent Failure / Enabled PF A
+0x46FD;H1;Settings / Permanent Failure / Enabled PF B
+0x46FE;H1;Settings / Permanent Failure / Enabled PF C
+0x4600;H1;Settings / Configuration / FET Options
+0x4601;H1;Settings / Configuration / I2C Gauging Configuration
+0x4602;H1;Settings / Configuration / I2C Configuration
+0x4604;H1;Settings / Configuration / Power Config
+0x4605;H1;Settings / Configuration / IO Config
+0x4632;H2;Settings / Configuration / SOC Flag Config A
+0x4634;H1;Settings / Configuration / SOC Flag Config B
+0x464D;H2;Settings / Configuration / IT Gauging Configuration
+0x465E;H1;Settings / Configuration / Charging Configuration
+0x469A;H1;Settings / Configuration / Temperature Enable
+0x469B;H1;Settings / Configuration / DA Configuration
+0x470A;H1;Settings / Configuration / Balancing Configuration
+0x469D;H1;Settings / AFE / AFE Protection Control
+0x46A3;I2;Settings / AFE / ZVCHG Exit Threshold
+0x4606;I2;Settings / BTP / Init Discharge Set
+0x4608;I2;Settings / BTP / Init Charge Set
+0x4624;H1;Settings / Charger / Device Address
+0x4625;H1;Settings / Charger / Voltage Register
+0x4626;H1;Settings / Charger / Current Register
+0x4629;U1;Settings / Charger / Broadcast Pacing
+0x43C0;H2;Settings / Manufacturing / Mfg Status init
+0x46B3;I2;Protections / CUV / Threshold
+0x46B5;U1;Protections / CUV / Delay
+0x46B6;I2;Protections / CUV / Recovery
+0x46B8;I2;Protections / COV / Threshold Low Temp
+0x46BA;I2;Protections / COV / Threshold Standard Temp
+0x46BC;I2;Protections / COV / Threshold High Temp
+0x46BE;I2;Protections / COV / Threshold Rec Temp
+0x46C0;U1;Protections / COV / Delay
+0x46C1;I2;Protections / COV / Recovery Low Temp
+0x46C3;I2;Protections / COV / Recovery Standard Temp
+0x46C5;I2;Protections / COV / Recovery High Temp
+0x46C7;I2;Protections / COV / Recovery Rec Temp
+0x46C9;I2;Protections / OCC / Threshold
+0x46CB;U1;Protections / OCC / Delay
+0x46CC;I2;Protections / OCC / Recovery Threshold
+0x46CE;U1;Protections / OCC / Recovery Delay
+0x46CF;I2;Protections / OCD / Threshold
+0x46D1;U1;Protections / OCD / Delay
+0x46D2;I2;Protections / OCD / Recovery Threshold
+0x46D4;U1;Protections / OCD / Recovery Delay
+0x469E;H1;Protections / AOLD / Threshold
+0x46D5;U1;Protections / AOLD / Recovery
+0x469F;H1;Protections / ASCC / Threshold
+0x46D6;U1;Protections / ASCC / Recovery
+0x46A0;H1;Protections / ASCD / Threshold 1
+0x46A1;H1;Protections / ASCD / Threshold 2
+0x46D7;U1;Protections / ASCD / Recovery
+0x46D8;I2;Protections / OTC / Threshold
+0x46DA;U1;Protections / OTC / Delay
+0x46DB;I2;Protections / OTC / Recovery
+0x46DD;I2;Protections / OTD / Threshold
+0x46DF;U1;Protections / OTD / Delay
+0x46E0;I2;Protections / OTD / Recovery
+0x46E2;I2;Protections / UTC / Threshold
+0x46E4;U1;Protections / UTC / Delay
+0x46E5;I2;Protections / UTC / Recovery
+0x46E7;I2;Protections / UTD / Threshold
+0x46E9;U1;Protections / UTD / Delay
+0x46EA;I2;Protections / UTD / Recovery
+0x46EC;I2;Protections / PTO / Charge Threshold
+0x46EE;I2;Protections / PTO / Suspend Threshold
+0x46F0;U2;Protections / PTO / Delay
+0x46F2;I2;Protections / PTO / Reset
+0x46F4;I2;Protections / CTO / Charge Threshold
+0x46F6;I2;Protections / CTO / Suspend Threshold
+0x46F8;U2;Protections / CTO / Delay
+0x46FA;I2;Protections / CTO / Reset
+0x4700;I2;Permanent Fail / SOV / Threshold
+0x4702;U1;Permanent Fail / SOV / Delay
+0x4703;I2;Permanent Fail / CFET / OFF Threshold
+0x4705;U1;Permanent Fail / CFET / OFF Delay
+0x4706;I2;Permanent Fail / DFET / OFF Threshold
+0x4708;U1;Permanent Fail / DFET / OFF Delay
+0x4715;I2;Permanent Fail / VIMR / Check Voltage
+0x4717;I2;Permanent Fail / VIMR / Check Current
+0x4719;I2;Permanent Fail / VIMR / Delta Threshold
+0x471B;U1;Permanent Fail / VIMR / Delta Delay
+0x471C;U2;Permanent Fail / VIMR / Duration
+0x471E;I2;Permanent Fail / VIMA / Check Voltage
+0x4720;I2;Permanent Fail / VIMA / Check Current
+0x4722;I2;Permanent Fail / VIMA / Delta Threshold
+0x4724;U1;Permanent Fail / VIMA / Delta Delay
+0x465F;I1;Advanced Charge Algorithm / Temperature Ranges / T1 Temp
+0x4660;I1;Advanced Charge Algorithm / Temperature Ranges / T2 Temp
+0x4661;I1;Advanced Charge Algorithm / Temperature Ranges / T5 Temp
+0x4662;I1;Advanced Charge Algorithm / Temperature Ranges / T6 Temp
+0x4663;I1;Advanced Charge Algorithm / Temperature Ranges / T3 Temp
+0x4664;I1;Advanced Charge Algorithm / Temperature Ranges / T4 Temp
+0x4665;I1;Advanced Charge Algorithm / Temperature Ranges / Hysteresis Temp
+0x4666;I2;Advanced Charge Algorithm / Low Temp Charging / Voltage
+0x4668;I2;Advanced Charge Algorithm / Low Temp Charging / Current Low
+0x466A;I2;Advanced Charge Algorithm / Low Temp Charging / Current Med
+0x466C;I2;Advanced Charge Algorithm / Low Temp Charging / Current High
+0x466E;I2;Advanced Charge Algorithm / Standard Temp Charging / Voltage
+0x4670;I2;Advanced Charge Algorithm / Standard Temp Charging / Current Low
+0x4672;I2;Advanced Charge Algorithm / Standard Temp Charging / Current Med
+0x4674;I2;Advanced Charge Algorithm / Standard Temp Charging / Current High
+0x4676;I2;Advanced Charge Algorithm / High Temp Charging / Voltage
+0x4678;I2;Advanced Charge Algorithm / High Temp Charging / Current Low
+0x467A;I2;Advanced Charge Algorithm / High Temp Charging / Current Med
+0x467C;I2;Advanced Charge Algorithm / High Temp Charging / Current High
+0x467E;I2;Advanced Charge Algorithm / Rec Temp Charging / Voltage
+0x4680;I2;Advanced Charge Algorithm / Rec Temp Charging / Current Low
+0x4682;I2;Advanced Charge Algorithm / Rec Temp Charging / Current Med
+0x4684;I2;Advanced Charge Algorithm / Rec Temp Charging / Current High
+0x4686;I2;Advanced Charge Algorithm / Pre-Charging / Current
+0x4688;I2;Advanced Charge Algorithm / Maintenance Charging / Current
+0x468A;I2;Advanced Charge Algorithm / Voltage Range / Precharge Start Voltage
+0x468C;I2;Advanced Charge Algorithm / Voltage Range / Charging Voltage Low
+0x468E;I2;Advanced Charge Algorithm / Voltage Range / Charging Voltage Med
+0x4690;I2;Advanced Charge Algorithm / Voltage Range / Charging Voltage High
+0x4692;U1;Advanced Charge Algorithm / Voltage Range / Charging Voltage Hysteresis
+0x4693;I2;Advanced Charge Algorithm / Termination Config / Charge Term Taper Current
+0x4697;I2;Advanced Charge Algorithm / Termination Config / Charge Term Voltage
+0x470B;U2;Advanced Charge Algorithm / Cell Balancing Config / Bal Time/mAh Cell 1
+0x470D;U2;Advanced Charge Algorithm / Cell Balancing Config / Bal Time/mAh Cell 2
+0x470F;U1;Advanced Charge Algorithm / Cell Balancing Config / Min Start Balance Delta
+0x4710;U4;Advanced Charge Algorithm / Cell Balancing Config / Relax Balance Interval
+0x4714;U1;Advanced Charge Algorithm / Cell Balancing Config / Min Rsoc for Balancing
+0x46A6;I2;Gas Gauging / Current Thresholds / Dsg Current Threshold
+0x46A8;I2;Gas Gauging / Current Thresholds / Chg Current Threshold
+0x46AA;I2;Gas Gauging / Current Thresholds / Quit Current
+0x46AC;U1;Gas Gauging / Current Thresholds / Dsg Relax Time
+0x46AD;U1;Gas Gauging / Current Thresholds / Chg Relax Time
+0x461D;I2;Gas Gauging / Standby / StandbyCurrent
+0x461F;I2;Gas Gauging / Max Load / Max Load Current
+0x4621;U1;Gas Gauging / Max Load / Max Load Rsoc
+0x462A;I2;Gas Gauging / Design / Design Capacity mAh
+0x462C;I2;Gas Gauging / Design / Design Capacity cWh
+0x462E;I2;Gas Gauging / Design / Design Voltage
+0x4630;U1;Gas Gauging / Cycle / Cycle Count Percentage
+0x4635;I2;Gas Gauging / FD / Set Voltage Threshold
+0x4637;I2;Gas Gauging / FD / Clear Voltage Threshold
+0x4639;U1;Gas Gauging / FD / Set % RSOC Threshold
+0x463A;U1;Gas Gauging / FD / Clear % RSOC Threshold
+0x463B;I2;Gas Gauging / FC / Set Voltage Threshold
+0x463D;I2;Gas Gauging / FC / Clear Voltage Threshold
+0x463F;U1;Gas Gauging / FC / Set % RSOC Threshold
+0x4640;U1;Gas Gauging / FC / Clear % RSOC Threshold
+0x4641;I2;Gas Gauging / TD / Set Voltage Threshold
+0x4643;I2;Gas Gauging / TD / Clear Voltage Threshold
+0x4645;U1;Gas Gauging / TD / Set % RSOC Threshold
+0x4646;U1;Gas Gauging / TD / Clear % RSOC Threshold
+0x4647;I2;Gas Gauging / TC / Set Voltage Threshold
+0x4649;I2;Gas Gauging / TC / Clear Voltage Threshold
+0x464B;U1;Gas Gauging / TC / Set % RSOC Threshold
+0x464C;U1;Gas Gauging / TC / Clear % RSOC Threshold
+0x4206;I2;Gas Gauging / State / Qmax Cell 1
+0x4208;I2;Gas Gauging / State / Qmax Cell 2
+0x420A;I2;Gas Gauging / State / Qmax Pack
+0x420C;U2;Gas Gauging / State / Qmax Cycle Count
+0x420E;H1;Gas Gauging / State / Update Status
+0x420F;I2;Gas Gauging / State / Cell 1 Chg Voltage at EoC
+0x4211;I2;Gas Gauging / State / Cell 2 Chg Voltage at EoC
+0x4213;I2;Gas Gauging / State / Current at EoC
+0x4215;I2;Gas Gauging / State / Avg I Last Run
+0x4217;I2;Gas Gauging / State / Avg P Last Run
+0x4219;I2;Gas Gauging / State / Delta Voltage
+0x421B;I2;Gas Gauging / State / Temp k
+0x421D;I2;Gas Gauging / State / Temp a
+0x421F;I2;Gas Gauging / State / Max Avg I Last Run
+0x4221;I2;Gas Gauging / State / Max Avg P Last Run
+0x4725;I2;Gas Gauging / State / SOH Temp k
+0x4727;I2;Gas Gauging / State / SOH Temp a
+0x4240;U2;Gas Gauging / State / Cycle Count
+0x4200;I2;Gas Gauging / IT Cfg / Design Resistance
+0x4202;I2;Gas Gauging / IT Cfg / Pack Resistance
+0x4204;I2;Gas Gauging / IT Cfg / System Resistance
+0x458E;U2;Gas Gauging / IT Cfg / Ra Filter
+0x4591;U1;Gas Gauging / IT Cfg / Ra Max Delta
+0x4594;U2;Gas Gauging / IT Cfg / Resistance Parameter Filter
+0x4596;U2;Gas Gauging / IT Cfg / Near EDV Ra Param Filter
+0x45BC;U1;Gas Gauging / IT Cfg / Qmax Delta
+0x45BD;U1;Gas Gauging / IT Cfg / Qmax Upper Bound
+0x45BE;I2;Gas Gauging / IT Cfg / Term Voltage
+0x45C0;U1;Gas Gauging / IT Cfg / Term V Hold Time
+0x45C1;I2;Gas Gauging / IT Cfg / Term Voltage Delta
+0x45C3;I2;Gas Gauging / IT Cfg / Term Min Cell V
+0x45CC;U1;Gas Gauging / IT Cfg / Max Simulation Iterations
+0x45DD;U1;Gas Gauging / IT Cfg / Fast Scale Start SOC
+0x45E6;I2;Gas Gauging / IT Cfg / Min Delta Voltage
+0x4651;U1;Gas Gauging / IT Cfg / Load Select
+0x4652;U1;Gas Gauging / IT Cfg / Load Mode
+0x4653;I2;Gas Gauging / IT Cfg / User Rate-mA
+0x4655;I2;Gas Gauging / IT Cfg / User Rate-cW
+0x4657;I2;Gas Gauging / IT Cfg / Reserve Cap-mAh
+0x4659;I2;Gas Gauging / IT Cfg / Reserve Cap-cWh
+0x465B;I2;Gas Gauging / Smoothing / Smooth Relax Time
+0x45E8;U1;Gas Gauging / SoH / SoH Load Rate
+0x460A;I2;Power / Power / Valid Update Voltage
+0x460C;I2;Power / Shutdown / Shutdown Voltage
+0x460E;U1;Power / Shutdown / Shutdown Time
+0x460F;I2;Power / Shutdown / Charger Present Threshold
+0x4611;I2;Power / Sleep / Sleep Current
+0x4613;U1;Power / Sleep / Bus Timeout
+0x4618;U1;Power / Sleep / Voltage Time
+0x4619;U1;Power / Sleep / Current Time
+0x461A;H1;Power / Sleep / Wake Comparator
+0x461B;U1;Power / Ship / FET Off Time
+0x461C;U1;Power / Ship / Delay
+0x4622;U2;Power / Ship / Auto Ship Time
+0x42C0;H1;PF Status / Device Status Data / Safety Alert A
+0x42C1;H1;PF Status / Device Status Data / Safety Status A
+0x42C2;H1;PF Status / Device Status Data / Safety Alert B
+0x42C3;H1;PF Status / Device Status Data / Safety Status B
+0x42C4;H1;PF Status / Device Status Data / Safety Alert C
+0x42C5;H1;PF Status / Device Status Data / Safety Status C
+0x42C6;H1;PF Status / Device Status Data / Safety Alert D
+0x42C7;H1;PF Status / Device Status Data / Safety Status D
+0x42C8;H1;PF Status / Device Status Data / PF Alert A
+0x42C9;H1;PF Status / Device Status Data / PF Status A
+0x42CA;H1;PF Status / Device Status Data / PF Alert B
+0x42CB;H1;PF Status / Device Status Data / PF Status B
+0x42CF;H1;PF Status / Device Status Data / PF Status D
+0x42D0;H2;PF Status / Device Status Data / Operation Status A
+0x42D2;H2;PF Status / Device Status Data / Operation Status B
+0x42D4;H1;PF Status / Device Status Data / Temp Range
+0x42D5;H1;PF Status / Device Status Data / Charging Status A
+0x42D6;H1;PF Status / Device Status Data / Charging Status B
+0x42D7;H1;PF Status / Device Status Data / Gauging Status
+0x42D8;H2;PF Status / Device Status Data / IT Status
+0x42DA;I2;PF Status / Device Voltage Data / Cell 1 Voltage
+0x42DC;I2;PF Status / Device Voltage Data / Cell 2 Voltage
+0x42DE;I2;PF Status / Device Voltage Data / Battery Direct Voltage
+0x42E0;I2;PF Status / Device Voltage Data / Pack Voltage
+0x42E2;I2;PF Status / Device Current Data / Current
+0x42E4;I2;PF Status / Device Temperature Data / Internal Temperature
+0x42E6;I2;PF Status / Device Temperature Data / External 1 Temperature
+0x42E8;I2;PF Status / Device Temperature Data / External 2 Temperature
+0x42EA;I2;PF Status / Device Gauging Data / Cell 1 Dod0
+0x42EC;I2;PF Status / Device Gauging Data / Cell 2 Dod0
+0x42EE;I2;PF Status / Device Gauging Data / Passed Charge
+0x42F0;H1;PF Status / AFE Regs / AFE Interrupt Status
+0x42F1;H1;PF Status / AFE Regs / AFE FET Status
+0x42F2;H1;PF Status / AFE Regs / AFE RXIN
+0x42F3;H1;PF Status / AFE Regs / AFE Latch Status
+0x42F4;H1;PF Status / AFE Regs / AFE Interrupt Enable
+0x42F5;H1;PF Status / AFE Regs / AFE FET Control
+0x42F6;H1;PF Status / AFE Regs / AFE RXIEN
+0x42F7;H1;PF Status / AFE Regs / AFE RLOUT
+0x42F8;H1;PF Status / AFE Regs / AFE RHOUT
+0x42F9;H1;PF Status / AFE Regs / AFE RHINT
+0x42FA;H1;PF Status / AFE Regs / AFE Cell Balance
+0x42FB;H1;PF Status / AFE Regs / AFE AD/CC Control
+0x42FC;H1;PF Status / AFE Regs / AFE ADC Mux
+0x42FD;H1;PF Status / AFE Regs / AFE LED Output
+0x42FE;H1;PF Status / AFE Regs / AFE State Control
+0x42FF;H1;PF Status / AFE Regs / AFE LED/Wake Control
+0x4300;H1;PF Status / AFE Regs / AFE Protection Control
+0x4301;H1;PF Status / AFE Regs / AFE OCD
+0x4302;H1;PF Status / AFE Regs / AFE SCC
+0x4303;H1;PF Status / AFE Regs / AFE SCD1
+0x4304;H1;PF Status / AFE Regs / AFE SCD2
+0x4041;H1;System Data / Manufacturer Data / Manufacturer Info Block A01
+0x4042;H1;System Data / Manufacturer Data / Manufacturer Info Block A02
+0x4043;H1;System Data / Manufacturer Data / Manufacturer Info Block A03
+0x4044;H1;System Data / Manufacturer Data / Manufacturer Info Block A04
+0x4045;H1;System Data / Manufacturer Data / Manufacturer Info Block A05
+0x4046;H1;System Data / Manufacturer Data / Manufacturer Info Block A06
+0x4047;H1;System Data / Manufacturer Data / Manufacturer Info Block A07
+0x4048;H1;System Data / Manufacturer Data / Manufacturer Info Block A08
+0x4049;H1;System Data / Manufacturer Data / Manufacturer Info Block A09
+0x404A;H1;System Data / Manufacturer Data / Manufacturer Info Block A10
+0x404B;H1;System Data / Manufacturer Data / Manufacturer Info Block A11
+0x404C;H1;System Data / Manufacturer Data / Manufacturer Info Block A12
+0x404D;H1;System Data / Manufacturer Data / Manufacturer Info Block A13
+0x404E;H1;System Data / Manufacturer Data / Manufacturer Info Block A14
+0x404F;H1;System Data / Manufacturer Data / Manufacturer Info Block A15
+0x4050;H1;System Data / Manufacturer Data / Manufacturer Info Block A16
+0x4051;H1;System Data / Manufacturer Data / Manufacturer Info Block A17
+0x4052;H1;System Data / Manufacturer Data / Manufacturer Info Block A18
+0x4053;H1;System Data / Manufacturer Data / Manufacturer Info Block A19
+0x4054;H1;System Data / Manufacturer Data / Manufacturer Info Block A20
+0x4055;H1;System Data / Manufacturer Data / Manufacturer Info Block A21
+0x4056;H1;System Data / Manufacturer Data / Manufacturer Info Block A22
+0x4057;H1;System Data / Manufacturer Data / Manufacturer Info Block A23
+0x4058;H1;System Data / Manufacturer Data / Manufacturer Info Block A24
+0x4059;H1;System Data / Manufacturer Data / Manufacturer Info Block A25
+0x405A;H1;System Data / Manufacturer Data / Manufacturer Info Block A26
+0x405B;H1;System Data / Manufacturer Data / Manufacturer Info Block A27
+0x405C;H1;System Data / Manufacturer Data / Manufacturer Info Block A28
+0x405D;H1;System Data / Manufacturer Data / Manufacturer Info Block A29
+0x405E;H1;System Data / Manufacturer Data / Manufacturer Info Block A30
+0x405F;H1;System Data / Manufacturer Data / Manufacturer Info Block A31
+0x4060;H1;System Data / Manufacturer Data / Manufacturer Info Block A32
+0x4061;H2;System Data / Integrity / Static DF Signature
+0x4063;H2;System Data / Integrity / Static Chem DF Signature
+0x4065;H2;System Data / Integrity / All DF Signature
+0x4067;U2;I2C Configuration / Data / Manufacture Date
+0x4069;H2;I2C Configuration / Data / Serial Number
+0x406B;S21;I2C Configuration / Data / Manufacturer Name
+0x4080;S21;I2C Configuration / Data / Device Name
+0x4095;S5;I2C Configuration / Data / Device Chemistry
+0x4280;I2;Lifetimes / Voltage / Cell 1 Max Voltage
+0x4282;I2;Lifetimes / Voltage / Cell 2 Max Voltage
+0x4284;I2;Lifetimes / Current / Max Charge Current
+0x4286;I2;Lifetimes / Current / Max Discharge Current
+0x4288;I1;Lifetimes / Temperature / Max Temp Cell
+0x4289;I1;Lifetimes / Temperature / Min Temp Cell
+0x4100;H2;Ra Table / R_a0 / Cell0 R_a flag
+0x4102;I2;Ra Table / R_a0 / Cell0 R_a 0
+0x4104;I2;Ra Table / R_a0 / Cell0 R_a 1
+0x4106;I2;Ra Table / R_a0 / Cell0 R_a 2
+0x4108;I2;Ra Table / R_a0 / Cell0 R_a 3
+0x410A;I2;Ra Table / R_a0 / Cell0 R_a 4
+0x410C;I2;Ra Table / R_a0 / Cell0 R_a 5
+0x410E;I2;Ra Table / R_a0 / Cell0 R_a 6
+0x4110;I2;Ra Table / R_a0 / Cell0 R_a 7
+0x4112;I2;Ra Table / R_a0 / Cell0 R_a 8
+0x4114;I2;Ra Table / R_a0 / Cell0 R_a 9
+0x4116;I2;Ra Table / R_a0 / Cell0 R_a 10
+0x4118;I2;Ra Table / R_a0 / Cell0 R_a 11
+0x411A;I2;Ra Table / R_a0 / Cell0 R_a 12
+0x411C;I2;Ra Table / R_a0 / Cell0 R_a 13
+0x411E;I2;Ra Table / R_a0 / Cell0 R_a 14
+0x4140;H2;Ra Table / R_a1 / Cell1 R_a flag
+0x4142;I2;Ra Table / R_a1 / Cell1 R_a 0
+0x4144;I2;Ra Table / R_a1 / Cell1 R_a 1
+0x4146;I2;Ra Table / R_a1 / Cell1 R_a 2
+0x4148;I2;Ra Table / R_a1 / Cell1 R_a 3
+0x414A;I2;Ra Table / R_a1 / Cell1 R_a 4
+0x414C;I2;Ra Table / R_a1 / Cell1 R_a 5
+0x414E;I2;Ra Table / R_a1 / Cell1 R_a 6
+0x4150;I2;Ra Table / R_a1 / Cell1 R_a 7
+0x4152;I2;Ra Table / R_a1 / Cell1 R_a 8
+0x4154;I2;Ra Table / R_a1 / Cell1 R_a 9
+0x4156;I2;Ra Table / R_a1 / Cell1 R_a 10
+0x4158;I2;Ra Table / R_a1 / Cell1 R_a 11
+0x415A;I2;Ra Table / R_a1 / Cell1 R_a 12
+0x415C;I2;Ra Table / R_a1 / Cell1 R_a 13
+0x415E;I2;Ra Table / R_a1 / Cell1 R_a 14
+0x4180;H2;Ra Table / R_a0x / xCell0 R_a flag
+0x4182;I2;Ra Table / R_a0x / xCell0 R_a 0
+0x4184;I2;Ra Table / R_a0x / xCell0 R_a 1
+0x4186;I2;Ra Table / R_a0x / xCell0 R_a 2
+0x4188;I2;Ra Table / R_a0x / xCell0 R_a 3
+0x418A;I2;Ra Table / R_a0x / xCell0 R_a 4
+0x418C;I2;Ra Table / R_a0x / xCell0 R_a 5
+0x418E;I2;Ra Table / R_a0x / xCell0 R_a 6
+0x4190;I2;Ra Table / R_a0x / xCell0 R_a 7
+0x4192;I2;Ra Table / R_a0x / xCell0 R_a 8
+0x4194;I2;Ra Table / R_a0x / xCell0 R_a 9
+0x4196;I2;Ra Table / R_a0x / xCell0 R_a 10
+0x4198;I2;Ra Table / R_a0x / xCell0 R_a 11
+0x419A;I2;Ra Table / R_a0x / xCell0 R_a 12
+0x419C;I2;Ra Table / R_a0x / xCell0 R_a 13
+0x419E;I2;Ra Table / R_a0x / xCell0 R_a 14
+0x41C0;H2;Ra Table / R_a1x / xCell1 R_a flag
+0x41C2;I2;Ra Table / R_a1x / xCell1 R_a 0
+0x41C4;I2;Ra Table / R_a1x / xCell1 R_a 1
+0x41C6;I2;Ra Table / R_a1x / xCell1 R_a 2
+0x41C8;I2;Ra Table / R_a1x / xCell1 R_a 3
+0x41CA;I2;Ra Table / R_a1x / xCell1 R_a 4
+0x41CC;I2;Ra Table / R_a1x / xCell1 R_a 5
+0x41CE;I2;Ra Table / R_a1x / xCell1 R_a 6
+0x41D0;I2;Ra Table / R_a1x / xCell1 R_a 7
+0x41D2;I2;Ra Table / R_a1x / xCell1 R_a 8
+0x41D4;I2;Ra Table / R_a1x / xCell1 R_a 9
+0x41D6;I2;Ra Table / R_a1x / xCell1 R_a 10
+0x41D8;I2;Ra Table / R_a1x / xCell1 R_a 11
+0x41DA;I2;Ra Table / R_a1x / xCell1 R_a 12
+0x41DC;I2;Ra Table / R_a1x / xCell1 R_a 13
+0x41DE;I2;Ra Table / R_a1x / xCell1 R_a 14

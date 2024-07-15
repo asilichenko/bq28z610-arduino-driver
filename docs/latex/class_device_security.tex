@@ -1,0 +1,56 @@
+\hypertarget{class_device_security}{}\doxysection{Device\+Security Class Reference}
+\label{class_device_security}\index{DeviceSecurity@{DeviceSecurity}}
+
+
+Chapter 9 Device Security.  
+
+
+
+
+{\ttfamily \#include $<$globals.\+h$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_device_security_af1a815f185a83a95bd0b7c461c1864b4}\label{class_device_security_af1a815f185a83a95bd0b7c461c1864b4}} 
+static const u32 \mbox{\hyperlink{class_device_security_af1a815f185a83a95bd0b7c461c1864b4}{DEFAULT\+\_\+\+UNSEAL\+\_\+\+KEY}} = 0x36720414
+\begin{DoxyCompactList}\small\item\em BQ28\+Z610 default Unseal key. \end{DoxyCompactList}\item 
+static const u32 \mbox{\hyperlink{class_device_security_ac6478b510f52de70da42e5492d8dd0d8}{DEFAULT\+\_\+\+FULL\+\_\+\+ACCESS\+\_\+\+KEY}} = 0x\+FFFFFFFF
+\begin{DoxyCompactList}\small\item\em BQ28\+Z610 default Full Access key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Chapter 9 Device Security. 
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+23 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0035 Security Keys 
+
+\mbox{\hyperlink{service_8cpp_a083ebacb63c52ce341e28bb71a61aca5}{unseal\+Device()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_device_security_ac6478b510f52de70da42e5492d8dd0d8}\label{class_device_security_ac6478b510f52de70da42e5492d8dd0d8}} 
+\index{DeviceSecurity@{DeviceSecurity}!DEFAULT\_FULL\_ACCESS\_KEY@{DEFAULT\_FULL\_ACCESS\_KEY}}
+\index{DEFAULT\_FULL\_ACCESS\_KEY@{DEFAULT\_FULL\_ACCESS\_KEY}!DeviceSecurity@{DeviceSecurity}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_FULL\_ACCESS\_KEY}{DEFAULT\_FULL\_ACCESS\_KEY}}
+{\footnotesize\ttfamily const u32 Device\+Security\+::\+DEFAULT\+\_\+\+FULL\+\_\+\+ACCESS\+\_\+\+KEY = 0x\+FFFFFFFF\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+BQ28\+Z610 default Full Access key. 
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} Checking Full Acces Security Mode\+:
+\begin{DoxyItemize}
+\item 12.\+1.\+1 0x00/01 \mbox{\hyperlink{std__data__commands_8cpp_a8f46c7d707496662eaeb16ac99da5823}{Manufacturer\+Access\+Control()}} -\/ responses \mbox{[}SEC1, SEC0\mbox{]} (Bits 14, 13) = (0, 0) -\/ which is WRONG!
+\item 12.\+2.\+30 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0054 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status()}} -\/ responses \mbox{[}SEC1, SEC0\mbox{]} (Bits 9–8) = (0, 1) -\/ which is CORRECT!
+\end{DoxyItemize}
+
+\mbox{[}!\mbox{]} Can be used only for Unsealed Device (after using Unseal Key). 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{globals_8h}{globals.\+h}}\end{DoxyCompactItemize}

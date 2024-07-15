@@ -1,0 +1,86 @@
+\hypertarget{class_da_configuration_flags}{}\doxysection{Da\+Configuration\+Flags Class Reference}
+\label{class_da_configuration_flags}\index{DaConfigurationFlags@{DaConfigurationFlags}}
+
+
+Data Flash\+: Settings; Configuration; 0x469B; DA Configuration; H1.  
+
+
+
+
+{\ttfamily \#include $<$flags.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_da_configuration_flags_a433dc30956487003fd2bef52c41eb07b}{CC0}} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_da_configuration_flags_a002cc5ce2e7363b828e71fbf5a9b7105}{IN\+\_\+\+SYSTEM\+\_\+\+SLEEP}} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_da_configuration_flags_a586179b75df70b08e5eeb7ebf6afc3f5}{SLEEP}} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_da_configuration_flags_aa880c9d01405da81bc05be54e2bb579c}{CTEMP}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Flash\+: Settings; Configuration; 0x469B; DA Configuration; H1. 
+
+
+\begin{DoxyPre}
+Bit 0: CC0 -\/ Cell Count
+Bit 1: Reserved
+Bit 2: Reserved
+Bit 3: IN\_SYSTEM\_SLEEP -\/ In-\/system SLEEP mode
+Bit 4: SLEEP -\/ SLEEP Mode
+Bit 5: Reserved
+Bit 6: CTEMP -\/ Cell Temperature protection source
+Bit 7: Reserved
+\end{DoxyPre}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_da_configuration_flags_a433dc30956487003fd2bef52c41eb07b}\label{class_da_configuration_flags_a433dc30956487003fd2bef52c41eb07b}} 
+\index{DaConfigurationFlags@{DaConfigurationFlags}!CC0@{CC0}}
+\index{CC0@{CC0}!DaConfigurationFlags@{DaConfigurationFlags}}
+\doxysubsubsection{\texorpdfstring{CC0()}{CC0()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Da\+Configuration\+Flags\+::\+CC0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = 1 cell
+\item 1 = 2 cell 
+\end{DoxyItemize}\mbox{\Hypertarget{class_da_configuration_flags_aa880c9d01405da81bc05be54e2bb579c}\label{class_da_configuration_flags_aa880c9d01405da81bc05be54e2bb579c}} 
+\index{DaConfigurationFlags@{DaConfigurationFlags}!CTEMP@{CTEMP}}
+\index{CTEMP@{CTEMP}!DaConfigurationFlags@{DaConfigurationFlags}}
+\doxysubsubsection{\texorpdfstring{CTEMP()}{CTEMP()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Da\+Configuration\+Flags\+::\+CTEMP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = MAX (default)
+\item 1 = Average 
+\end{DoxyItemize}\mbox{\Hypertarget{class_da_configuration_flags_a002cc5ce2e7363b828e71fbf5a9b7105}\label{class_da_configuration_flags_a002cc5ce2e7363b828e71fbf5a9b7105}} 
+\index{DaConfigurationFlags@{DaConfigurationFlags}!IN\_SYSTEM\_SLEEP@{IN\_SYSTEM\_SLEEP}}
+\index{IN\_SYSTEM\_SLEEP@{IN\_SYSTEM\_SLEEP}!DaConfigurationFlags@{DaConfigurationFlags}}
+\doxysubsubsection{\texorpdfstring{IN\_SYSTEM\_SLEEP()}{IN\_SYSTEM\_SLEEP()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Da\+Configuration\+Flags\+::\+IN\+\_\+\+SYSTEM\+\_\+\+SLEEP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = Disables (default)
+\item 1 = Enables 
+\end{DoxyItemize}\mbox{\Hypertarget{class_da_configuration_flags_a586179b75df70b08e5eeb7ebf6afc3f5}\label{class_da_configuration_flags_a586179b75df70b08e5eeb7ebf6afc3f5}} 
+\index{DaConfigurationFlags@{DaConfigurationFlags}!SLEEP@{SLEEP}}
+\index{SLEEP@{SLEEP}!DaConfigurationFlags@{DaConfigurationFlags}}
+\doxysubsubsection{\texorpdfstring{SLEEP()}{SLEEP()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Da\+Configuration\+Flags\+::\+SLEEP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = Disables SLEEP mode
+\item 1 = Enables SLEEP mode (default) 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flags_8h}{flags.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,289 @@
+\hypertarget{class_alt_manufacturer_commands}{}\doxysection{Alt\+Manufacturer\+Commands Class Reference}
+\label{class_alt_manufacturer_commands}\index{AltManufacturerCommands@{AltManufacturerCommands}}
+
+
+12.\+2 0x3E, 0x3F \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} Commands  
+
+
+
+
+{\ttfamily \#include $<$globals.\+h$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a99c257a99ffba5d19a78616a71bf1380}{DEVICE\+\_\+\+TYPE}} = 0x0001
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_acbbd59188d572bfd0a1de163202210e0}{FIRMWARE\+\_\+\+VERSION}} = 0x0002
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_af69f41a7c12b137238f9161b754e3272}{HARDWARE\+\_\+\+VERSION}} = 0x0003
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_ab60fa13c8211296e4a8bdf998d33af2d}{CHEMICAL\+\_\+\+ID}} = 0x0006
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_ad97fa59e4ac544a45b860f03be04673a}{DEVICE\+\_\+\+RESET}} = 0x0012
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_aa4937eb062e83838f3445e959e00e9b1}{CHG\+\_\+\+FET}} = 0x001F
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_acec752214831e8b6515490920935925b}{DSG\+\_\+\+FET}} = 0x0020
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_ab4c9ce52bb8b9f245346e8ebcf505638}{GAUGE\+\_\+\+EN}} = 0x0021
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_aa55ea4313637df7bb89634e70d7258bc}{FET\+\_\+\+CONTROL}} = 0x0022
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_ad2422eb7a6e1e2330e5fad04e841aed5}{LIFETIME\+\_\+\+DATA\+\_\+\+RESET}} = 0x0028
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a7a8b68ba60b2228588bedebced1c2c54}{PERMANENT\+\_\+\+FAIL\+\_\+\+DATA\+\_\+\+RESET}} = 0x0029
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a294703cd60e1d85da47451f3d6488e25}{SEAL\+\_\+\+DEVICE}} = 0x0030
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a7413f0cc488af050bc8a291a6c1cb3a9}{SAFETY\+\_\+\+ALERT}} = 0x0050
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a44f127759b83f16a7f65186e4b099349}{PF\+\_\+\+ALERT}} = 0x0052
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a2de11dea680e0e61122ed600ab6c2925}{PF\+\_\+\+STATUS}} = 0x0053
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_ae4dd3f20226f787785e2f71fb3cf2d67}{OPERATION\+\_\+\+STATUS}} = 0x0054
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a8b4769628755c6b39773aad5a8344cb9}{CHARGING\+\_\+\+STATUS}} = 0x0055
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a3c8fedd325ec6b49f0ab9a915c6ec06c}{GAUGING\+\_\+\+STATUS}} = 0x0056
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_aa33dcdfedf3d3e2dbaa6853625463463}{MANUFACTURER\+\_\+\+STATUS}} = 0x0057
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a7cd6eefbac067eb7bfd45a1e1ce6b7b0}{DA\+\_\+\+STATUS\+\_\+1}} = 0x0071
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a1684fd0c9c5fa7af2bcbe9b3ffc912ee}{DA\+\_\+\+STATUS\+\_\+2}} = 0x0072
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a79b114c553ce9a1b752ed729a5f5c99d}{IT\+\_\+\+STATUS\+\_\+1}} = 0x0073
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a9b43e80cb78662328a59c422381c0101}{IT\+\_\+\+STATUS\+\_\+2}} = 0x0074
+\item 
+static const word \mbox{\hyperlink{class_alt_manufacturer_commands_a0153ad359501cc94be39c3116a2785ee}{IT\+\_\+\+STATUS\+\_\+3}} = 0x0075
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+12.\+2 0x3E, 0x3F \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} Commands 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a8b4769628755c6b39773aad5a8344cb9}\label{class_alt_manufacturer_commands_a8b4769628755c6b39773aad5a8344cb9}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!CHARGING\_STATUS@{CHARGING\_STATUS}}
+\index{CHARGING\_STATUS@{CHARGING\_STATUS}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{CHARGING\_STATUS}{CHARGING\_STATUS}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+CHARGING\+\_\+\+STATUS = 0x0055\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+31 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0055 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a0f0f164ada38c9618c7c74e5a1c0f5b0}{Charging\+Status()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_ab60fa13c8211296e4a8bdf998d33af2d}\label{class_alt_manufacturer_commands_ab60fa13c8211296e4a8bdf998d33af2d}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!CHEMICAL\_ID@{CHEMICAL\_ID}}
+\index{CHEMICAL\_ID@{CHEMICAL\_ID}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{CHEMICAL\_ID}{CHEMICAL\_ID}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+CHEMICAL\+\_\+\+ID = 0x0006\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+6 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0006 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab903197332cdb8a5a84409794482cd8d}{Chemical\+ID()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_aa4937eb062e83838f3445e959e00e9b1}\label{class_alt_manufacturer_commands_aa4937eb062e83838f3445e959e00e9b1}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!CHG\_FET@{CHG\_FET}}
+\index{CHG\_FET@{CHG\_FET}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{CHG\_FET}{CHG\_FET}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+CHG\+\_\+\+FET = 0x001F\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+13 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x001F \mbox{\hyperlink{alt__manufacturer__access_8cpp_a335c4294edae7152d25964302f8d686a}{Charge\+FET()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a7cd6eefbac067eb7bfd45a1e1ce6b7b0}\label{class_alt_manufacturer_commands_a7cd6eefbac067eb7bfd45a1e1ce6b7b0}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{DA\_STATUS\_1}{DA\_STATUS\_1}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+DA\+\_\+\+STATUS\+\_\+1 = 0x0071\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+37 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0071 \mbox{\hyperlink{alt__manufacturer__access_8cpp_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a1684fd0c9c5fa7af2bcbe9b3ffc912ee}\label{class_alt_manufacturer_commands_a1684fd0c9c5fa7af2bcbe9b3ffc912ee}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!DA\_STATUS\_2@{DA\_STATUS\_2}}
+\index{DA\_STATUS\_2@{DA\_STATUS\_2}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{DA\_STATUS\_2}{DA\_STATUS\_2}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+DA\+\_\+\+STATUS\+\_\+2 = 0x0072\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+38 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0072 DAStatus2() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_ad97fa59e4ac544a45b860f03be04673a}\label{class_alt_manufacturer_commands_ad97fa59e4ac544a45b860f03be04673a}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!DEVICE\_RESET@{DEVICE\_RESET}}
+\index{DEVICE\_RESET@{DEVICE\_RESET}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{DEVICE\_RESET}{DEVICE\_RESET}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+DEVICE\+\_\+\+RESET = 0x0012\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+12 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0012 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a02b69036bf7448d7e2aa97ae40958cc9}{Device\+Reset()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a99c257a99ffba5d19a78616a71bf1380}\label{class_alt_manufacturer_commands_a99c257a99ffba5d19a78616a71bf1380}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!DEVICE\_TYPE@{DEVICE\_TYPE}}
+\index{DEVICE\_TYPE@{DEVICE\_TYPE}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{DEVICE\_TYPE}{DEVICE\_TYPE}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+DEVICE\+\_\+\+TYPE = 0x0001\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+1 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0001 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ac67da0f995a5f135746757164f0c0008}{Device\+Type()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_acec752214831e8b6515490920935925b}\label{class_alt_manufacturer_commands_acec752214831e8b6515490920935925b}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!DSG\_FET@{DSG\_FET}}
+\index{DSG\_FET@{DSG\_FET}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{DSG\_FET}{DSG\_FET}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+DSG\+\_\+\+FET = 0x0020\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+14 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0020 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a28b68d628ca00665b6685d2d25adabe5}{Discharge\+FET()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_aa55ea4313637df7bb89634e70d7258bc}\label{class_alt_manufacturer_commands_aa55ea4313637df7bb89634e70d7258bc}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!FET\_CONTROL@{FET\_CONTROL}}
+\index{FET\_CONTROL@{FET\_CONTROL}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{FET\_CONTROL}{FET\_CONTROL}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+FET\+\_\+\+CONTROL = 0x0022\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+16 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0022 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a01687753e4c49eadefa79f5c281c74ce}{FETControl()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_acbbd59188d572bfd0a1de163202210e0}\label{class_alt_manufacturer_commands_acbbd59188d572bfd0a1de163202210e0}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!FIRMWARE\_VERSION@{FIRMWARE\_VERSION}}
+\index{FIRMWARE\_VERSION@{FIRMWARE\_VERSION}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{FIRMWARE\_VERSION}{FIRMWARE\_VERSION}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+FIRMWARE\+\_\+\+VERSION = 0x0002\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+2 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0002 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab38a9e329ae6bafab0c53118672257bd}{Firmware\+Version()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_ab4c9ce52bb8b9f245346e8ebcf505638}\label{class_alt_manufacturer_commands_ab4c9ce52bb8b9f245346e8ebcf505638}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!GAUGE\_EN@{GAUGE\_EN}}
+\index{GAUGE\_EN@{GAUGE\_EN}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{GAUGE\_EN}{GAUGE\_EN}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+GAUGE\+\_\+\+EN = 0x0021\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+15 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0021 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a67d94d3144664bb8b770fc47eced493f}{Gauging()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a3c8fedd325ec6b49f0ab9a915c6ec06c}\label{class_alt_manufacturer_commands_a3c8fedd325ec6b49f0ab9a915c6ec06c}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!GAUGING\_STATUS@{GAUGING\_STATUS}}
+\index{GAUGING\_STATUS@{GAUGING\_STATUS}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{GAUGING\_STATUS}{GAUGING\_STATUS}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+GAUGING\+\_\+\+STATUS = 0x0056\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+32 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0056 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ae3bb119a26909aad06df129f3734befe}{Gauging\+Status()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_af69f41a7c12b137238f9161b754e3272}\label{class_alt_manufacturer_commands_af69f41a7c12b137238f9161b754e3272}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!HARDWARE\_VERSION@{HARDWARE\_VERSION}}
+\index{HARDWARE\_VERSION@{HARDWARE\_VERSION}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{HARDWARE\_VERSION}{HARDWARE\_VERSION}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+HARDWARE\+\_\+\+VERSION = 0x0003\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+3 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0003 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a2eb8c2bdabbc0e137f2e29bf62cbded8}{Hardware\+Version()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a79b114c553ce9a1b752ed729a5f5c99d}\label{class_alt_manufacturer_commands_a79b114c553ce9a1b752ed729a5f5c99d}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!IT\_STATUS\_1@{IT\_STATUS\_1}}
+\index{IT\_STATUS\_1@{IT\_STATUS\_1}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{IT\_STATUS\_1}{IT\_STATUS\_1}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+IT\+\_\+\+STATUS\+\_\+1 = 0x0073\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+39 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0073 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a0ae5d7dbe75d396aa17aee0efb7a800e}{ITStatus1()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a9b43e80cb78662328a59c422381c0101}\label{class_alt_manufacturer_commands_a9b43e80cb78662328a59c422381c0101}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!IT\_STATUS\_2@{IT\_STATUS\_2}}
+\index{IT\_STATUS\_2@{IT\_STATUS\_2}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{IT\_STATUS\_2}{IT\_STATUS\_2}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+IT\+\_\+\+STATUS\+\_\+2 = 0x0074\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+40 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0074 \mbox{\hyperlink{alt__manufacturer__access_8cpp_aed7919e4500455e50b6f690d0db9459a}{ITStatus2()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a0153ad359501cc94be39c3116a2785ee}\label{class_alt_manufacturer_commands_a0153ad359501cc94be39c3116a2785ee}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!IT\_STATUS\_3@{IT\_STATUS\_3}}
+\index{IT\_STATUS\_3@{IT\_STATUS\_3}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{IT\_STATUS\_3}{IT\_STATUS\_3}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+IT\+\_\+\+STATUS\+\_\+3 = 0x0075\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+41 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0075 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ae35efcb07cd3b2d30e723540a6d9a1fd}{ITStatus3()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_ad2422eb7a6e1e2330e5fad04e841aed5}\label{class_alt_manufacturer_commands_ad2422eb7a6e1e2330e5fad04e841aed5}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!LIFETIME\_DATA\_RESET@{LIFETIME\_DATA\_RESET}}
+\index{LIFETIME\_DATA\_RESET@{LIFETIME\_DATA\_RESET}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{LIFETIME\_DATA\_RESET}{LIFETIME\_DATA\_RESET}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+LIFETIME\+\_\+\+DATA\+\_\+\+RESET = 0x0028\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+19 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0028 Lifetime Data Reset 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_aa33dcdfedf3d3e2dbaa6853625463463}\label{class_alt_manufacturer_commands_aa33dcdfedf3d3e2dbaa6853625463463}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!MANUFACTURER\_STATUS@{MANUFACTURER\_STATUS}}
+\index{MANUFACTURER\_STATUS@{MANUFACTURER\_STATUS}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{MANUFACTURER\_STATUS}{MANUFACTURER\_STATUS}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+MANUFACTURER\+\_\+\+STATUS = 0x0057\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+33 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0057 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ad42df9b25d22d22ef9b8a26b8024d48a}{Manufacturing\+Status()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_ae4dd3f20226f787785e2f71fb3cf2d67}\label{class_alt_manufacturer_commands_ae4dd3f20226f787785e2f71fb3cf2d67}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!OPERATION\_STATUS@{OPERATION\_STATUS}}
+\index{OPERATION\_STATUS@{OPERATION\_STATUS}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{OPERATION\_STATUS}{OPERATION\_STATUS}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+OPERATION\+\_\+\+STATUS = 0x0054\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+30 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0054 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a7a8b68ba60b2228588bedebced1c2c54}\label{class_alt_manufacturer_commands_a7a8b68ba60b2228588bedebced1c2c54}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!PERMANENT\_FAIL\_DATA\_RESET@{PERMANENT\_FAIL\_DATA\_RESET}}
+\index{PERMANENT\_FAIL\_DATA\_RESET@{PERMANENT\_FAIL\_DATA\_RESET}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{PERMANENT\_FAIL\_DATA\_RESET}{PERMANENT\_FAIL\_DATA\_RESET}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+PERMANENT\+\_\+\+FAIL\+\_\+\+DATA\+\_\+\+RESET = 0x0029\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+20 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0029 \mbox{\hyperlink{alt__manufacturer__access_8cpp_aeac681ca58666f9a02534ed5f9fa6fe6}{Permanent\+Failure\+Data\+Reset()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a44f127759b83f16a7f65186e4b099349}\label{class_alt_manufacturer_commands_a44f127759b83f16a7f65186e4b099349}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!PF\_ALERT@{PF\_ALERT}}
+\index{PF\_ALERT@{PF\_ALERT}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{PF\_ALERT}{PF\_ALERT}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+PF\+\_\+\+ALERT = 0x0052\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+28 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0052 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a3edd7c871357ec90a50e3d487dc04d72}{PFAlert()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a2de11dea680e0e61122ed600ab6c2925}\label{class_alt_manufacturer_commands_a2de11dea680e0e61122ed600ab6c2925}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!PF\_STATUS@{PF\_STATUS}}
+\index{PF\_STATUS@{PF\_STATUS}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{PF\_STATUS}{PF\_STATUS}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+PF\+\_\+\+STATUS = 0x0053\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+29 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0053 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ad45c5f43ed9271ffa86c9e59eccc6c14}{PFStatus()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a7413f0cc488af050bc8a291a6c1cb3a9}\label{class_alt_manufacturer_commands_a7413f0cc488af050bc8a291a6c1cb3a9}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!SAFETY\_ALERT@{SAFETY\_ALERT}}
+\index{SAFETY\_ALERT@{SAFETY\_ALERT}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{SAFETY\_ALERT}{SAFETY\_ALERT}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+SAFETY\+\_\+\+ALERT = 0x0050\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+26 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0050 \mbox{\hyperlink{alt__manufacturer__access_8cpp_afcd9adb81727f3b065b43b6eeea6c3c1}{Safety\+Alert()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_alt_manufacturer_commands_a294703cd60e1d85da47451f3d6488e25}\label{class_alt_manufacturer_commands_a294703cd60e1d85da47451f3d6488e25}} 
+\index{AltManufacturerCommands@{AltManufacturerCommands}!SEAL\_DEVICE@{SEAL\_DEVICE}}
+\index{SEAL\_DEVICE@{SEAL\_DEVICE}!AltManufacturerCommands@{AltManufacturerCommands}}
+\doxysubsubsection{\texorpdfstring{SEAL\_DEVICE}{SEAL\_DEVICE}}
+{\footnotesize\ttfamily const word Alt\+Manufacturer\+Commands\+::\+SEAL\+\_\+\+DEVICE = 0x0030\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+22 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0030 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a562740b8603d5a04766c5ab1c14659b5}{Seal\+Device()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{globals_8h}{globals.\+h}}\end{DoxyCompactItemize}

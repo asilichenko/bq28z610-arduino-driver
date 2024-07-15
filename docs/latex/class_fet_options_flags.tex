@@ -1,0 +1,118 @@
+\hypertarget{class_fet_options_flags}{}\doxysection{Fet\+Options\+Flags Class Reference}
+\label{class_fet_options_flags}\index{FetOptionsFlags@{FetOptionsFlags}}
+
+
+Data Flash\+: Settings; Configuration; FET Options; H1.  
+
+
+
+
+{\ttfamily \#include $<$flags.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_fet_options_flags_ad2b8ab60bcc2ed2b43d0637f29c3ba4d}{OTFET}} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_fet_options_flags_a44b1a49c181b0b943940bfc45b6df639}{CHGSU}} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_fet_options_flags_a46b50ed102868f92202110cf9f89460e}{CHGIN}} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_fet_options_flags_a6c0a97d1eb672054059768acc3e686e4}{CHGFET}} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_fet_options_flags_a0168a76a7c084819fb04c5b4cfecedf7}{SLEEPCHG}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Flash\+: Settings; Configuration; FET Options; H1. 
+
+
+\begin{DoxyItemize}
+\item JBL\+: 01011100
+\end{DoxyItemize}
+
+
+\begin{DoxyPre}
+Bit 0: Reserved
+Bit 1: Reserved
+Bit 2: OTFET -\/ FET action in OVERTEMPERATURE mode
+  0 = No FET action for overtemperature condition
+  1 = CHG and DSG FETs will be turned off for overtemperature conditions.
+Bit 3: CHGSU -\/ FET action in CHARGE SUSPEND mode
+  0 = FET active
+  1 = Charging or precharging disabled, FET off
+Bit 4: CHGIN -\/ FET action in CHARGE INHIBIT mode
+  0 = FET active
+  1 = Charging or precharging disabled, FET off
+Bit 5: CHGFET -\/ FET action on valid charge termination
+  0 = FET active
+  1 = Charging or precharging disabled, FET off
+Bit 6: SLEEPCHG -\/ CHG FET enabled during sleep
+  0 = CHG FET off during sleep
+  1 = CHG FET remains on during sleep.
+Bit 7: Reserved
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8cpp_aa084a7a06c551cf138045bbbfc64f169}{df\+Read\+Fet\+Options()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fet_options_flags_a6c0a97d1eb672054059768acc3e686e4}\label{class_fet_options_flags_a6c0a97d1eb672054059768acc3e686e4}} 
+\index{FetOptionsFlags@{FetOptionsFlags}!CHGFET@{CHGFET}}
+\index{CHGFET@{CHGFET}!FetOptionsFlags@{FetOptionsFlags}}
+\doxysubsubsection{\texorpdfstring{CHGFET()}{CHGFET()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Fet\+Options\+Flags\+::\+CHGFET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = FET active (default)
+\item 1 = Charging or precharging disabled, FET off 
+\end{DoxyItemize}\mbox{\Hypertarget{class_fet_options_flags_a46b50ed102868f92202110cf9f89460e}\label{class_fet_options_flags_a46b50ed102868f92202110cf9f89460e}} 
+\index{FetOptionsFlags@{FetOptionsFlags}!CHGIN@{CHGIN}}
+\index{CHGIN@{CHGIN}!FetOptionsFlags@{FetOptionsFlags}}
+\doxysubsubsection{\texorpdfstring{CHGIN()}{CHGIN()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Fet\+Options\+Flags\+::\+CHGIN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = FET active (default)
+\item 1 = Charging or precharging disabled, FET off 
+\end{DoxyItemize}\mbox{\Hypertarget{class_fet_options_flags_a44b1a49c181b0b943940bfc45b6df639}\label{class_fet_options_flags_a44b1a49c181b0b943940bfc45b6df639}} 
+\index{FetOptionsFlags@{FetOptionsFlags}!CHGSU@{CHGSU}}
+\index{CHGSU@{CHGSU}!FetOptionsFlags@{FetOptionsFlags}}
+\doxysubsubsection{\texorpdfstring{CHGSU()}{CHGSU()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Fet\+Options\+Flags\+::\+CHGSU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = FET active (default)
+\item 1 = Charging or precharging disabled, FET off 
+\end{DoxyItemize}\mbox{\Hypertarget{class_fet_options_flags_ad2b8ab60bcc2ed2b43d0637f29c3ba4d}\label{class_fet_options_flags_ad2b8ab60bcc2ed2b43d0637f29c3ba4d}} 
+\index{FetOptionsFlags@{FetOptionsFlags}!OTFET@{OTFET}}
+\index{OTFET@{OTFET}!FetOptionsFlags@{FetOptionsFlags}}
+\doxysubsubsection{\texorpdfstring{OTFET()}{OTFET()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Fet\+Options\+Flags\+::\+OTFET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = No FET action for overtemperature condition (default)
+\item 1 = CHG and DSG FETs will be turned off for overtemperature conditions. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_fet_options_flags_a0168a76a7c084819fb04c5b4cfecedf7}\label{class_fet_options_flags_a0168a76a7c084819fb04c5b4cfecedf7}} 
+\index{FetOptionsFlags@{FetOptionsFlags}!SLEEPCHG@{SLEEPCHG}}
+\index{SLEEPCHG@{SLEEPCHG}!FetOptionsFlags@{FetOptionsFlags}}
+\doxysubsubsection{\texorpdfstring{SLEEPCHG()}{SLEEPCHG()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Fet\+Options\+Flags\+::\+SLEEPCHG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = CHG FET off during sleep (default)
+\item 1 = CHG FET remains on during sleep. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flags_8h}{flags.\+h}}\end{DoxyCompactItemize}

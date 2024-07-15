@@ -1,0 +1,722 @@
+\hypertarget{alt__manufacturer__access_8h}{}\doxysection{alt\+\_\+manufacturer\+\_\+access.\+h File Reference}
+\label{alt__manufacturer__access_8h}\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+
+
+12.\+2 0x3E, 0x3F \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} headers  
+
+
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access}} (const word MACSubcmd, byte $\ast$retval, byte $\ast$len)
+\begin{DoxyCompactList}\small\item\em 12.\+2 0x3E, 0x3F Alt\+Manufacturer\+Access \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_ae8fbcdb43f25f37c2ecb5811b95f782b}{Alt\+Manufacturer\+Access}} (const word MACSubcmd)
+\begin{DoxyCompactList}\small\item\em 12.\+2 0x3\+E/0x3F Alt\+Manufacturer\+Access \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{alt__manufacturer__access_8h_ac67da0f995a5f135746757164f0c0008}{Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+1 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0001 Device Type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_ab38a9e329ae6bafab0c53118672257bd}{Firmware\+Version}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+2 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0002 Firmware Version. \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{alt__manufacturer__access_8h_a2eb8c2bdabbc0e137f2e29bf62cbded8}{Hardware\+Version}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+3 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0003 Hardware Version. \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{alt__manufacturer__access_8h_ab903197332cdb8a5a84409794482cd8d}{Chemical\+ID}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+6 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0006 Chemical ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a02b69036bf7448d7e2aa97ae40958cc9}{Device\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+12 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0012 Device Reset \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a335c4294edae7152d25964302f8d686a}{Charge\+FET}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+13 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x001F CHG FET \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a28b68d628ca00665b6685d2d25adabe5}{Discharge\+FET}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+14 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0020 DSG FET \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a67d94d3144664bb8b770fc47eced493f}{Gauging}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+15 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0021 Gauging \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a01687753e4c49eadefa79f5c281c74ce}{FETControl}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+16 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0022 FET Control \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_adcd46a7b7396bc58a16bf91c6a9ff160}{Lifetime\+Data\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+19 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0028 Lifetime Data Reset \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_aeac681ca58666f9a02534ed5f9fa6fe6}{Permanent\+Failure\+Data\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+20 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0029 Permanent Fail Data Reset \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a562740b8603d5a04766c5ab1c14659b5}{Seal\+Device}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+22 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0030 Seal Device \end{DoxyCompactList}\item 
+u32 \mbox{\hyperlink{alt__manufacturer__access_8h_afcd9adb81727f3b065b43b6eeea6c3c1}{Safety\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+26 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0050 Safety\+Alert \end{DoxyCompactList}\item 
+u32 \mbox{\hyperlink{alt__manufacturer__access_8h_ad8ffb0c2d2869f8852c15f952e4ffb92}{Safety\+Status}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+27 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0051 Safety\+Status \end{DoxyCompactList}\item 
+u32 \mbox{\hyperlink{alt__manufacturer__access_8h_a3edd7c871357ec90a50e3d487dc04d72}{PFAlert}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+28 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0052 PFAlert \end{DoxyCompactList}\item 
+u32 \mbox{\hyperlink{alt__manufacturer__access_8h_ad45c5f43ed9271ffa86c9e59eccc6c14}{PFStatus}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+29 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0053 PFStatus \end{DoxyCompactList}\item 
+u32 \mbox{\hyperlink{alt__manufacturer__access_8h_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+30 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0054 Operation\+Status \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{alt__manufacturer__access_8h_a0f0f164ada38c9618c7c74e5a1c0f5b0}{Charging\+Status}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+31 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0055 Charging\+Status \end{DoxyCompactList}\item 
+u32 \mbox{\hyperlink{alt__manufacturer__access_8h_ae3bb119a26909aad06df129f3734befe}{Gauging\+Status}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+32 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0056 Gauging\+Status \end{DoxyCompactList}\item 
+word \mbox{\hyperlink{alt__manufacturer__access_8h_ad42df9b25d22d22ef9b8a26b8024d48a}{Manufacturing\+Status}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+33 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0057 Manufacturing\+Status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1}} (byte $\ast$retval)
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+37 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0071 DAStatus1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a805a7c8a972b6a7a8e2ed0651528000f}{DAStatus1}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+37 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0071 DAStatus1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a0ae5d7dbe75d396aa17aee0efb7a800e}{ITStatus1}} (byte $\ast$retval)
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+39 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0073 ITStatus1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a4821544bb363b1ec4b23152c12eee74e}{ITStatus1}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+39 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0073 ITStatus1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_aed7919e4500455e50b6f690d0db9459a}{ITStatus2}} (byte $\ast$retval)
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+40 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0074 ITStatus2 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_aa03cc811521363f651cdf4f1e1553731}{ITStatus2}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+40 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0074 ITStatus2 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_ae35efcb07cd3b2d30e723540a6d9a1fd}{ITStatus3}} (byte $\ast$retval)
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+41 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0075 ITStatus3 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{alt__manufacturer__access_8h_a3859f69c11b73d9a4615655a79abad92}{ITStatus3}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+41 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0075 ITStatus3 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+12.\+2 0x3E, 0x3F \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} headers 
+
+The host controller communicates with the gauge through gauge commands. A gauge command is the equivalent to a register. For example, reading the state of charge is accomplished through the State\+Of\+Charge() gauge command, which has the command codes 0x1C and 0x1D. So if the interface is I2C, reading from device register 0x1C and 0x1D returns the current state of charge of the battery as calculated by the gauge.
+
+\mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} provides a method of reading and writing data in the Manufacturer Access System (MAC). The MAC command is sent via \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} by a block protocol. The result is returned on \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} via a block read.
+
+Commands are set by writing to registers 0x00/0x01. On valid word access, the MAC command state is set, and commands 0x3E and 0x3F are used for MAC commands. These new addresses work the same as 0x00 and 0x01, but are primarily intended for block writes and reads.
+
+
+\begin{DoxyPre}
+BQ28Z610
+Technical Reference Manual
+(c) Texas Instruments
+Literature Number: SLUUA65E
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.ti.com/lit/ug/sluua65e/sluua65e.pdf}{\texttt{ https\+://www.\+ti.\+com/lit/ug/sluua65e/sluua65e.\+pdf}}
+\end{DoxySeeAlso}
+MIT License
+
+Copyright (c) 2024 Oleksii Sylichenko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \char`\"{}\+AS IS\char`\"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ae8fbcdb43f25f37c2ecb5811b95f782b}\label{alt__manufacturer__access_8h_ae8fbcdb43f25f37c2ecb5811b95f782b}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!AltManufacturerAccess@{AltManufacturerAccess}}
+\index{AltManufacturerAccess@{AltManufacturerAccess}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{AltManufacturerAccess()}{AltManufacturerAccess()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Alt\+Manufacturer\+Access (\begin{DoxyParamCaption}\item[{const word}]{MACSubcmd }\end{DoxyParamCaption})}
+
+
+
+12.\+2 0x3\+E/0x3F Alt\+Manufacturer\+Access 
+
+Send subcommand to 0x3E Alt\+Manufacturer\+Access. \mbox{\Hypertarget{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}\label{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!AltManufacturerAccess@{AltManufacturerAccess}}
+\index{AltManufacturerAccess@{AltManufacturerAccess}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{AltManufacturerAccess()}{AltManufacturerAccess()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Alt\+Manufacturer\+Access (\begin{DoxyParamCaption}\item[{const word}]{MACSubcmd,  }\item[{byte $\ast$}]{retval,  }\item[{byte $\ast$}]{len }\end{DoxyParamCaption})}
+
+
+
+12.\+2 0x3E, 0x3F Alt\+Manufacturer\+Access 
+
+Provides a method of reading and writing data in the Manufacturer Access System (MAC). The MAC command is sent via Alt\+Manufacturer\+Access by a block protocol. The result is returned on Alt\+Manufacturer\+Access via a block read.
+
+Send subcommand to 0x3E Alt\+Manufacturer\+Access and request block of data.
+
+\begin{DoxyReturn}{Returns}
+whether the request was successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a335c4294edae7152d25964302f8d686a}\label{alt__manufacturer__access_8h_a335c4294edae7152d25964302f8d686a}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ChargeFET@{ChargeFET}}
+\index{ChargeFET@{ChargeFET}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ChargeFET()}{ChargeFET()}}
+{\footnotesize\ttfamily void Charge\+FET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+13 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x001F CHG FET 
+
+This command turns on/off CHG FET drive function to ease testing during manufacturing.
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} This toggling command will only set the RAM data, meaning the conditions set by the command will be cleared if a reset or seal is issued to the gauge.
+
+\mbox{[}!\mbox{]} This command turns on the Charge FET only if DSG FET = 1.
+
+\mbox{[}!\mbox{]} Not Available in SEALED Mode
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8h_a01687753e4c49eadefa79f5c281c74ce}{FETControl()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a0f0f164ada38c9618c7c74e5a1c0f5b0}\label{alt__manufacturer__access_8h_a0f0f164ada38c9618c7c74e5a1c0f5b0}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ChargingStatus@{ChargingStatus}}
+\index{ChargingStatus@{ChargingStatus}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ChargingStatus()}{ChargingStatus()}}
+{\footnotesize\ttfamily word Charging\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+31 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0055 Charging\+Status 
+
+\begin{DoxyReturn}{Returns}
+the Charging\+Status flags on MACData(). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_charging_status_flags}{Charging\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ab903197332cdb8a5a84409794482cd8d}\label{alt__manufacturer__access_8h_ab903197332cdb8a5a84409794482cd8d}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ChemicalID@{ChemicalID}}
+\index{ChemicalID@{ChemicalID}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ChemicalID()}{ChemicalID()}}
+{\footnotesize\ttfamily word Chemical\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+6 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0006 Chemical ID. 
+
+\begin{DoxyReturn}{Returns}
+the chemical ID of the OCV tables used in the gauging algorithm. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a805a7c8a972b6a7a8e2ed0651528000f}\label{alt__manufacturer__access_8h_a805a7c8a972b6a7a8e2ed0651528000f}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!DAStatus1@{DAStatus1}}
+\index{DAStatus1@{DAStatus1}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{DAStatus1()}{DAStatus1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void DAStatus1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+37 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0071 DAStatus1 
+
+Print result of DAStatus1. \mbox{\Hypertarget{alt__manufacturer__access_8h_af8b9c312271e1ce5600f794f6d94e208}\label{alt__manufacturer__access_8h_af8b9c312271e1ce5600f794f6d94e208}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!DAStatus1@{DAStatus1}}
+\index{DAStatus1@{DAStatus1}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{DAStatus1()}{DAStatus1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void DAStatus1 (\begin{DoxyParamCaption}\item[{byte $\ast$}]{retval }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+37 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0071 DAStatus1 
+
+\begin{DoxyReturn}{Returns}
+32 bytes of data on MACData() in the following format\+: 
+
+aa\+AAbb\+BBcc\+CCdd\+DDee\+EEff\+FFgg\+GGhh\+HHii\+IIjj\+JJkk\+KKll\+LLmm\+MMnn\+NNoo\+OOpp\+PP 
+
+
+\begin{DoxyItemize}
+\item AAaa\+: Cell Voltage 1
+\item BBbb\+: Cell Voltage 2
+\item CCcc\+:
+\item DDdd\+:
+\item EEee\+: BAT Voltage. Voltage at the VC2 (BAT) terminal
+\item FFff\+: PACK Voltage
+\item GGgg\+: Cell Current 1. Simultaneous current measured during Cell Voltage1 measurement
+\item HHhh\+: Cell Current 2. Simultaneous current measured during Cell Voltage2 measurement
+\item IIii\+:
+\item JJjj\+:
+\item KKkk\+: Cell Power 1. Calculated using Cell Voltage1 and Cell Current 1 data
+\item LLll\+: Cell Power 2. Calculated using Cell Voltage2 and Cell Current 2 data
+\item MMmm\+:
+\item NNnn\+:
+\item OOoo\+: Power calculated by \mbox{\hyperlink{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}{Voltage()}} × \mbox{\hyperlink{std__data__commands_8cpp_ac56c1d075bdc355c84d8a341676a92c1}{Current()}}
+\item PPpp\+: Average Power. Calculated by \mbox{\hyperlink{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}{Voltage()}} × \mbox{\hyperlink{std__data__commands_8cpp_ad2ecff5053257e61c28fbf42a48fff3e}{Average\+Current()}}
+\end{DoxyItemize}
+
+32 bytes of data on MACData() in the following format\+: 
+
+
+\begin{DoxyItemize}
+\item AAaa\+: Cell Voltage 1
+\item BBbb\+: Cell Voltage 2
+\item CCcc\+:
+\item DDdd\+:
+\item EEee\+: BAT Voltage. Voltage at the VC2 (BAT) terminal
+\item FFff\+: PACK Voltage
+\item GGgg\+: Cell Current 1. Simultaneous current measured during Cell Voltage1 measurement
+\item HHhh\+: Cell Current 2. Simultaneous current measured during Cell Voltage2 measurement
+\item IIii\+:
+\item JJjj\+:
+\item KKkk\+: Cell Power 1. Calculated using Cell Voltage1 and Cell Current 1 data
+\item LLll\+: Cell Power 2. Calculated using Cell Voltage2 and Cell Current 2 data
+\item MMmm\+:
+\item NNnn\+:
+\item OOoo\+: Power calculated by \mbox{\hyperlink{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}{Voltage()}} × \mbox{\hyperlink{std__data__commands_8cpp_ac56c1d075bdc355c84d8a341676a92c1}{Current()}}
+\item PPpp\+: Average Power. Calculated by \mbox{\hyperlink{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}{Voltage()}} × \mbox{\hyperlink{std__data__commands_8cpp_ad2ecff5053257e61c28fbf42a48fff3e}{Average\+Current()}} 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a02b69036bf7448d7e2aa97ae40958cc9}\label{alt__manufacturer__access_8h_a02b69036bf7448d7e2aa97ae40958cc9}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!DeviceReset@{DeviceReset}}
+\index{DeviceReset@{DeviceReset}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{DeviceReset()}{DeviceReset()}}
+{\footnotesize\ttfamily void Device\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+12 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0012 Device Reset 
+
+This command resets the device.
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} Not Available in SEALED Mode 
+\end{DoxyWarning}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ac67da0f995a5f135746757164f0c0008}\label{alt__manufacturer__access_8h_ac67da0f995a5f135746757164f0c0008}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!DeviceType@{DeviceType}}
+\index{DeviceType@{DeviceType}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{DeviceType()}{DeviceType()}}
+{\footnotesize\ttfamily word Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+1 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0001 Device Type 
+
+The device can be checked for the IC part number.
+
+\begin{DoxyReturn}{Returns}
+the IC part number on subsequent read on MACData() in the following format\+: 
+
+aa\+AA 
+
+
+\begin{DoxyItemize}
+\item AAaa\+: Device type
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 2610 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a28b68d628ca00665b6685d2d25adabe5}\label{alt__manufacturer__access_8h_a28b68d628ca00665b6685d2d25adabe5}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!DischargeFET@{DischargeFET}}
+\index{DischargeFET@{DischargeFET}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{DischargeFET()}{DischargeFET()}}
+{\footnotesize\ttfamily void Discharge\+FET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+14 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0020 DSG FET 
+
+This command turns on/off DSG FET drive function to ease testing during manufacturing.
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} This toggling command will only set the RAM data, meaning the conditions set by the command will be cleared if a reset or seal is issued to the gauge.
+
+\mbox{[}!\mbox{]} Not Available in SEALED Mode
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+12.\+2.\+16 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0022 \mbox{\hyperlink{alt__manufacturer__access_8h_a01687753e4c49eadefa79f5c281c74ce}{FETControl()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a01687753e4c49eadefa79f5c281c74ce}\label{alt__manufacturer__access_8h_a01687753e4c49eadefa79f5c281c74ce}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!FETControl@{FETControl}}
+\index{FETControl@{FETControl}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{FETControl()}{FETControl()}}
+{\footnotesize\ttfamily void FETControl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+16 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0022 FET Control 
+
+This command disables/enables control of the CHG, DSG, and PCHG FETs by the firmware.
+
+
+\begin{DoxyItemize}
+\item Disable\+: Manufacturing\+Status\mbox{[}FET\+\_\+\+EN\mbox{]} = 1 -\/$>$ 0, CHG and DSG FETs are disabled and remain OFF.
+\item Enable\+: Manufacturing\+Status\mbox{[}FET\+\_\+\+EN\mbox{]} = 0 -\/$>$ 1, CHG and DSG FETs are controlled by the firmware
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} Not Available in SEALED Mode 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8h_ad42df9b25d22d22ef9b8a26b8024d48a}{Manufacturing\+Status()}} 
+
+\mbox{\hyperlink{class_manufacturing_status_flags}{Manufacturing\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ab38a9e329ae6bafab0c53118672257bd}\label{alt__manufacturer__access_8h_ab38a9e329ae6bafab0c53118672257bd}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!FirmwareVersion@{FirmwareVersion}}
+\index{FirmwareVersion@{FirmwareVersion}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{FirmwareVersion()}{FirmwareVersion()}}
+{\footnotesize\ttfamily void Firmware\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+2 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0002 Firmware Version. 
+
+The device can be checked for the firmware version of the IC
+
+The firmware revision on MACData() in the following format\+:
+
+dd\+DDvv\+VVbb\+BBTTzz\+ZZRREE
+
+
+\begin{DoxyItemize}
+\item dd\+DD\+: Device Number
+\item vv\+VV\+: Version
+\item bb\+BB\+: build number
+\item tt\+TT\+: Firmware type
+\item zz\+ZZ\+: Impedance Track Version
+\item RR\+: Reserved
+\item EE\+: Reserved
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em JBL} & 
+\begin{DoxyItemize}
+\item Device Number\+: 0x2610
+\item Version\+: 0x0017
+\item Build number\+: 0x0016
+\item Firmware type\+: 0x00
+\item Impedance Track Version\+: 0x0385 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a67d94d3144664bb8b770fc47eced493f}\label{alt__manufacturer__access_8h_a67d94d3144664bb8b770fc47eced493f}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!Gauging@{Gauging}}
+\index{Gauging@{Gauging}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{Gauging()}{Gauging()}}
+{\footnotesize\ttfamily void Gauging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+15 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0021 Gauging 
+
+This command enables or disables the gauging function to ease testing during manufacturing.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_alt_manufacturer_commands}{Alt\+Manufacturer\+Commands}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ae3bb119a26909aad06df129f3734befe}\label{alt__manufacturer__access_8h_ae3bb119a26909aad06df129f3734befe}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!GaugingStatus@{GaugingStatus}}
+\index{GaugingStatus@{GaugingStatus}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{GaugingStatus()}{GaugingStatus()}}
+{\footnotesize\ttfamily u32 Gauging\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+32 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0056 Gauging\+Status 
+
+\begin{DoxyReturn}{Returns}
+the Gauging\+Status flags on MACData(). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_gauging_status_flags}{Gauging\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a2eb8c2bdabbc0e137f2e29bf62cbded8}\label{alt__manufacturer__access_8h_a2eb8c2bdabbc0e137f2e29bf62cbded8}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!HardwareVersion@{HardwareVersion}}
+\index{HardwareVersion@{HardwareVersion}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{HardwareVersion()}{HardwareVersion()}}
+{\footnotesize\ttfamily word Hardware\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+3 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0003 Hardware Version. 
+
+The device can be checked for the hardware version of the IC.
+
+\begin{DoxyReturn}{Returns}
+the hardware revision on subsequent read on MACData() 
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a4821544bb363b1ec4b23152c12eee74e}\label{alt__manufacturer__access_8h_a4821544bb363b1ec4b23152c12eee74e}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ITStatus1@{ITStatus1}}
+\index{ITStatus1@{ITStatus1}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ITStatus1()}{ITStatus1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ITStatus1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+39 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0073 ITStatus1 
+
+Print result of ITStatus1. \mbox{\Hypertarget{alt__manufacturer__access_8h_a0ae5d7dbe75d396aa17aee0efb7a800e}\label{alt__manufacturer__access_8h_a0ae5d7dbe75d396aa17aee0efb7a800e}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ITStatus1@{ITStatus1}}
+\index{ITStatus1@{ITStatus1}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ITStatus1()}{ITStatus1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ITStatus1 (\begin{DoxyParamCaption}\item[{byte $\ast$}]{retval }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+39 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0073 ITStatus1 
+
+\begin{DoxyReturn}{Returns}
+24 bytes of IT data values on MACData() in the following format\+: 
+
+aa\+AAbb\+BBcc\+CCdd\+DDee\+EEff\+FFgg\+GGhh\+HHii\+IIjj\+JJkk\+KKll\+LL 
+
+
+\begin{DoxyItemize}
+\item AAaa\+: True Rem Q. True remaining capacity in m\+Ah from IT simulation before any filtering or smoothing function. This value can be negative or higher than FCC.
+\item BBbb\+: True Rem E. True remaining energy in c\+Wh from IT simulation before any filtering or smoothing function. This value can be negative or higher than FCC.
+\item CCcc\+: Initial Q. Initial capacity calculated from IT simulation
+\item DDdd\+: Initial E. Initial energy calculated from IT simulation
+\item EEee\+: True\+Full\+ChgQ. True full charge capacity
+\item FFff\+: True\+Full\+ChgE. True full charge energy
+\item GGgg\+: T\+\_\+sim. Temperature during the last simulation run (in 0.\+1K)
+\item HHhh\+: T\+\_\+ambient. Current estimated ambient temperature used by the IT algorithm for thermal modeling
+\item IIii\+: Ra\+Scale 0. Ra table scaling factor of Cell1
+\item JJjj\+: Ra\+Scale 1. Ra table scaling factor of Cell2
+\item KKkk\+: Comp\+Res1. Last computed resistance for Cell1
+\item LLll\+: Comp\+Res2. Last computed resistance for Cell2 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_aa03cc811521363f651cdf4f1e1553731}\label{alt__manufacturer__access_8h_aa03cc811521363f651cdf4f1e1553731}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ITStatus2@{ITStatus2}}
+\index{ITStatus2@{ITStatus2}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ITStatus2()}{ITStatus2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ITStatus2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+40 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0074 ITStatus2 
+
+Print result of ITStatus2. \mbox{\Hypertarget{alt__manufacturer__access_8h_aed7919e4500455e50b6f690d0db9459a}\label{alt__manufacturer__access_8h_aed7919e4500455e50b6f690d0db9459a}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ITStatus2@{ITStatus2}}
+\index{ITStatus2@{ITStatus2}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ITStatus2()}{ITStatus2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ITStatus2 (\begin{DoxyParamCaption}\item[{byte $\ast$}]{retval }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+40 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0074 ITStatus2 
+
+This command instructs the device to return Impedance Track related gauging information on MACData().
+
+\begin{DoxyReturn}{Returns}
+24 bytes of IT data values on MACData() in the following format\+: 
+
+AA BB CC DD EE FF gg\+GGhh\+HH ii\+II jj\+JJ kk\+KK ll\+LL mm\+MM nn\+NN oo\+OO 
+
+
+\begin{DoxyPre}
+AA: Pack Grid. Active pack grid point (only valid in discharge)
+
+BB: LStatus—Learned status of resistance table
+  Bit 3 | Bit 2 | Bit 1| Bit 0
+  QMax  | ITEN  | CF1  | CF0
+
+  CF1, CF0: QMax Status
+    0,0 = Battery OK
+    0,1 = QMax is first updated in learning cycle.
+    1,0 = QMax and resistance table updated in learning cycle
+
+  ITEN: IT enable
+    0 = IT disabled
+    1 = IT enabled
+
+  QMax: QMax field updates
+    0 = QMax is not updated in the field.
+    1 = QMax is updated in the field.
+
+  00: IT disabled
+  04: Learning in process.
+  05: QMax is first updated in learning cycle.
+  06: Resistance table is updated.
+  0E: Learning finished.
+
+CC: Cell Grid 1. Active grid point of Cell1
+DD: Cell Grid 2. Active grid point of Cell2
+EE: N/A. RSVD
+FF: N/A. RSVD
+HHhhGGgg: State Time. Time passed since last state change (Discharge, Charge, Rest)
+IIii: DOD0\_1. Depth of discharge for Cell1
+JJjj: DOD0\_2. Depth of discharge for Cell2
+KKkk: DOD0 Passed Q. Passed charge since DOD0
+LLll: DOD0 Passed Energy. Passed energy since the last DOD0 update
+MMmm: DOD0 Time. Time passed since the last DOD0 update
+NNnn: DODEOC\_1. Cell 1 DOD@EOC
+OOoo: DODEOC\_2. Cell 2 DOD@EOC
+\end{DoxyPre}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a3859f69c11b73d9a4615655a79abad92}\label{alt__manufacturer__access_8h_a3859f69c11b73d9a4615655a79abad92}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ITStatus3@{ITStatus3}}
+\index{ITStatus3@{ITStatus3}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ITStatus3()}{ITStatus3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ITStatus3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+41 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0075 ITStatus3 
+
+Print result of ITStatus3. \mbox{\Hypertarget{alt__manufacturer__access_8h_ae35efcb07cd3b2d30e723540a6d9a1fd}\label{alt__manufacturer__access_8h_ae35efcb07cd3b2d30e723540a6d9a1fd}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ITStatus3@{ITStatus3}}
+\index{ITStatus3@{ITStatus3}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ITStatus3()}{ITStatus3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ITStatus3 (\begin{DoxyParamCaption}\item[{byte $\ast$}]{retval }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+41 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0075 ITStatus3 
+
+\begin{DoxyReturn}{Returns}
+20 bytes of IT data values on MACData() in the following format\+: 
+
+aa\+AAbb\+BBcc\+CCdd\+DDee\+EEff\+FFgg\+GGhh\+HHIii\+IIjj\+JJ 
+
+
+\begin{DoxyItemize}
+\item AAaa\+: QMax 1. QMax of Cell 1
+\item BBbb\+: QMax 2. QMax of Cell 2
+\item CCcc\+: QMax\+DOD0\+\_\+1. Cell 1 DOD for Qmax
+\item DDdd\+: QMax\+DOD0\+\_\+2. Cell 2 DOD for Qmax
+\item EEee\+: QMax\+PassedQ. Passed charge since DOD for Qmax recorded (m\+Ah)
+\item FFff\+: QMax\+Time. Time since DOD for Qmax recorded (hour / 16 units)
+\item GGgg\+: Tk. Thermal model “k”
+\item HHhh\+: Ta. Thermal model “a”
+\item IIii\+: Raw\+DOD0\+\_\+1. Cell 1 raw DOD0 measurement
+\item JJjj\+: Raw\+DOD0\+\_\+2. Cell 2 raw DOD0 measurement 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_adcd46a7b7396bc58a16bf91c6a9ff160}\label{alt__manufacturer__access_8h_adcd46a7b7396bc58a16bf91c6a9ff160}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!LifetimeDataReset@{LifetimeDataReset}}
+\index{LifetimeDataReset@{LifetimeDataReset}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{LifetimeDataReset()}{LifetimeDataReset()}}
+{\footnotesize\ttfamily void Lifetime\+Data\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+19 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0028 Lifetime Data Reset 
+
+This command resets Lifetime data in data flash for ease of manufacturing.
+
+Clears Lifetime Data in DF\+:
+
+
+\begin{DoxyItemize}
+\item 0x4280\+: (I2) \mbox{[}Lifetimes / Voltage / Cell 1 Max Voltage\mbox{]} = 0
+\item 0x4282\+: (I2) \mbox{[}Lifetimes / Voltage / Cell 2 Max Voltage\mbox{]} = 0
+\item 0x4284\+: (I2) \mbox{[}Lifetimes / Current / Max Charge Current\mbox{]} = 0
+\item 0x4286\+: (I2) \mbox{[}Lifetimes / Current / Max Discharge Current\mbox{]} = 0
+\item 0x4288\+: (I1) \mbox{[}Lifetimes / Temperature / Max Temp Cell\mbox{]} = -\/128
+\item 0x4289\+: (I1) \mbox{[}Lifetimes / Temperature / Min Temp Cell\mbox{]} = 127
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} Not Available in SEALED Mode. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ad42df9b25d22d22ef9b8a26b8024d48a}\label{alt__manufacturer__access_8h_ad42df9b25d22d22ef9b8a26b8024d48a}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!ManufacturingStatus@{ManufacturingStatus}}
+\index{ManufacturingStatus@{ManufacturingStatus}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{ManufacturingStatus()}{ManufacturingStatus()}}
+{\footnotesize\ttfamily word Manufacturing\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+33 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0057 Manufacturing\+Status 
+
+\begin{DoxyReturn}{Returns}
+the Manufacturing\+Status flags on MACData(). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_manufacturing_status_flags}{Manufacturing\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ab6390cbd1492381166f7a8c1729b851a}\label{alt__manufacturer__access_8h_ab6390cbd1492381166f7a8c1729b851a}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!OperationStatus@{OperationStatus}}
+\index{OperationStatus@{OperationStatus}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{OperationStatus()}{OperationStatus()}}
+{\footnotesize\ttfamily u32 Operation\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+30 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0054 Operation\+Status 
+
+\begin{DoxyReturn}{Returns}
+the Operation\+Status flags on MACData() 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_operation_status_flags}{Operation\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_aeac681ca58666f9a02534ed5f9fa6fe6}\label{alt__manufacturer__access_8h_aeac681ca58666f9a02534ed5f9fa6fe6}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!PermanentFailureDataReset@{PermanentFailureDataReset}}
+\index{PermanentFailureDataReset@{PermanentFailureDataReset}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{PermanentFailureDataReset()}{PermanentFailureDataReset()}}
+{\footnotesize\ttfamily void Permanent\+Failure\+Data\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+20 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0029 Permanent Fail Data Reset 
+
+This command resets PF data in data flash for ease of manufacturing.
+
+\begin{DoxyWarning}{Warning}
+\mbox{[}!\mbox{]} Not Available in SEALED Mode. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a3edd7c871357ec90a50e3d487dc04d72}\label{alt__manufacturer__access_8h_a3edd7c871357ec90a50e3d487dc04d72}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!PFAlert@{PFAlert}}
+\index{PFAlert@{PFAlert}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{PFAlert()}{PFAlert()}}
+{\footnotesize\ttfamily u32 PFAlert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+28 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0052 PFAlert 
+
+\begin{DoxyReturn}{Returns}
+the PFAlert flags on MACData(). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ad45c5f43ed9271ffa86c9e59eccc6c14}\label{alt__manufacturer__access_8h_ad45c5f43ed9271ffa86c9e59eccc6c14}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!PFStatus@{PFStatus}}
+\index{PFStatus@{PFStatus}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{PFStatus()}{PFStatus()}}
+{\footnotesize\ttfamily u32 PFStatus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+29 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0053 PFStatus 
+
+\begin{DoxyReturn}{Returns}
+the PFStatus flags on MACData(). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_p_f_status_flags}{PFStatus\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_afcd9adb81727f3b065b43b6eeea6c3c1}\label{alt__manufacturer__access_8h_afcd9adb81727f3b065b43b6eeea6c3c1}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!SafetyAlert@{SafetyAlert}}
+\index{SafetyAlert@{SafetyAlert}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{SafetyAlert()}{SafetyAlert()}}
+{\footnotesize\ttfamily u32 Safety\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+26 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0050 Safety\+Alert 
+
+\begin{DoxyReturn}{Returns}
+the Safety\+Alert flags on \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} or MACData(). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_ad8ffb0c2d2869f8852c15f952e4ffb92}\label{alt__manufacturer__access_8h_ad8ffb0c2d2869f8852c15f952e4ffb92}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!SafetyStatus@{SafetyStatus}}
+\index{SafetyStatus@{SafetyStatus}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{SafetyStatus()}{SafetyStatus()}}
+{\footnotesize\ttfamily u32 Safety\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+27 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0051 Safety\+Status 
+
+\begin{DoxyReturn}{Returns}
+the Safety\+Status flags on MACData(). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_safety_status_flags}{Safety\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{alt__manufacturer__access_8h_a562740b8603d5a04766c5ab1c14659b5}\label{alt__manufacturer__access_8h_a562740b8603d5a04766c5ab1c14659b5}} 
+\index{alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}!SealDevice@{SealDevice}}
+\index{SealDevice@{SealDevice}!alt\_manufacturer\_access.h@{alt\_manufacturer\_access.h}}
+\doxysubsubsection{\texorpdfstring{SealDevice()}{SealDevice()}}
+{\footnotesize\ttfamily void Seal\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+22 \mbox{\hyperlink{alt__manufacturer__access_8h_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0030 Seal Device 
+
+This command seals the device for the field, disabling certain commands and access to DF.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{service_8cpp_a083ebacb63c52ce341e28bb71a61aca5}{unseal\+Device()}} 
+
+9.\+5.\+2 SEALED to UNSEALED 
+\end{DoxySeeAlso}

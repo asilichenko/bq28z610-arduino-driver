@@ -1,0 +1,87 @@
+\hypertarget{class_gas_gauging_update_status_flags}{}\doxysection{Gas\+Gauging\+Update\+Status\+Flags Class Reference}
+\label{class_gas_gauging_update_status_flags}\index{GasGaugingUpdateStatusFlags@{GasGaugingUpdateStatusFlags}}
+
+
+Data Flash\+: Gas Gauging; State; 0x420E; Update Status; H1.  
+
+
+
+
+{\ttfamily \#include $<$flags.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gas_gauging_update_status_flags_a45ab707c0ef3818208a4dd94bc148b39}\label{class_gas_gauging_update_status_flags_a45ab707c0ef3818208a4dd94bc148b39}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries Update0} ()
+\item 
+\mbox{\Hypertarget{class_gas_gauging_update_status_flags_a59315861ece162446cb90bae0c22f1a8}\label{class_gas_gauging_update_status_flags_a59315861ece162446cb90bae0c22f1a8}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries Update1} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_gas_gauging_update_status_flags_ac324412b030db33fcfc2e477ef60ea3e}{Enable}} ()
+\item 
+static \mbox{\hyperlink{struct_flag}{Flag}} \mbox{\hyperlink{class_gas_gauging_update_status_flags_a324f6463d85d77372790922bf4ce2069}{QMax\+\_\+update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const byte \mbox{\hyperlink{class_gas_gauging_update_status_flags_a4b4af11e34991b3a7ef45305f9c6e64b}{UPDATE\+\_\+\+STATUS}} = 0b11
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Flash\+: Gas Gauging; State; 0x420E; Update Status; H1. 
+
+
+\begin{DoxyItemize}
+\item Bit 1\+:0\+: Update1, Update0 -\/ Update Status
+\item Bit 2\+: Enable -\/ Impedance Track gauging and lifetime updating is enabled.
+\item Bit 3\+: QMax\+\_\+update -\/ QMax was updated in the field (in real conditions)
+\item Bit 7\+:4\+: Reserved
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8cpp_a8de36963065eb19be14644c9ff431c7a}{df\+Read\+Gas\+Gauging\+Update\+Status()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gas_gauging_update_status_flags_ac324412b030db33fcfc2e477ef60ea3e}\label{class_gas_gauging_update_status_flags_ac324412b030db33fcfc2e477ef60ea3e}} 
+\index{GasGaugingUpdateStatusFlags@{GasGaugingUpdateStatusFlags}!Enable@{Enable}}
+\index{Enable@{Enable}!GasGaugingUpdateStatusFlags@{GasGaugingUpdateStatusFlags}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Gas\+Gauging\+Update\+Status\+Flags\+::\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = Disabled
+\item 1 = Enabled 
+\end{DoxyItemize}\mbox{\Hypertarget{class_gas_gauging_update_status_flags_a324f6463d85d77372790922bf4ce2069}\label{class_gas_gauging_update_status_flags_a324f6463d85d77372790922bf4ce2069}} 
+\index{GasGaugingUpdateStatusFlags@{GasGaugingUpdateStatusFlags}!QMax\_update@{QMax\_update}}
+\index{QMax\_update@{QMax\_update}!GasGaugingUpdateStatusFlags@{GasGaugingUpdateStatusFlags}}
+\doxysubsubsection{\texorpdfstring{QMax\_update()}{QMax\_update()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_flag}{Flag}} Gas\+Gauging\+Update\+Status\+Flags\+::\+QMax\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyItemize}
+\item 0 = Not updated
+\item 1 = Updated 
+\end{DoxyItemize}
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_gas_gauging_update_status_flags_a4b4af11e34991b3a7ef45305f9c6e64b}\label{class_gas_gauging_update_status_flags_a4b4af11e34991b3a7ef45305f9c6e64b}} 
+\index{GasGaugingUpdateStatusFlags@{GasGaugingUpdateStatusFlags}!UPDATE\_STATUS@{UPDATE\_STATUS}}
+\index{UPDATE\_STATUS@{UPDATE\_STATUS}!GasGaugingUpdateStatusFlags@{GasGaugingUpdateStatusFlags}}
+\doxysubsubsection{\texorpdfstring{UPDATE\_STATUS}{UPDATE\_STATUS}}
+{\footnotesize\ttfamily const byte Gas\+Gauging\+Update\+Status\+Flags\+::\+UPDATE\+\_\+\+STATUS = 0b11\hspace{0.3cm}{\ttfamily [static]}}
+
+Bit 1\+:0\+: Update1, Update0 -\/ Update Status\+:
+\begin{DoxyItemize}
+\item 0,0 = Impedance Track gauging and lifetime updating is disabled.
+\item 0,1 = QMax updated
+\item 1,0 = QMax and Ra table have been updated 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flags_8h}{flags.\+h}}\end{DoxyCompactItemize}

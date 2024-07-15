@@ -1,0 +1,53 @@
+\hypertarget{flags_8h}{}\doxysection{flags.\+h File Reference}
+\label{flags_8h}\index{flags.h@{flags.h}}
+
+
+Flags constants.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_flag}{Flag}}
+\begin{DoxyCompactList}\small\item\em Structure that stores flag information. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_manufacturer_access_flags}{Manufacturer\+Access\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+1 0x00/01 \mbox{\hyperlink{std__data__commands_8cpp_a8f46c7d707496662eaeb16ac99da5823}{Manufacturer\+Access\+Control()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_battery_status_flags}{Battery\+Status\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+1.\+6 0x0\+A/0B \mbox{\hyperlink{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}{Battery\+Status()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_safety_alert_flags}{Safety\+Alert\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+26 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0050 \mbox{\hyperlink{alt__manufacturer__access_8cpp_afcd9adb81727f3b065b43b6eeea6c3c1}{Safety\+Alert()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_safety_status_flags}{Safety\+Status\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+27 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0051 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ad8ffb0c2d2869f8852c15f952e4ffb92}{Safety\+Status()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_p_f_status_flags}{PFStatus\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+29 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0053 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ad45c5f43ed9271ffa86c9e59eccc6c14}{PFStatus()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_operation_status_flags}{Operation\+Status\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+30 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0054 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_charging_status_flags}{Charging\+Status\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+31 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0055 \mbox{\hyperlink{alt__manufacturer__access_8cpp_a0f0f164ada38c9618c7c74e5a1c0f5b0}{Charging\+Status()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_gauging_status_flags}{Gauging\+Status\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+32 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0056 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ae3bb119a26909aad06df129f3734befe}{Gauging\+Status()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_manufacturing_status_flags}{Manufacturing\+Status\+Flags}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+33 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0057 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ad42df9b25d22d22ef9b8a26b8024d48a}{Manufacturing\+Status()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_fet_options_flags}{Fet\+Options\+Flags}}
+\begin{DoxyCompactList}\small\item\em Data Flash\+: Settings; Configuration; FET Options; H1. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_da_configuration_flags}{Da\+Configuration\+Flags}}
+\begin{DoxyCompactList}\small\item\em Data Flash\+: Settings; Configuration; 0x469B; DA Configuration; H1. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_gas_gauging_update_status_flags}{Gas\+Gauging\+Update\+Status\+Flags}}
+\begin{DoxyCompactList}\small\item\em Data Flash\+: Gas Gauging; State; 0x420E; Update Status; H1. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_s_o_c_flag_config_a_flags}{SOCFlag\+Config\+AFlags}}
+\begin{DoxyCompactList}\small\item\em Data Flash\+: Settings; Configuration; 0x4632; SOC \mbox{\hyperlink{struct_flag}{Flag}} Config A; H2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Flags constants. 
+
+MIT License
+
+Copyright (c) 2024 Oleksii Sylichenko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \char`\"{}\+AS IS\char`\"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 

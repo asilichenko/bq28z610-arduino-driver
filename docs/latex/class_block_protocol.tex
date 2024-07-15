@@ -1,0 +1,66 @@
+\hypertarget{class_block_protocol}{}\doxysection{Block\+Protocol Class Reference}
+\label{class_block_protocol}\index{BlockProtocol@{BlockProtocol}}
+
+
+Block Protocol contants.  
+
+
+
+
+{\ttfamily \#include $<$globals.\+h$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_block_protocol_aaa8beae978d4de6958aa9baa71657b02}\label{class_block_protocol_aaa8beae978d4de6958aa9baa71657b02}} 
+static const int \mbox{\hyperlink{class_block_protocol_aaa8beae978d4de6958aa9baa71657b02}{REQUEST\+\_\+\+MAX\+\_\+\+SIZE}} = 32
+\begin{DoxyCompactList}\small\item\em The maximum number of bytes that can be obtained from the device in a single request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_a08bb15b0141bac118d1f061b56ef0025}\label{class_block_protocol_a08bb15b0141bac118d1f061b56ef0025}} 
+static const int \mbox{\hyperlink{class_block_protocol_a08bb15b0141bac118d1f061b56ef0025}{PAYLOAD\+\_\+\+MAX\+\_\+\+SIZE}} = \mbox{\hyperlink{class_block_protocol_aaa8beae978d4de6958aa9baa71657b02}{REQUEST\+\_\+\+MAX\+\_\+\+SIZE}}
+\begin{DoxyCompactList}\small\item\em The maximum number of data bytes that can be obtained from the device in a single function call. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_a1a5ece982e0366d27e75eb0320df81a2}\label{class_block_protocol_a1a5ece982e0366d27e75eb0320df81a2}} 
+static const int \mbox{\hyperlink{class_block_protocol_a1a5ece982e0366d27e75eb0320df81a2}{ADDR\+\_\+\+SIZE}} = 2
+\begin{DoxyCompactList}\small\item\em Number of bytes for address, 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_a819c7269bd613e2552a7622bfe48483a}\label{class_block_protocol_a819c7269bd613e2552a7622bfe48483a}} 
+static const int \mbox{\hyperlink{class_block_protocol_a819c7269bd613e2552a7622bfe48483a}{CHECKSUM\+\_\+\+SIZE}} = 1
+\begin{DoxyCompactList}\small\item\em Number of bytes for Checksum, 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_a6e087e781e176873a2bd8b1533fa582c}\label{class_block_protocol_a6e087e781e176873a2bd8b1533fa582c}} 
+static const int \mbox{\hyperlink{class_block_protocol_a6e087e781e176873a2bd8b1533fa582c}{LENGTH\+\_\+\+SIZE}} = 1
+\begin{DoxyCompactList}\small\item\em Number of bytes for Length, 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_aad4aed50ff3771149294937d45d6e4ed}\label{class_block_protocol_aad4aed50ff3771149294937d45d6e4ed}} 
+static const int \mbox{\hyperlink{class_block_protocol_aad4aed50ff3771149294937d45d6e4ed}{CHECKSUM\+\_\+\+AND\+\_\+\+LENGTH\+\_\+\+SIZE}} = \mbox{\hyperlink{class_block_protocol_a819c7269bd613e2552a7622bfe48483a}{CHECKSUM\+\_\+\+SIZE}} + \mbox{\hyperlink{class_block_protocol_a6e087e781e176873a2bd8b1533fa582c}{LENGTH\+\_\+\+SIZE}}
+\begin{DoxyCompactList}\small\item\em Number of bytes for the Checksum and Length, 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_a8888e15639b5aaa4f86644881e10e266}\label{class_block_protocol_a8888e15639b5aaa4f86644881e10e266}} 
+static const int \mbox{\hyperlink{class_block_protocol_a8888e15639b5aaa4f86644881e10e266}{SERVICE\+\_\+\+SIZE}} = \mbox{\hyperlink{class_block_protocol_a1a5ece982e0366d27e75eb0320df81a2}{ADDR\+\_\+\+SIZE}} + \mbox{\hyperlink{class_block_protocol_a819c7269bd613e2552a7622bfe48483a}{CHECKSUM\+\_\+\+SIZE}} + \mbox{\hyperlink{class_block_protocol_a6e087e781e176873a2bd8b1533fa582c}{LENGTH\+\_\+\+SIZE}}
+\begin{DoxyCompactList}\small\item\em Number of the service bytes (address, checksum, length), 4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_acf15163984e595bf1f964405b45a739b}\label{class_block_protocol_acf15163984e595bf1f964405b45a739b}} 
+static const int \mbox{\hyperlink{class_block_protocol_acf15163984e595bf1f964405b45a739b}{DATA\+\_\+\+INDEX}} = 2
+\begin{DoxyCompactList}\small\item\em Index of the byte from which data starts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_afdd5441b96c571779b235534bbd72920}\label{class_block_protocol_afdd5441b96c571779b235534bbd72920}} 
+static const int \mbox{\hyperlink{class_block_protocol_afdd5441b96c571779b235534bbd72920}{CHECKSUM\+\_\+\+INDEX}} = 34
+\begin{DoxyCompactList}\small\item\em The index of the byte that stores the checksum of the response. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_a7d2b4a43a5dcee896d0b3f14b45422ec}\label{class_block_protocol_a7d2b4a43a5dcee896d0b3f14b45422ec}} 
+static const int \mbox{\hyperlink{class_block_protocol_a7d2b4a43a5dcee896d0b3f14b45422ec}{LENGTH\+\_\+\+INDEX}} = 35
+\begin{DoxyCompactList}\small\item\em The index of the byte that stores the total length of the response. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_a8221ba2c289f6b2a963533b6897ff8ae}\label{class_block_protocol_a8221ba2c289f6b2a963533b6897ff8ae}} 
+static const int \mbox{\hyperlink{class_block_protocol_a8221ba2c289f6b2a963533b6897ff8ae}{RESPONSE\+\_\+\+MAX\+\_\+\+SIZE}} = 36
+\begin{DoxyCompactList}\small\item\em Maximum size of the full response in bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_protocol_ac00e611cacb8fefacef86db3d7a659d8}\label{class_block_protocol_ac00e611cacb8fefacef86db3d7a659d8}} 
+static const int {\bfseries MAX} = \mbox{\hyperlink{class_block_protocol_a8221ba2c289f6b2a963533b6897ff8ae}{RESPONSE\+\_\+\+MAX\+\_\+\+SIZE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Block Protocol contants. 
+
+
+\begin{DoxyItemize}
+\item The first 2 bytes are the request address
+\item Request payload max size = 32
+\item Checksum
+\item Request length 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{globals_8h}{globals.\+h}}\end{DoxyCompactItemize}

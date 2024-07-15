@@ -1,0 +1,215 @@
+\hypertarget{class_std_commands}{}\doxysection{Std\+Commands Class Reference}
+\label{class_std_commands}\index{StdCommands@{StdCommands}}
+
+
+12.\+1 Standard Data Commands  
+
+
+
+
+{\ttfamily \#include $<$globals.\+h$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a2683b9f692be10a5b1004380a24c9332}{MANUFACTURER\+\_\+\+ACCESS\+\_\+\+CONTROL}} = 0x00
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a014fcb2601243fd695e9d1b2166c0809}{TEMPERATURE}} = 0x06
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a37914e802c3bea918e4157339372d38b}{VOLTAGE}} = 0x08
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a9cfe29caa19ab42d8f68ae1d24acc63a}{BATTERY\+\_\+\+STATUS}} = 0x0A
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a004695335b4f35aa4864ce0a365cbf6e}{CURRENT}} = 0x0C
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a8cb1cf9f5736579585ccd9728a75ae7a}{REMAINING\+\_\+\+CAPACITY}} = 0x10
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_ae0f78c83cb8cfd34b64dab1aeb7e39fb}{FULL\+\_\+\+CHARGE\+\_\+\+CAPACITY}} = 0x12
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a52d5bfdc6c03b0c4e1b92ecb5ef9f2f3}{AVERAGE\+\_\+\+CURRENT}} = 0x14
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_aa900f9e2fa28dcda033239a38ae23caa}{CYCLE\+\_\+\+COUNT}} = 0x2A
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a96992146ccb8fead1badcef9ac83e91b}{RELATIVE\+\_\+\+STATE\+\_\+\+OF\+\_\+\+CHARGE}} = 0x2C
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_ae72b1be8f72f62c764a6ba108d2c5402}{STATE\+\_\+\+OF\+\_\+\+HEALTH}} = 0x2E
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_ab2eb9b44ab2cd4c040e4ed4488242bc7}{CHARGING\+\_\+\+VOLTAGE}} = 0x30
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a40adac5c31172458d3809d557628bb0c}{CHARGING\+\_\+\+CURRENT}} = 0x32
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_ac512909c55ad54d4ea8abb2424c7cdaa}{DESIGN\+\_\+\+CAPACITY}} = 0x3C
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a0efff1326633d02d9673784d6eb63195}{ALT\+\_\+\+MANUFACTURER\+\_\+\+ACCESS}} = 0x3E
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_a27889fd53443561a1fe2588932751825}{MAC\+\_\+\+DATA}} = 0x40
+\item 
+static const byte \mbox{\hyperlink{class_std_commands_abe429a1d7681ea92ce9c0d38bac4439b}{MAC\+\_\+\+DATA\+\_\+\+CHECKSUM}} = 0x60
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+12.\+1 Standard Data Commands 
+
+To enable the system to read and write battery information, the BQ28\+Z610 uses a series of 2-\/byte standard I2C commands. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_std_commands_a0efff1326633d02d9673784d6eb63195}\label{class_std_commands_a0efff1326633d02d9673784d6eb63195}} 
+\index{StdCommands@{StdCommands}!ALT\_MANUFACTURER\_ACCESS@{ALT\_MANUFACTURER\_ACCESS}}
+\index{ALT\_MANUFACTURER\_ACCESS@{ALT\_MANUFACTURER\_ACCESS}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{ALT\_MANUFACTURER\_ACCESS}{ALT\_MANUFACTURER\_ACCESS}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+ALT\+\_\+\+MANUFACTURER\+\_\+\+ACCESS = 0x3E\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+28 0x3\+E/3F \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a52d5bfdc6c03b0c4e1b92ecb5ef9f2f3}\label{class_std_commands_a52d5bfdc6c03b0c4e1b92ecb5ef9f2f3}} 
+\index{StdCommands@{StdCommands}!AVERAGE\_CURRENT@{AVERAGE\_CURRENT}}
+\index{AVERAGE\_CURRENT@{AVERAGE\_CURRENT}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{AVERAGE\_CURRENT}{AVERAGE\_CURRENT}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+AVERAGE\+\_\+\+CURRENT = 0x14\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+11 0x14/15 \mbox{\hyperlink{std__data__commands_8cpp_ad2ecff5053257e61c28fbf42a48fff3e}{Average\+Current()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a9cfe29caa19ab42d8f68ae1d24acc63a}\label{class_std_commands_a9cfe29caa19ab42d8f68ae1d24acc63a}} 
+\index{StdCommands@{StdCommands}!BATTERY\_STATUS@{BATTERY\_STATUS}}
+\index{BATTERY\_STATUS@{BATTERY\_STATUS}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{BATTERY\_STATUS}{BATTERY\_STATUS}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+BATTERY\+\_\+\+STATUS = 0x0A\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+6 0x0\+A/0B \mbox{\hyperlink{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}{Battery\+Status()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a40adac5c31172458d3809d557628bb0c}\label{class_std_commands_a40adac5c31172458d3809d557628bb0c}} 
+\index{StdCommands@{StdCommands}!CHARGING\_CURRENT@{CHARGING\_CURRENT}}
+\index{CHARGING\_CURRENT@{CHARGING\_CURRENT}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{CHARGING\_CURRENT}{CHARGING\_CURRENT}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+CHARGING\+\_\+\+CURRENT = 0x32\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+26 0x32/33 \mbox{\hyperlink{std__data__commands_8cpp_a3377442e26888b879b3e9b727d907b16}{Charging\+Current()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_ab2eb9b44ab2cd4c040e4ed4488242bc7}\label{class_std_commands_ab2eb9b44ab2cd4c040e4ed4488242bc7}} 
+\index{StdCommands@{StdCommands}!CHARGING\_VOLTAGE@{CHARGING\_VOLTAGE}}
+\index{CHARGING\_VOLTAGE@{CHARGING\_VOLTAGE}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{CHARGING\_VOLTAGE}{CHARGING\_VOLTAGE}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+CHARGING\+\_\+\+VOLTAGE = 0x30\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+25 0x30/31 \mbox{\hyperlink{std__data__commands_8cpp_a9272fd6e5e20a5a3c2d511fcce2ada67}{Charging\+Voltage()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a004695335b4f35aa4864ce0a365cbf6e}\label{class_std_commands_a004695335b4f35aa4864ce0a365cbf6e}} 
+\index{StdCommands@{StdCommands}!CURRENT@{CURRENT}}
+\index{CURRENT@{CURRENT}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{CURRENT}{CURRENT}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+CURRENT = 0x0C\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+7 0x0\+C/0D \mbox{\hyperlink{std__data__commands_8cpp_ac56c1d075bdc355c84d8a341676a92c1}{Current()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_aa900f9e2fa28dcda033239a38ae23caa}\label{class_std_commands_aa900f9e2fa28dcda033239a38ae23caa}} 
+\index{StdCommands@{StdCommands}!CYCLE\_COUNT@{CYCLE\_COUNT}}
+\index{CYCLE\_COUNT@{CYCLE\_COUNT}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{CYCLE\_COUNT}{CYCLE\_COUNT}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+CYCLE\+\_\+\+COUNT = 0x2A\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+22 0x2\+A/2B \mbox{\hyperlink{std__data__commands_8cpp_a1f5283a0454a9c6fc179ace1406c8379}{Cycle\+Count()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_ac512909c55ad54d4ea8abb2424c7cdaa}\label{class_std_commands_ac512909c55ad54d4ea8abb2424c7cdaa}} 
+\index{StdCommands@{StdCommands}!DESIGN\_CAPACITY@{DESIGN\_CAPACITY}}
+\index{DESIGN\_CAPACITY@{DESIGN\_CAPACITY}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{DESIGN\_CAPACITY}{DESIGN\_CAPACITY}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+DESIGN\+\_\+\+CAPACITY = 0x3C\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+27 0x3\+C/3D \mbox{\hyperlink{std__data__commands_8cpp_ada28a22bb2c6314b5a9c0ac0655a4f2c}{Design\+Capacity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_ae0f78c83cb8cfd34b64dab1aeb7e39fb}\label{class_std_commands_ae0f78c83cb8cfd34b64dab1aeb7e39fb}} 
+\index{StdCommands@{StdCommands}!FULL\_CHARGE\_CAPACITY@{FULL\_CHARGE\_CAPACITY}}
+\index{FULL\_CHARGE\_CAPACITY@{FULL\_CHARGE\_CAPACITY}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{FULL\_CHARGE\_CAPACITY}{FULL\_CHARGE\_CAPACITY}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+FULL\+\_\+\+CHARGE\+\_\+\+CAPACITY = 0x12\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+10 0x12/13 \mbox{\hyperlink{std__data__commands_8cpp_a1ad98dba5c1618cbd5ef973095df6dff}{Full\+Charge\+Capacity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a27889fd53443561a1fe2588932751825}\label{class_std_commands_a27889fd53443561a1fe2588932751825}} 
+\index{StdCommands@{StdCommands}!MAC\_DATA@{MAC\_DATA}}
+\index{MAC\_DATA@{MAC\_DATA}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{MAC\_DATA}{MAC\_DATA}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+MAC\+\_\+\+DATA = 0x40\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+29 0x40/0x5F MACData() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_abe429a1d7681ea92ce9c0d38bac4439b}\label{class_std_commands_abe429a1d7681ea92ce9c0d38bac4439b}} 
+\index{StdCommands@{StdCommands}!MAC\_DATA\_CHECKSUM@{MAC\_DATA\_CHECKSUM}}
+\index{MAC\_DATA\_CHECKSUM@{MAC\_DATA\_CHECKSUM}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{MAC\_DATA\_CHECKSUM}{MAC\_DATA\_CHECKSUM}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+MAC\+\_\+\+DATA\+\_\+\+CHECKSUM = 0x60\hspace{0.3cm}{\ttfamily [static]}}
+
+Checksum and lendgth start address\+:
+\begin{DoxyItemize}
+\item 12.\+1.\+30 0x60 MACData\+Checksum()
+\item 12.\+1.\+31 0x61 MACData\+Length() 
+\end{DoxyItemize}\mbox{\Hypertarget{class_std_commands_a2683b9f692be10a5b1004380a24c9332}\label{class_std_commands_a2683b9f692be10a5b1004380a24c9332}} 
+\index{StdCommands@{StdCommands}!MANUFACTURER\_ACCESS\_CONTROL@{MANUFACTURER\_ACCESS\_CONTROL}}
+\index{MANUFACTURER\_ACCESS\_CONTROL@{MANUFACTURER\_ACCESS\_CONTROL}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{MANUFACTURER\_ACCESS\_CONTROL}{MANUFACTURER\_ACCESS\_CONTROL}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+MANUFACTURER\+\_\+\+ACCESS\+\_\+\+CONTROL = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+1 0x00/01 \mbox{\hyperlink{std__data__commands_8cpp_a8f46c7d707496662eaeb16ac99da5823}{Manufacturer\+Access\+Control()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a96992146ccb8fead1badcef9ac83e91b}\label{class_std_commands_a96992146ccb8fead1badcef9ac83e91b}} 
+\index{StdCommands@{StdCommands}!RELATIVE\_STATE\_OF\_CHARGE@{RELATIVE\_STATE\_OF\_CHARGE}}
+\index{RELATIVE\_STATE\_OF\_CHARGE@{RELATIVE\_STATE\_OF\_CHARGE}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{RELATIVE\_STATE\_OF\_CHARGE}{RELATIVE\_STATE\_OF\_CHARGE}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+RELATIVE\+\_\+\+STATE\+\_\+\+OF\+\_\+\+CHARGE = 0x2C\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+23 0x2\+C/2D \mbox{\hyperlink{std__data__commands_8cpp_a99e1df3aff21e73c4bd84365ef490cf1}{Relative\+State\+Of\+Charge()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a8cb1cf9f5736579585ccd9728a75ae7a}\label{class_std_commands_a8cb1cf9f5736579585ccd9728a75ae7a}} 
+\index{StdCommands@{StdCommands}!REMAINING\_CAPACITY@{REMAINING\_CAPACITY}}
+\index{REMAINING\_CAPACITY@{REMAINING\_CAPACITY}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{REMAINING\_CAPACITY}{REMAINING\_CAPACITY}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+REMAINING\+\_\+\+CAPACITY = 0x10\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+9 0x10/11 \mbox{\hyperlink{std__data__commands_8cpp_a3129870e862bc7e7cfe911559689ff80}{Remaining\+Capacity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_ae72b1be8f72f62c764a6ba108d2c5402}\label{class_std_commands_ae72b1be8f72f62c764a6ba108d2c5402}} 
+\index{StdCommands@{StdCommands}!STATE\_OF\_HEALTH@{STATE\_OF\_HEALTH}}
+\index{STATE\_OF\_HEALTH@{STATE\_OF\_HEALTH}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{STATE\_OF\_HEALTH}{STATE\_OF\_HEALTH}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+STATE\+\_\+\+OF\+\_\+\+HEALTH = 0x2E\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+24 0x2\+E/2F State-\/of-\/\+Health (SOH) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a014fcb2601243fd695e9d1b2166c0809}\label{class_std_commands_a014fcb2601243fd695e9d1b2166c0809}} 
+\index{StdCommands@{StdCommands}!TEMPERATURE@{TEMPERATURE}}
+\index{TEMPERATURE@{TEMPERATURE}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{TEMPERATURE}{TEMPERATURE}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+TEMPERATURE = 0x06\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+4 0x06/07 \mbox{\hyperlink{std__data__commands_8cpp_a46c82120b621c4a0f268646f6bc4ef49}{Temperature()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_std_commands_a37914e802c3bea918e4157339372d38b}\label{class_std_commands_a37914e802c3bea918e4157339372d38b}} 
+\index{StdCommands@{StdCommands}!VOLTAGE@{VOLTAGE}}
+\index{VOLTAGE@{VOLTAGE}!StdCommands@{StdCommands}}
+\doxysubsubsection{\texorpdfstring{VOLTAGE}{VOLTAGE}}
+{\footnotesize\ttfamily const byte Std\+Commands\+::\+VOLTAGE = 0x08\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+5 0x08/09 \mbox{\hyperlink{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}{Voltage()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{globals_8h}{globals.\+h}}\end{DoxyCompactItemize}

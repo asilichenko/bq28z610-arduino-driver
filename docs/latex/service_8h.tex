@@ -1,0 +1,435 @@
+\hypertarget{service_8h}{}\doxysection{service.\+h File Reference}
+\label{service_8h}\index{service.h@{service.h}}
+
+
+Custom functions headers.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+data\+\_\+commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}alt\+\_\+manufacturer\+\_\+access.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+flash\+\_\+access.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{service_8h_a9bbb35f15022e9328822bc2d0f62e41d}{security\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Request current security mode of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_a08ab14a09e9884b94acccf040d7f31fa}{unseal\+Device}} (u32 key=\mbox{\hyperlink{class_device_security_af1a815f185a83a95bd0b7c461c1864b4}{Device\+Security\+::\+DEFAULT\+\_\+\+UNSEAL\+\_\+\+KEY}})
+\begin{DoxyCompactList}\small\item\em 9.\+5.\+2 SEALED to UNSEALED \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_ab3536f17f4ac20d17e0bb3576de9d840}{full\+Access\+Device}} (u32 key=\mbox{\hyperlink{class_device_security_ac6478b510f52de70da42e5492d8dd0d8}{Device\+Security\+::\+DEFAULT\+\_\+\+FULL\+\_\+\+ACCESS\+\_\+\+KEY}})
+\begin{DoxyCompactList}\small\item\em 9.\+5.\+3 UNSEALED to FULL ACCESS \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_a19a206e39752e9564f6e8e3838b53e89}{manufactory\+Charge\+Fet}} (bool mode)
+\begin{DoxyCompactList}\small\item\em Brings Charge FET into desired mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_ac758b95c6df6e16f8295dbc7d75437b7}{manufactory\+Discharge\+Fet}} (bool mode)
+\begin{DoxyCompactList}\small\item\em Brings Discharge FET into desired mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_a19b1ed2b4dc7852ba9e9a34e125f0a14}{fet\+Control}} (bool mode)
+\begin{DoxyCompactList}\small\item\em Brings Manufacturing\+Status\mbox{[}FET\+\_\+\+EN\mbox{]} into desired mode. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{service_8h_a6b965dfedc0c9db5579317f09d52e00a}{is\+Permanent\+Fail}} ()
+\begin{DoxyCompactList}\small\item\em Chapter 3\+: Permanent Fail. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{service_8h_a95310b5573fa09af6b63aa5e96ba1dd2}{cell\+Voltage1}} ()
+\item 
+float \mbox{\hyperlink{service_8h_ae102a2e61924349a7ce2ea62e61437ae}{cell\+Voltage2}} ()
+\item 
+float \mbox{\hyperlink{service_8h_a13f266bda15b8e4e7e1fc7dfb616d923}{bat\+Voltage}} ()
+\item 
+float \mbox{\hyperlink{service_8h_a4339a271cb20f72d83c26f737ffcea71}{pack\+Voltage}} ()
+\item 
+\mbox{\Hypertarget{service_8h_a9a0ad361f22cabee349aa8b4cff54855}\label{service_8h_a9a0ad361f22cabee349aa8b4cff54855}} 
+void \mbox{\hyperlink{service_8h_a9a0ad361f22cabee349aa8b4cff54855}{Cell\+Undervoltage\+Protection\+Check}} ()
+\begin{DoxyCompactList}\small\item\em 2.\+2 Cell Undervoltage Protection \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{service_8h_aed0a901662d1d3fdac2737ffb9ad70dd}\label{service_8h_aed0a901662d1d3fdac2737ffb9ad70dd}} 
+void \mbox{\hyperlink{service_8h_aed0a901662d1d3fdac2737ffb9ad70dd}{Short\+Circuit\+In\+Charge\+Protection\+Check}} ()
+\begin{DoxyCompactList}\small\item\em 2.\+6.\+2 Short Circuit in Charge Protection \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{service_8h_a2b8b06f8fe8169f2e235620f75f5d682}\label{service_8h_a2b8b06f8fe8169f2e235620f75f5d682}} 
+void \mbox{\hyperlink{service_8h_a2b8b06f8fe8169f2e235620f75f5d682}{Short\+Circuit\+In\+Discharge\+Protection\+Check}} ()
+\begin{DoxyCompactList}\small\item\em 2.\+6.\+3 Short Circuit in Discharge Protection \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_a28af72e2476a216cf9179c501a6e8adb}{Overtemperature\+In\+Charge\+Protection\+Check}} ()
+\begin{DoxyCompactList}\small\item\em 2.\+8 Overtemperature in Charge Protection \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_af798e2de8151b31a9c961fa682075f66}{Permanent\+Fail\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Chapter 3 Permanent Fail. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_a859eeefffdff3993d1b4028bc8884b50}{fets\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Print flags that correspond to the FETs status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_a28509c7c2ed26b52a9d85d94ceec79cf}{set\+Enabled\+Charging\+Soc\+Threshold}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or Disable turning charging FET off at 60\% SOC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_afa6a5ad20c31999efba5142a65a8c2e4}{learning\+Cycle\+Init}} (int design\+Capacity\+Mah, int design\+Energy\+Cwh, word q\+Max\+Cell0, word q\+Max\+Cell1, word cycle\+Count)
+\begin{DoxyCompactList}\small\item\em Write initial parameters to the Gas Gauging Device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_af72771d4b5181c6b8a3b6f11bb35d43c}{learning\+Cycle\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Print into Serial port the important information for the Learning Cycle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{service_8h_a8d09e10a0e06e265b176dc32d7d5d623}{dod0\+PassedQ}} ()
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+40 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0074 ITStatus2 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{service_8h_a7738a58210780ebcc3271b2bec336d7f}{get\+Occ\+Threshold}} ()
+\begin{DoxyCompactList}\small\item\em Overcurrent in Charge trip threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service_8h_acd6f4e2c16b0e6d24d1f3cf1bfe6455b}{set\+Occ\+Threshold}} (int occ\+Threshold)
+\begin{DoxyCompactList}\small\item\em Overcurrent in Charge trip threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom functions headers. 
+
+MIT License
+
+Copyright (c) 2024 Oleksii Sylichenko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \char`\"{}\+AS IS\char`\"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{service_8h_a13f266bda15b8e4e7e1fc7dfb616d923}\label{service_8h_a13f266bda15b8e4e7e1fc7dfb616d923}} 
+\index{service.h@{service.h}!batVoltage@{batVoltage}}
+\index{batVoltage@{batVoltage}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{batVoltage()}{batVoltage()}}
+{\footnotesize\ttfamily float bat\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1()}} 
+
+\mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1}{DA\+\_\+\+STATUS\+\_\+1}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a95310b5573fa09af6b63aa5e96ba1dd2}\label{service_8h_a95310b5573fa09af6b63aa5e96ba1dd2}} 
+\index{service.h@{service.h}!cellVoltage1@{cellVoltage1}}
+\index{cellVoltage1@{cellVoltage1}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{cellVoltage1()}{cellVoltage1()}}
+{\footnotesize\ttfamily float cell\+Voltage1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1()}} 
+
+\mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1}{DA\+\_\+\+STATUS\+\_\+1}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_ae102a2e61924349a7ce2ea62e61437ae}\label{service_8h_ae102a2e61924349a7ce2ea62e61437ae}} 
+\index{service.h@{service.h}!cellVoltage2@{cellVoltage2}}
+\index{cellVoltage2@{cellVoltage2}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{cellVoltage2()}{cellVoltage2()}}
+{\footnotesize\ttfamily float cell\+Voltage2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1()}} 
+
+\mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1}{DA\+\_\+\+STATUS\+\_\+1}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a8d09e10a0e06e265b176dc32d7d5d623}\label{service_8h_a8d09e10a0e06e265b176dc32d7d5d623}} 
+\index{service.h@{service.h}!dod0PassedQ@{dod0PassedQ}}
+\index{dod0PassedQ@{dod0PassedQ}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{dod0PassedQ()}{dod0PassedQ()}}
+{\footnotesize\ttfamily int dod0\+PassedQ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+12.\+2.\+40 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0074 ITStatus2 
+
+\begin{DoxyReturn}{Returns}
+KKkk\+: DOD0 Passed Q. Passed charge since DOD0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{service_8h_a19b1ed2b4dc7852ba9e9a34e125f0a14}\label{service_8h_a19b1ed2b4dc7852ba9e9a34e125f0a14}} 
+\index{service.h@{service.h}!fetControl@{fetControl}}
+\index{fetControl@{fetControl}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{fetControl()}{fetControl()}}
+{\footnotesize\ttfamily void fet\+Control (\begin{DoxyParamCaption}\item[{bool}]{mode }\end{DoxyParamCaption})}
+
+
+
+Brings Manufacturing\+Status\mbox{[}FET\+\_\+\+EN\mbox{]} into desired mode. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_a01687753e4c49eadefa79f5c281c74ce}{FETControl()}} 
+
+\mbox{\hyperlink{class_manufacturing_status_flags}{Manufacturing\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a859eeefffdff3993d1b4028bc8884b50}\label{service_8h_a859eeefffdff3993d1b4028bc8884b50}} 
+\index{service.h@{service.h}!fetsStatus@{fetsStatus}}
+\index{fetsStatus@{fetsStatus}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{fetsStatus()}{fetsStatus()}}
+{\footnotesize\ttfamily void fets\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print flags that correspond to the FETs status. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{std__data__commands_8cpp_a3377442e26888b879b3e9b727d907b16}{Charging\+Current()}} 
+
+\mbox{\hyperlink{std__data__commands_8cpp_a9272fd6e5e20a5a3c2d511fcce2ada67}{Charging\+Voltage()}} 
+
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_ad42df9b25d22d22ef9b8a26b8024d48a}{Manufacturing\+Status()}} 
+
+\mbox{\hyperlink{class_manufacturing_status_flags}{Manufacturing\+Status\+Flags}} 
+
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status()}} 
+
+\mbox{\hyperlink{class_operation_status_flags}{Operation\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_ab3536f17f4ac20d17e0bb3576de9d840}\label{service_8h_ab3536f17f4ac20d17e0bb3576de9d840}} 
+\index{service.h@{service.h}!fullAccessDevice@{fullAccessDevice}}
+\index{fullAccessDevice@{fullAccessDevice}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{fullAccessDevice()}{fullAccessDevice()}}
+{\footnotesize\ttfamily void full\+Access\+Device (\begin{DoxyParamCaption}\item[{u32}]{key }\end{DoxyParamCaption})}
+
+
+
+9.\+5.\+3 UNSEALED to FULL ACCESS 
+
+UNSEALED to FULL ACCESS instructs the device to allow full access to all standard and extended registers and data flash. The device is shipped from TI in this mode. The keys for UNSEALED to FULL ACCESS can be read and changed via the MAC command Security\+Key() when in FULL ACCESS mode. Changing from UNSEALED to FULL ACCESS is performed by using the \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} command, by writing the first word of the Full Access Key to \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}}, followed by the second word of the Full Access Key to \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}}. In FULL ACCESS mode, the command to go to boot ROM can be sent.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_device_security_ac6478b510f52de70da42e5492d8dd0d8}{Device\+Security\+::\+DEFAULT\+\_\+\+FULL\+\_\+\+ACCESS\+\_\+\+KEY}} 
+
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_a562740b8603d5a04766c5ab1c14659b5}{Seal\+Device()}} 
+
+\mbox{\hyperlink{service_8h_a9bbb35f15022e9328822bc2d0f62e41d}{security\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a7738a58210780ebcc3271b2bec336d7f}\label{service_8h_a7738a58210780ebcc3271b2bec336d7f}} 
+\index{service.h@{service.h}!getOccThreshold@{getOccThreshold}}
+\index{getOccThreshold@{getOccThreshold}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{getOccThreshold()}{getOccThreshold()}}
+{\footnotesize\ttfamily int get\+Occ\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Overcurrent in Charge trip threshold. 
+
+13.\+10.\+3 OCC -\/ Overcurrent In Charge\+: Protections; OCC; 0x46\+C9; Threshold; I2 \mbox{\Hypertarget{service_8h_a6b965dfedc0c9db5579317f09d52e00a}\label{service_8h_a6b965dfedc0c9db5579317f09d52e00a}} 
+\index{service.h@{service.h}!isPermanentFail@{isPermanentFail}}
+\index{isPermanentFail@{isPermanentFail}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{isPermanentFail()}{isPermanentFail()}}
+{\footnotesize\ttfamily bool is\+Permanent\+Fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Chapter 3\+: Permanent Fail. 
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status()}}\mbox{[}PF\mbox{]} = 1
+\item \mbox{\hyperlink{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}{Battery\+Status()}}\mbox{[}TCA\mbox{]} = 1
+\item \mbox{\hyperlink{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}{Battery\+Status()}}\mbox{[}TDA\mbox{]} = 1
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_operation_status_flags}{Operation\+Status\+Flags}} 
+
+\mbox{\hyperlink{class_battery_status_flags}{Battery\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_afa6a5ad20c31999efba5142a65a8c2e4}\label{service_8h_afa6a5ad20c31999efba5142a65a8c2e4}} 
+\index{service.h@{service.h}!learningCycleInit@{learningCycleInit}}
+\index{learningCycleInit@{learningCycleInit}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{learningCycleInit()}{learningCycleInit()}}
+{\footnotesize\ttfamily void learning\+Cycle\+Init (\begin{DoxyParamCaption}\item[{int}]{design\+Capacity\+Mah,  }\item[{int}]{design\+Energy\+Cwh,  }\item[{word}]{q\+Max\+Cell0,  }\item[{word}]{q\+Max\+Cell1,  }\item[{word}]{cycle\+Count }\end{DoxyParamCaption})}
+
+
+
+Write initial parameters to the Gas Gauging Device. 
+
+Write into Data Flash\+:
+\begin{DoxyItemize}
+\item Design Capacity m\+Ah (pack Capacity) to address 0x462A;
+\item Design Energy c\+Wh (pack Voltage $\ast$ pack Capacity / 10) to 0x462C;
+\item expected Qmax Cell 0 word to 0x4206;
+\item expected Qmax Cell 1 word to 0x4208;
+\item expected Qmax Pack word to 0x420A;
+\item Gas Gauging Update Status\+: byte = 0x04 to 0x420E.
+\item Gas Gauging\+: Cycle Count word = 0 -\/ for new battery, or some approx. value of recharging cycles -\/ for used one to 0x4240;
+\end{DoxyItemize}
+
+Reset \char`\"{}\+R\+\_\+a flags\char`\"{} in the Data Flash to the Default values\+:
+\begin{DoxyItemize}
+\item Cell0 R\+\_\+a flag\+: addr = 0x4100, data = 0x\+FF55 -\/ Cell impedance never updated; Table being used;
+\item Cell1 R\+\_\+a flag\+: addr = 0x4140, data = 0x\+FF55 -\/ Cell impedance never updated; Table being used;
+\item x\+Cell0 R\+\_\+a flag\+: addr = 0x4180, data = 0x\+FFFF -\/ Cell impedance never updated; Table never used;
+\item x\+Cell0 R\+\_\+a flag\+: addr = 0x41\+C0, data = 0x\+FFFF -\/ Cell impedance never updated; Table never used;
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.linkedin.com/pulse/gas-gauging-device-bq28z610-learning-cycle-practical-guide-oleksii-ngk8f}{\texttt{ https\+://www.\+linkedin.\+com/pulse/gas-\/gauging-\/device-\/bq28z610-\/learning-\/cycle-\/practical-\/guide-\/oleksii-\/ngk8f}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_af72771d4b5181c6b8a3b6f11bb35d43c}\label{service_8h_af72771d4b5181c6b8a3b6f11bb35d43c}} 
+\index{service.h@{service.h}!learningCycleLog@{learningCycleLog}}
+\index{learningCycleLog@{learningCycleLog}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{learningCycleLog()}{learningCycleLog()}}
+{\footnotesize\ttfamily void learning\+Cycle\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print into Serial port the important information for the Learning Cycle. 
+
+
+\begin{DoxyItemize}
+\item Cell0 Voltage, mV
+\item Cell1 Voltage, mV
+\item Pack Voltage, mV
+\item Momentary current, mA
+\item Temperature, 0.\+1$\ast$C
+\item State Of Charge (SOC), \%
+\item QMax of the Cell0, m\+Ah
+\item QMax of the Cell1, m\+Ah
+\item QMax of the Pack, m\+Ah
+\item Binary result of \mbox{\hyperlink{alt__manufacturer__access_8cpp_ae3bb119a26909aad06df129f3734befe}{Gauging\+Status()}}
+\item Update Status in HEX format
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.linkedin.com/pulse/gas-gauging-device-bq28z610-learning-cycle-practical-guide-oleksii-ngk8f}{\texttt{ https\+://www.\+linkedin.\+com/pulse/gas-\/gauging-\/device-\/bq28z610-\/learning-\/cycle-\/practical-\/guide-\/oleksii-\/ngk8f}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a19a206e39752e9564f6e8e3838b53e89}\label{service_8h_a19a206e39752e9564f6e8e3838b53e89}} 
+\index{service.h@{service.h}!manufactoryChargeFet@{manufactoryChargeFet}}
+\index{manufactoryChargeFet@{manufactoryChargeFet}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{manufactoryChargeFet()}{manufactoryChargeFet()}}
+{\footnotesize\ttfamily void manufactory\+Charge\+Fet (\begin{DoxyParamCaption}\item[{bool}]{mode }\end{DoxyParamCaption})}
+
+
+
+Brings Charge FET into desired mode. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_a01687753e4c49eadefa79f5c281c74ce}{FETControl()}} 
+
+\mbox{\hyperlink{class_manufacturing_status_flags}{Manufacturing\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_ac758b95c6df6e16f8295dbc7d75437b7}\label{service_8h_ac758b95c6df6e16f8295dbc7d75437b7}} 
+\index{service.h@{service.h}!manufactoryDischargeFet@{manufactoryDischargeFet}}
+\index{manufactoryDischargeFet@{manufactoryDischargeFet}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{manufactoryDischargeFet()}{manufactoryDischargeFet()}}
+{\footnotesize\ttfamily void manufactory\+Discharge\+Fet (\begin{DoxyParamCaption}\item[{bool}]{mode }\end{DoxyParamCaption})}
+
+
+
+Brings Discharge FET into desired mode. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_a01687753e4c49eadefa79f5c281c74ce}{FETControl()}} 
+
+\mbox{\hyperlink{class_manufacturing_status_flags}{Manufacturing\+Status\+Flags}} 
+
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_a28b68d628ca00665b6685d2d25adabe5}{Discharge\+FET()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a28af72e2476a216cf9179c501a6e8adb}\label{service_8h_a28af72e2476a216cf9179c501a6e8adb}} 
+\index{service.h@{service.h}!OvertemperatureInChargeProtectionCheck@{OvertemperatureInChargeProtectionCheck}}
+\index{OvertemperatureInChargeProtectionCheck@{OvertemperatureInChargeProtectionCheck}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{OvertemperatureInChargeProtectionCheck()}{OvertemperatureInChargeProtectionCheck()}}
+{\footnotesize\ttfamily void Overtemperature\+In\+Charge\+Protection\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+2.\+8 Overtemperature in Charge Protection 
+
+Trip\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{alt__manufacturer__access_8cpp_afcd9adb81727f3b065b43b6eeea6c3c1}{Safety\+Alert()}}\mbox{[}OTC\mbox{]} = 0
+\item \mbox{\hyperlink{alt__manufacturer__access_8cpp_ad8ffb0c2d2869f8852c15f952e4ffb92}{Safety\+Status()}}\mbox{[}OTC\mbox{]} = 1
+\item \mbox{\hyperlink{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}{Battery\+Status()}}\mbox{[}OTA\mbox{]} = 1
+\item \mbox{\hyperlink{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}{Battery\+Status()}}\mbox{[}TCA\mbox{]} = 0
+\item \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status()}}\mbox{[}XCHG\mbox{]} = 1
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_safety_alert_flags}{Safety\+Alert\+Flags}} 
+
+\mbox{\hyperlink{class_safety_status_flags}{Safety\+Status\+Flags}} 
+
+\mbox{\hyperlink{class_battery_status_flags}{Battery\+Status\+Flags}} 
+
+\mbox{\hyperlink{class_operation_status_flags}{Operation\+Status\+Flags}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_afe26ddb2eef6699c0f33b4c5eef54e99}{DF\+\_\+\+ADDR\+::\+OTC\+\_\+\+THRESHOLD}} 
+
+\mbox{\hyperlink{class_d_f___a_d_d_r_a73994277198a09fb4e837b6d7c2e36f6}{DF\+\_\+\+ADDR\+::\+OTC\+\_\+\+RECOVERY}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a4339a271cb20f72d83c26f737ffcea71}\label{service_8h_a4339a271cb20f72d83c26f737ffcea71}} 
+\index{service.h@{service.h}!packVoltage@{packVoltage}}
+\index{packVoltage@{packVoltage}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{packVoltage()}{packVoltage()}}
+{\footnotesize\ttfamily float pack\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1()}} 
+
+\mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1}{DA\+\_\+\+STATUS\+\_\+1}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_af798e2de8151b31a9c961fa682075f66}\label{service_8h_af798e2de8151b31a9c961fa682075f66}} 
+\index{service.h@{service.h}!PermanentFailCheck@{PermanentFailCheck}}
+\index{PermanentFailCheck@{PermanentFailCheck}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{PermanentFailCheck()}{PermanentFailCheck()}}
+{\footnotesize\ttfamily void Permanent\+Fail\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Chapter 3 Permanent Fail. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status()}} 
+
+\mbox{\hyperlink{std__data__commands_8cpp_a1a8585cc05785ecc45c88035791eb6b1}{Battery\+Status()}} 
+
+\mbox{\hyperlink{std__data__commands_8cpp_a3377442e26888b879b3e9b727d907b16}{Charging\+Current()}} 
+
+\mbox{\hyperlink{std__data__commands_8cpp_a9272fd6e5e20a5a3c2d511fcce2ada67}{Charging\+Voltage()}} 
+
+\mbox{\hyperlink{class_operation_status_flags}{Operation\+Status\+Flags}} 
+
+\mbox{\hyperlink{class_battery_status_flags}{Battery\+Status\+Flags}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a9bbb35f15022e9328822bc2d0f62e41d}\label{service_8h_a9bbb35f15022e9328822bc2d0f62e41d}} 
+\index{service.h@{service.h}!securityMode@{securityMode}}
+\index{securityMode@{securityMode}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{securityMode()}{securityMode()}}
+{\footnotesize\ttfamily int security\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Request current security mode of the device. 
+
+12.\+2.\+30 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0054 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab6390cbd1492381166f7a8c1729b851a}{Operation\+Status()}} SEC1, SEC0 (Bits 14, 13)\+: SECURITY Mode 0, 0 = Reserved 0, 1 = Full Access 1, 0 = Unsealed 1, 1 = Sealed
+
+12.\+1.\+1 0x00/01 \mbox{\hyperlink{std__data__commands_8cpp_a8f46c7d707496662eaeb16ac99da5823}{Manufacturer\+Access\+Control()}} SEC1, SEC0 (Bits 14, 13)\+: SECURITY Mode 0, 0 = Reserved 0, 1 = Full Access -\/ doesn\textquotesingle{}t work correct! It\textquotesingle{}s (0, 0) in fact 1, 0 = Unsealed 1, 1 = Sealed \mbox{\Hypertarget{service_8h_a28509c7c2ed26b52a9d85d94ceec79cf}\label{service_8h_a28509c7c2ed26b52a9d85d94ceec79cf}} 
+\index{service.h@{service.h}!setEnabledChargingSocThreshold@{setEnabledChargingSocThreshold}}
+\index{setEnabledChargingSocThreshold@{setEnabledChargingSocThreshold}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{setEnabledChargingSocThreshold()}{setEnabledChargingSocThreshold()}}
+{\footnotesize\ttfamily void set\+Enabled\+Charging\+Soc\+Threshold (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or Disable turning charging FET off at 60\% SOC. 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.linkedin.com/pulse/how-stop-battery-charging-specific-percentage-oleksii-sylichenko-vpmkf}{\texttt{ https\+://www.\+linkedin.\+com/pulse/how-\/stop-\/battery-\/charging-\/specific-\/percentage-\/oleksii-\/sylichenko-\/vpmkf}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_acd6f4e2c16b0e6d24d1f3cf1bfe6455b}\label{service_8h_acd6f4e2c16b0e6d24d1f3cf1bfe6455b}} 
+\index{service.h@{service.h}!setOccThreshold@{setOccThreshold}}
+\index{setOccThreshold@{setOccThreshold}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{setOccThreshold()}{setOccThreshold()}}
+{\footnotesize\ttfamily void set\+Occ\+Threshold (\begin{DoxyParamCaption}\item[{int}]{occ\+Threshold }\end{DoxyParamCaption})}
+
+
+
+Overcurrent in Charge trip threshold. 
+
+13.\+10.\+3 OCC -\/ Overcurrent In Charge\+: Protections; OCC; 0x46\+C9; Threshold; I2
+
+Should be not greater than C/2, where C -\/ Full\+Charge\+Capacity.
+
+\begin{DoxySeeAlso}{See also}
+12.\+1.\+10 0x12/13 \mbox{\hyperlink{std__data__commands_8cpp_a1ad98dba5c1618cbd5ef973095df6dff}{Full\+Charge\+Capacity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{service_8h_a08ab14a09e9884b94acccf040d7f31fa}\label{service_8h_a08ab14a09e9884b94acccf040d7f31fa}} 
+\index{service.h@{service.h}!unsealDevice@{unsealDevice}}
+\index{unsealDevice@{unsealDevice}!service.h@{service.h}}
+\doxysubsubsection{\texorpdfstring{unsealDevice()}{unsealDevice()}}
+{\footnotesize\ttfamily void unseal\+Device (\begin{DoxyParamCaption}\item[{u32}]{key }\end{DoxyParamCaption})}
+
+
+
+9.\+5.\+2 SEALED to UNSEALED 
+
+SEALED to UNSEALED instructs the device to extend access to the standard and extended registers and data flash space and clears the \mbox{[}SEC1\mbox{]}\mbox{[}SEC0\mbox{]} flags. In UNSEALED mode, all data, standard and extended registers and DF have read/write access. Unsealing is a two-\/step command performed by writing the first word of the unseal key to \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} (MAC), followed by the second word of the unseal key to \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}}. The unseal key can be read and changed via the MAC Security\+Key() command when in FULL ACCESS mode. To return to the SEALED mode, either a hardware reset is needed, or the MAC \mbox{\hyperlink{alt__manufacturer__access_8cpp_a562740b8603d5a04766c5ab1c14659b5}{Seal\+Device()}} command is needed to transit from FULL ACCESS or UNSEALED to SEALED.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{alt__manufacturer__access_8cpp_a562740b8603d5a04766c5ab1c14659b5}{Seal\+Device()}} 
+
+\mbox{\hyperlink{service_8h_a9bbb35f15022e9328822bc2d0f62e41d}{security\+Mode()}} 
+
+\mbox{\hyperlink{class_device_security_af1a815f185a83a95bd0b7c461c1864b4}{Device\+Security\+::\+DEFAULT\+\_\+\+UNSEAL\+\_\+\+KEY}} 
+\end{DoxySeeAlso}

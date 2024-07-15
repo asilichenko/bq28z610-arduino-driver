@@ -1,0 +1,85 @@
+\hypertarget{globals_8h}{}\doxysection{globals.\+h File Reference}
+\label{globals_8h}\index{globals.h@{globals.h}}
+
+
+Global constants.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}flags.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_security_mode}{Security\+Mode}}
+\begin{DoxyCompactList}\small\item\em Constants for \mbox{\hyperlink{service_8cpp_a9bbb35f15022e9328822bc2d0f62e41d}{security\+Mode()}} result. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_device_security}{Device\+Security}}
+\begin{DoxyCompactList}\small\item\em Chapter 9 Device Security. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_block_protocol}{Block\+Protocol}}
+\begin{DoxyCompactList}\small\item\em Block Protocol contants. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_std_commands}{Std\+Commands}}
+\begin{DoxyCompactList}\small\item\em 12.\+1 Standard Data Commands \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_alt_manufacturer_commands}{Alt\+Manufacturer\+Commands}}
+\begin{DoxyCompactList}\small\item\em 12.\+2 0x3E, 0x3F \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} Commands \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1}{DA\+\_\+\+STATUS\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+37 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0071 \mbox{\hyperlink{alt__manufacturer__access_8cpp_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_i_t___s_t_a_t_u_s__2}{IT\+\_\+\+STATUS\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+40 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0074 \mbox{\hyperlink{alt__manufacturer__access_8cpp_aed7919e4500455e50b6f690d0db9459a}{ITStatus2()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_i_t___s_t_a_t_u_s__3}{IT\+\_\+\+STATUS\+\_\+3}}
+\begin{DoxyCompactList}\small\item\em 12.\+2.\+41 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0075 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ae35efcb07cd3b2d30e723540a6d9a1fd}{ITStatus3()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_units}{Units}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_units}{Units}} of measurement to print to serial port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{globals_8h_a4e04e3a6a7a18c4c1bbf901c98f4fa22}\label{globals_8h_a4e04e3a6a7a18c4c1bbf901c98f4fa22}} 
+bool \mbox{\hyperlink{globals_8h_a4e04e3a6a7a18c4c1bbf901c98f4fa22}{SILENCE}}
+\begin{DoxyCompactList}\small\item\em Do not print data into Serial from the functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{globals_8h_a117352cc494cc62c6b2f1882786a332c}\label{globals_8h_a117352cc494cc62c6b2f1882786a332c}} 
+bool \mbox{\hyperlink{globals_8h_a117352cc494cc62c6b2f1882786a332c}{DEBUG}}
+\begin{DoxyCompactList}\small\item\em Print extended info. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{globals_8h_a85fa5af10687d51465539701d2d9d4b6}\label{globals_8h_a85fa5af10687d51465539701d2d9d4b6}} 
+const char START\+\_\+\+MESSAGE\mbox{[}$\,$\mbox{]} {\bfseries PROGMEM} = \char`\"{}\textbackslash{}n============ START\+: \mbox{[}BQ28\+Z610 Driver\mbox{]} ============\textbackslash{}n\+License\+: MIT License\textbackslash{}n\+Copyright (c) 2024 Oleksii Sylichenko\textbackslash{}n==================================================\textbackslash{}n\char`\"{}
+\item 
+const int \mbox{\hyperlink{globals_8h_a999bc316a3020cf3e55d1142a86a1d80}{DEVICE\+\_\+\+ADDR}} = 0x55
+\begin{DoxyCompactList}\small\item\em Standard BQ28\+Z610 Device I2C Address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{globals_8h_aba9d79260ca54a98b45abc04b2a704bc}\label{globals_8h_aba9d79260ca54a98b45abc04b2a704bc}} 
+const float \mbox{\hyperlink{globals_8h_aba9d79260ca54a98b45abc04b2a704bc}{DECIPART}} = 0.\+1
+\begin{DoxyCompactList}\small\item\em 1/10 part \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{globals_8h_a7e71aef5c773bbb39ff5af1b4edfe43f}\label{globals_8h_a7e71aef5c773bbb39ff5af1b4edfe43f}} 
+const float \mbox{\hyperlink{globals_8h_a7e71aef5c773bbb39ff5af1b4edfe43f}{DECIPART\+\_\+\+DECIMAL}} = 1
+\begin{DoxyCompactList}\small\item\em Number of decimal places. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{globals_8h_afedc869bb260678a522027127dd48e46}\label{globals_8h_afedc869bb260678a522027127dd48e46}} 
+const float \mbox{\hyperlink{globals_8h_afedc869bb260678a522027127dd48e46}{PERMIL}} = 0.\+001
+\begin{DoxyCompactList}\small\item\em 1/1000 part \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{globals_8h_af397c1b21cc3ad5a3b9a7721d1d7a4ad}\label{globals_8h_af397c1b21cc3ad5a3b9a7721d1d7a4ad}} 
+const byte \mbox{\hyperlink{globals_8h_af397c1b21cc3ad5a3b9a7721d1d7a4ad}{PERMIL\+\_\+\+DECIMAL}} = 3
+\begin{DoxyCompactList}\small\item\em Number of decimal places. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Global constants. 
+
+MIT License
+
+Copyright (c) 2024 Oleksii Sylichenko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \char`\"{}\+AS IS\char`\"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{globals_8h_a999bc316a3020cf3e55d1142a86a1d80}\label{globals_8h_a999bc316a3020cf3e55d1142a86a1d80}} 
+\index{globals.h@{globals.h}!DEVICE\_ADDR@{DEVICE\_ADDR}}
+\index{DEVICE\_ADDR@{DEVICE\_ADDR}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{DEVICE\_ADDR}{DEVICE\_ADDR}}
+{\footnotesize\ttfamily const int DEVICE\+\_\+\+ADDR = 0x55}
+
+
+
+Standard BQ28\+Z610 Device I2C Address. 
+
+\begin{DoxySeeAlso}{See also}
+12.\+1 Standard Data Commands 
+\end{DoxySeeAlso}

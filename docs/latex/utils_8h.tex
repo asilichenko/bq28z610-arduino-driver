@@ -1,0 +1,387 @@
+\hypertarget{utils_8h}{}\doxysection{utils.\+h File Reference}
+\label{utils_8h}\index{utils.h@{utils.h}}
+
+
+Util functions headers.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{utils_8h_a24bc399fec4a19d88adb946044024c16}\label{utils_8h_a24bc399fec4a19d88adb946044024c16}} 
+\#define {\bfseries KELVIN\+\_\+\+TO\+\_\+\+CELSIUS}(k)~(k -\/ 273.\+15)
+\item 
+\#define \mbox{\hyperlink{utils_8h_ab935f49f953ad8dd0fa50fb9b758934b}{PGM\+\_\+\+PRINT}}(s)~Serial.\+print(\mbox{\hyperlink{utils_8h_a218d4f1dab339922199b187e6d6d3411}{string\+From\+Progmem}}(PSTR(s)))
+\item 
+\#define \mbox{\hyperlink{utils_8h_ae7e0138db8cc642db33ad85eea4b17b7}{PGM\+\_\+\+PRINTLN}}(s)~Serial.\+println(\mbox{\hyperlink{utils_8h_a218d4f1dab339922199b187e6d6d3411}{string\+From\+Progmem}}(PSTR(s)))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{utils_8h_a872d6f7436fa1ebd5ec95b4a5362d740}{is\+Allowed\+Request\+Payload\+Size}} (int len)
+\item 
+\mbox{\Hypertarget{utils_8h_a029cbf82ea5e66f642ded8426d0a20c8}\label{utils_8h_a029cbf82ea5e66f642ded8426d0a20c8}} 
+int {\bfseries send\+Command} (byte command)
+\item 
+int \mbox{\hyperlink{utils_8h_a5cc15e17500209faf992c3d5d4bce1c1}{send\+Command}} (byte reg, word command)
+\item 
+int \mbox{\hyperlink{utils_8h_a054c20ae7578ffd109c157c559fd4d5f}{send\+Data}} (byte reg, byte $\ast$data, int len)
+\item 
+int \mbox{\hyperlink{utils_8h_a33476da8f6910fae31a14e4d4e309b52}{request\+Block}} (byte $\ast$buf)
+\item 
+\mbox{\Hypertarget{utils_8h_a18d631b74edce8331bde9e9c88764940}\label{utils_8h_a18d631b74edce8331bde9e9c88764940}} 
+byte {\bfseries request\+Byte} ()
+\item 
+int \mbox{\hyperlink{utils_8h_a5d8f8c2e7ec676ad08fa8ade604216fb}{request\+Bytes}} (byte $\ast$buf, int len)
+\item 
+word \mbox{\hyperlink{utils_8h_a5d9ff40ba7bef208a962317e842284db}{request\+Word}} ()
+\item 
+byte \mbox{\hyperlink{utils_8h_abcaf898a9078d3a830cb6bc5c240d2a5}{checksum}} (byte $\ast$data, byte len)
+\item 
+bool \mbox{\hyperlink{utils_8h_ae72f6c67363bb0236ffafd699864eed0}{validate}} (byte $\ast$data)
+\item 
+word \mbox{\hyperlink{utils_8h_a1c4cdd8595661a9cfff6183049052595}{compose\+Word}} (byte $\ast$buf, int lower\+Byte\+Index=0, bool little\+Endian=true)
+\item 
+u32 \mbox{\hyperlink{utils_8h_a0f8bc0afd2cdffa24c3d85a524d442a2}{compose\+Double\+Word}} (byte $\ast$buf)
+\item 
+u32 \mbox{\hyperlink{utils_8h_a2e6fa1736a5f96af24b46302535479a3}{compose\+Value}} (byte $\ast$buf, int from, int till)
+\item 
+String \mbox{\hyperlink{utils_8h_a218d4f1dab339922199b187e6d6d3411}{string\+From\+Progmem}} (PGM\+\_\+P string\+Ptr)
+\item 
+void \mbox{\hyperlink{utils_8h_a9390d90db9f138016c27fafaf0b04441}{print\+Bin}} (u32 val, int n, bool new\+Line=false)
+\item 
+void \mbox{\hyperlink{utils_8h_a320fa6fcb7c70da0036ec661f6e8bd1e}{print\+Long\+Split\+Bin}} (u32 val)
+\item 
+\mbox{\Hypertarget{utils_8h_a5759d8fd710dd67697ead3598d26fd59}\label{utils_8h_a5759d8fd710dd67697ead3598d26fd59}} 
+void {\bfseries print\+Long\+Bin} (u32 val, bool new\+Line=false)
+\item 
+\mbox{\Hypertarget{utils_8h_af1f5a62b9e2c4f61c18f5d7a2f39a880}\label{utils_8h_af1f5a62b9e2c4f61c18f5d7a2f39a880}} 
+void {\bfseries print\+Word\+Bin} (word val, bool new\+Line=false)
+\item 
+\mbox{\Hypertarget{utils_8h_adfc0765709134e063fe64dfa8977c222}\label{utils_8h_adfc0765709134e063fe64dfa8977c222}} 
+void {\bfseries print\+Byte\+Bin} (byte val, bool new\+Line=false)
+\item 
+void \mbox{\hyperlink{utils_8h_a0f40714e48463a135f3bf994a7786216}{print\+Long\+Hex}} (u32 val, bool new\+Line=false)
+\item 
+\mbox{\Hypertarget{utils_8h_a1bdcab5b599fa552f1fa8513a27f642b}\label{utils_8h_a1bdcab5b599fa552f1fa8513a27f642b}} 
+void {\bfseries print\+Word\+Hex} (word val, bool new\+Line=false)
+\item 
+\mbox{\Hypertarget{utils_8h_a204c7cf0ebf2dba364bd07907eea5a09}\label{utils_8h_a204c7cf0ebf2dba364bd07907eea5a09}} 
+void {\bfseries print\+Word\+Hex} (PGM\+\_\+P caption, word val, bool new\+Line=true)
+\item 
+\mbox{\Hypertarget{utils_8h_a584eef70cca789ee67945d9063cd830a}\label{utils_8h_a584eef70cca789ee67945d9063cd830a}} 
+void {\bfseries print\+Byte\+Hex} (byte val, bool new\+Line=false)
+\item 
+void \mbox{\hyperlink{utils_8h_a9162946a8b242addd0b003be02866613}{print\+Bytes\+Hex}} (byte $\ast$buf, int len)
+\item 
+void \mbox{\hyperlink{utils_8h_a30ffe0959c4c4a968e9c4f92ba399e2a}{print\+Integer}} (PGM\+\_\+P caption, int value, bool new\+Line=true)
+\item 
+void \mbox{\hyperlink{utils_8h_a35f71783001958f9972c663bd31eea9d}{print\+Integer}} (PGM\+\_\+P caption, int value, PGM\+\_\+P units, bool new\+Line=true)
+\item 
+void \mbox{\hyperlink{utils_8h_a5a74589896c67e2a5030af655f90a727}{print\+Integer}} (int value, PGM\+\_\+P units, bool new\+Line=false)
+\item 
+\mbox{\Hypertarget{utils_8h_a2a7392e43935858694896e2903985e13}\label{utils_8h_a2a7392e43935858694896e2903985e13}} 
+void {\bfseries print\+Float} (float value, int format, PGM\+\_\+P units, bool new\+Line=false)
+\item 
+\mbox{\Hypertarget{utils_8h_aa99f5ebc5e1fb7955155b19c08cb2a01}\label{utils_8h_aa99f5ebc5e1fb7955155b19c08cb2a01}} 
+void {\bfseries print\+Float} (PGM\+\_\+P caption, float value, int format, PGM\+\_\+P units)
+\item 
+\mbox{\Hypertarget{utils_8h_a0556cf2d8fa19e7aa40c4b5c5dbf8b52}\label{utils_8h_a0556cf2d8fa19e7aa40c4b5c5dbf8b52}} 
+void {\bfseries print\+Float} (PGM\+\_\+P caption, float value, int format, PGM\+\_\+P($\ast$units\+Fn)())
+\item 
+void \mbox{\hyperlink{utils_8h_ab556ead4ae483111436b7af845badb8d}{print\+Premil}} (PGM\+\_\+P caption, int value, PGM\+\_\+P units)
+\item 
+\mbox{\Hypertarget{utils_8h_a45aa937cd95512ee316f61052641410a}\label{utils_8h_a45aa937cd95512ee316f61052641410a}} 
+void {\bfseries print\+Premil} (PGM\+\_\+P caption, int value, PGM\+\_\+P($\ast$units\+Fn)())
+\item 
+void \mbox{\hyperlink{utils_8h_a50f58c1da508caeaaca1fe3bfbc94326}{print\+Flag}} (PGM\+\_\+P caption, u32 flags, int n)
+\item 
+void \mbox{\hyperlink{utils_8h_a1152a962d0cdf28da007f996b2aed304}{print\+Flag}} (PGM\+\_\+P caption, u32 flags, \mbox{\hyperlink{struct_flag}{Flag}}($\ast$flag\+Fn)())
+\item 
+void \mbox{\hyperlink{utils_8h_ae0ae9160434f6dc78ec2f2a92b131e3f}{print\+Flag}} (PGM\+\_\+P caption, u32 flags, \mbox{\hyperlink{struct_flag}{Flag}} flag)
+\item 
+void \mbox{\hyperlink{utils_8h_a00a891b822657fd7b45f3b6eaaba8d58}{print\+Flag}} (u32 flags, \mbox{\hyperlink{struct_flag}{Flag}} flag)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Util functions headers. 
+
+MIT License
+
+Copyright (c) 2024 Oleksii Sylichenko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \char`\"{}\+AS IS\char`\"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{utils_8h_ab935f49f953ad8dd0fa50fb9b758934b}\label{utils_8h_ab935f49f953ad8dd0fa50fb9b758934b}} 
+\index{utils.h@{utils.h}!PGM\_PRINT@{PGM\_PRINT}}
+\index{PGM\_PRINT@{PGM\_PRINT}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PGM\_PRINT}{PGM\_PRINT}}
+{\footnotesize\ttfamily \#define PGM\+\_\+\+PRINT(\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})~Serial.\+print(\mbox{\hyperlink{utils_8h_a218d4f1dab339922199b187e6d6d3411}{string\+From\+Progmem}}(PSTR(s)))}
+
+Put defined string into program memory, in the runtime read the string from the program memory and print it. \mbox{\Hypertarget{utils_8h_ae7e0138db8cc642db33ad85eea4b17b7}\label{utils_8h_ae7e0138db8cc642db33ad85eea4b17b7}} 
+\index{utils.h@{utils.h}!PGM\_PRINTLN@{PGM\_PRINTLN}}
+\index{PGM\_PRINTLN@{PGM\_PRINTLN}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PGM\_PRINTLN}{PGM\_PRINTLN}}
+{\footnotesize\ttfamily \#define PGM\+\_\+\+PRINTLN(\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})~Serial.\+println(\mbox{\hyperlink{utils_8h_a218d4f1dab339922199b187e6d6d3411}{string\+From\+Progmem}}(PSTR(s)))}
+
+Put defined string into program memory, in the runtime read the string from the program memory and print it. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8h_abcaf898a9078d3a830cb6bc5c240d2a5}\label{utils_8h_abcaf898a9078d3a830cb6bc5c240d2a5}} 
+\index{utils.h@{utils.h}!checksum@{checksum}}
+\index{checksum@{checksum}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{checksum()}{checksum()}}
+{\footnotesize\ttfamily byte checksum (\begin{DoxyParamCaption}\item[{byte $\ast$}]{data,  }\item[{byte}]{len }\end{DoxyParamCaption})}
+
+The checksum is the bitwise inversion of the sum of bytes.
+
+For example\+: 
+\begin{DoxyPre}
+  \string~(0x35 + 0x00 + 0x23 + 0x01 + 0x67 + 0x45 + 0xAB + 0x89 + 0xEF + 0xCD)
+  = \string~(0xF5) = \string~(0b11110101) = 0b00001010 = 0x0A
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{https://github.com/tibms/kernel-4.4/blob/release/drivers/power/bq28z610/bq28z610_fg.c\#L378}{\texttt{ https\+://github.\+com/tibms/kernel-\/4.\+4/blob/release/drivers/power/bq28z610/bq28z610\+\_\+fg.\+c\#\+L378}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{utils_8h_a0f8bc0afd2cdffa24c3d85a524d442a2}\label{utils_8h_a0f8bc0afd2cdffa24c3d85a524d442a2}} 
+\index{utils.h@{utils.h}!composeDoubleWord@{composeDoubleWord}}
+\index{composeDoubleWord@{composeDoubleWord}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{composeDoubleWord()}{composeDoubleWord()}}
+{\footnotesize\ttfamily u32 compose\+Double\+Word (\begin{DoxyParamCaption}\item[{byte $\ast$}]{buf }\end{DoxyParamCaption})}
+
+Returns the Unsigned integer 32-\/bit value of 4 bytes from the buffer in Little Endian format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & -\/ data array \\
+\hline
+{\em a} & -\/ index of the least significant byte; bits\+: \mbox{[}0..7\mbox{]} \\
+\hline
+{\em b} & -\/ index of the most significant byte\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item \mbox{[}0x11, 0x22, 0x33, 0x44\mbox{]} -\/$>$ 0x44332211
+\item \mbox{[}0x11, 0x22, 0x00, 0x00\mbox{]} -\/$>$ 0x00002211 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a2e6fa1736a5f96af24b46302535479a3}\label{utils_8h_a2e6fa1736a5f96af24b46302535479a3}} 
+\index{utils.h@{utils.h}!composeValue@{composeValue}}
+\index{composeValue@{composeValue}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{composeValue()}{composeValue()}}
+{\footnotesize\ttfamily u32 compose\+Value (\begin{DoxyParamCaption}\item[{byte $\ast$}]{buf,  }\item[{int}]{from,  }\item[{int}]{till }\end{DoxyParamCaption})}
+
+Compose value from the bytes of the buffer in Little Endian format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & -\/ data array \\
+\hline
+{\em from} & -\/ index of the least significant byte; bits\+: \mbox{[}0..7\mbox{]} \\
+\hline
+{\em till} & -\/ index of the most significant byte\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item \mbox{[}0x11, 0x22, 0x33, 0x44\mbox{]} -\/$>$ 0x44332211
+\item \mbox{[}0x11, 0x22, 0x00, 0x00\mbox{]} -\/$>$ 0x00002211 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a1c4cdd8595661a9cfff6183049052595}\label{utils_8h_a1c4cdd8595661a9cfff6183049052595}} 
+\index{utils.h@{utils.h}!composeWord@{composeWord}}
+\index{composeWord@{composeWord}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{composeWord()}{composeWord()}}
+{\footnotesize\ttfamily word compose\+Word (\begin{DoxyParamCaption}\item[{byte $\ast$}]{buf,  }\item[{int}]{lsb\+Index,  }\item[{bool}]{little\+Endian }\end{DoxyParamCaption})}
+
+Compose the word value from the two bytes of the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & -\/ data array \\
+\hline
+{\em lower\+Byte\+Index} & -\/ Index of the byte that should be placed in the lower position of the result. \\
+\hline
+{\em little\+Endian} & -\/ Ending indicator\+:
+\begin{DoxyItemize}
+\item true -\/ Little Endian
+\item false -\/ Big Endian 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Little endian\+: \mbox{[}0x11, 0x22\mbox{]} -\/$>$ 0x2211
+\item Big Endian\+: \mbox{[}0x11, 0x22\mbox{]} -\/$>$ 0x1122 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a872d6f7436fa1ebd5ec95b4a5362d740}\label{utils_8h_a872d6f7436fa1ebd5ec95b4a5362d740}} 
+\index{utils.h@{utils.h}!isAllowedRequestPayloadSize@{isAllowedRequestPayloadSize}}
+\index{isAllowedRequestPayloadSize@{isAllowedRequestPayloadSize}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{isAllowedRequestPayloadSize()}{isAllowedRequestPayloadSize()}}
+{\footnotesize\ttfamily bool is\+Allowed\+Request\+Payload\+Size (\begin{DoxyParamCaption}\item[{int}]{len }\end{DoxyParamCaption})}
+
+Check whether length is greater than 0 and lower that 32.
+
+Max Data length in the Block Protocol is 32. \mbox{\Hypertarget{utils_8h_a9390d90db9f138016c27fafaf0b04441}\label{utils_8h_a9390d90db9f138016c27fafaf0b04441}} 
+\index{utils.h@{utils.h}!printBin@{printBin}}
+\index{printBin@{printBin}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printBin()}{printBin()}}
+{\footnotesize\ttfamily void print\+Bin (\begin{DoxyParamCaption}\item[{u32}]{val,  }\item[{int}]{n,  }\item[{bool}]{new\+Line }\end{DoxyParamCaption})}
+
+Print value in binary format with leading zeros. \mbox{\Hypertarget{utils_8h_a9162946a8b242addd0b003be02866613}\label{utils_8h_a9162946a8b242addd0b003be02866613}} 
+\index{utils.h@{utils.h}!printBytesHex@{printBytesHex}}
+\index{printBytesHex@{printBytesHex}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printBytesHex()}{printBytesHex()}}
+{\footnotesize\ttfamily void print\+Bytes\+Hex (\begin{DoxyParamCaption}\item[{byte $\ast$}]{buf,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Print content of the byte array in one line in hex format with leading zeros if necessary. \mbox{[} AA BB CC DD ... \mbox{]} \mbox{\Hypertarget{utils_8h_ae0ae9160434f6dc78ec2f2a92b131e3f}\label{utils_8h_ae0ae9160434f6dc78ec2f2a92b131e3f}} 
+\index{utils.h@{utils.h}!printFlag@{printFlag}}
+\index{printFlag@{printFlag}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printFlag()}{printFlag()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void print\+Flag (\begin{DoxyParamCaption}\item[{PGM\+\_\+P}]{caption,  }\item[{u32}]{flags,  }\item[{\mbox{\hyperlink{struct_flag}{Flag}}}]{flag }\end{DoxyParamCaption})}
+
+Print the \mbox{\hyperlink{struct_flag}{Flag}} value with the caption. \mbox{\Hypertarget{utils_8h_a1152a962d0cdf28da007f996b2aed304}\label{utils_8h_a1152a962d0cdf28da007f996b2aed304}} 
+\index{utils.h@{utils.h}!printFlag@{printFlag}}
+\index{printFlag@{printFlag}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printFlag()}{printFlag()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void print\+Flag (\begin{DoxyParamCaption}\item[{PGM\+\_\+P}]{caption,  }\item[{u32}]{flags,  }\item[{\mbox{\hyperlink{struct_flag}{Flag}}($\ast$)()}]{flag\+Fn }\end{DoxyParamCaption})}
+
+Print the \mbox{\hyperlink{struct_flag}{Flag}} value with the caption. The \mbox{\hyperlink{struct_flag}{Flag}} supplier function is passed as a parameter. \mbox{\Hypertarget{utils_8h_a50f58c1da508caeaaca1fe3bfbc94326}\label{utils_8h_a50f58c1da508caeaaca1fe3bfbc94326}} 
+\index{utils.h@{utils.h}!printFlag@{printFlag}}
+\index{printFlag@{printFlag}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printFlag()}{printFlag()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void print\+Flag (\begin{DoxyParamCaption}\item[{PGM\+\_\+P}]{caption,  }\item[{u32}]{flags,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Print the \mbox{\hyperlink{struct_flag}{Flag}} number with the caption. \mbox{\Hypertarget{utils_8h_a00a891b822657fd7b45f3b6eaaba8d58}\label{utils_8h_a00a891b822657fd7b45f3b6eaaba8d58}} 
+\index{utils.h@{utils.h}!printFlag@{printFlag}}
+\index{printFlag@{printFlag}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printFlag()}{printFlag()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void print\+Flag (\begin{DoxyParamCaption}\item[{u32}]{flags,  }\item[{\mbox{\hyperlink{struct_flag}{Flag}}}]{flag }\end{DoxyParamCaption})}
+
+Print the \mbox{\hyperlink{struct_flag}{Flag}} value, caption is taken from the \mbox{\hyperlink{struct_flag}{Flag}} definition. \mbox{\Hypertarget{utils_8h_a5a74589896c67e2a5030af655f90a727}\label{utils_8h_a5a74589896c67e2a5030af655f90a727}} 
+\index{utils.h@{utils.h}!printInteger@{printInteger}}
+\index{printInteger@{printInteger}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printInteger()}{printInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void print\+Integer (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{PGM\+\_\+P}]{units,  }\item[{bool}]{new\+Line = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Print in format\+: \char`\"{}value units\char`\"{} \mbox{\Hypertarget{utils_8h_a30ffe0959c4c4a968e9c4f92ba399e2a}\label{utils_8h_a30ffe0959c4c4a968e9c4f92ba399e2a}} 
+\index{utils.h@{utils.h}!printInteger@{printInteger}}
+\index{printInteger@{printInteger}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printInteger()}{printInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void print\+Integer (\begin{DoxyParamCaption}\item[{PGM\+\_\+P}]{caption,  }\item[{int}]{value,  }\item[{bool}]{new\+Line = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Print in format\+: \char`\"{}\+Caption\+: value\char`\"{} \mbox{\Hypertarget{utils_8h_a35f71783001958f9972c663bd31eea9d}\label{utils_8h_a35f71783001958f9972c663bd31eea9d}} 
+\index{utils.h@{utils.h}!printInteger@{printInteger}}
+\index{printInteger@{printInteger}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printInteger()}{printInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void print\+Integer (\begin{DoxyParamCaption}\item[{PGM\+\_\+P}]{caption,  }\item[{int}]{value,  }\item[{PGM\+\_\+P}]{units,  }\item[{bool}]{new\+Line = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Print in format\+: \char`\"{}\+Caption\+: value units\char`\"{} \mbox{\Hypertarget{utils_8h_a0f40714e48463a135f3bf994a7786216}\label{utils_8h_a0f40714e48463a135f3bf994a7786216}} 
+\index{utils.h@{utils.h}!printLongHex@{printLongHex}}
+\index{printLongHex@{printLongHex}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printLongHex()}{printLongHex()}}
+{\footnotesize\ttfamily void print\+Long\+Hex (\begin{DoxyParamCaption}\item[{u32}]{val,  }\item[{bool}]{new\+Line }\end{DoxyParamCaption})}
+
+Print value in the HEX format with leading 0x and zero if necessary. \mbox{\Hypertarget{utils_8h_a320fa6fcb7c70da0036ec661f6e8bd1e}\label{utils_8h_a320fa6fcb7c70da0036ec661f6e8bd1e}} 
+\index{utils.h@{utils.h}!printLongSplitBin@{printLongSplitBin}}
+\index{printLongSplitBin@{printLongSplitBin}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printLongSplitBin()}{printLongSplitBin()}}
+{\footnotesize\ttfamily void print\+Long\+Split\+Bin (\begin{DoxyParamCaption}\item[{u32}]{val }\end{DoxyParamCaption})}
+
+Print long value bits (32) in two lines\+: 31 -\/ 16 15 -\/ 0 \mbox{\Hypertarget{utils_8h_ab556ead4ae483111436b7af845badb8d}\label{utils_8h_ab556ead4ae483111436b7af845badb8d}} 
+\index{utils.h@{utils.h}!printPremil@{printPremil}}
+\index{printPremil@{printPremil}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{printPremil()}{printPremil()}}
+{\footnotesize\ttfamily void print\+Premil (\begin{DoxyParamCaption}\item[{PGM\+\_\+P}]{caption,  }\item[{int}]{value,  }\item[{PGM\+\_\+P}]{units }\end{DoxyParamCaption})}
+
+Print the integer value as a float divided by 1000 with 3 decimal places in format\+: \char`\"{}\+Caption\+: 65.\+536\char`\"{} \mbox{\Hypertarget{utils_8h_a33476da8f6910fae31a14e4d4e309b52}\label{utils_8h_a33476da8f6910fae31a14e4d4e309b52}} 
+\index{utils.h@{utils.h}!requestBlock@{requestBlock}}
+\index{requestBlock@{requestBlock}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{requestBlock()}{requestBlock()}}
+{\footnotesize\ttfamily int request\+Block (\begin{DoxyParamCaption}\item[{byte $\ast$}]{buf }\end{DoxyParamCaption})}
+
+Request the device for 36 bytes per multiple requests using the Block Protocol.
+\begin{DoxyItemize}
+\item The first 2 bytes represent the requested address.
+\item 32 bytes contain data.
+\item 1 byte is allocated for the checksum.
+\item 1 byte denotes the total length. 
+\end{DoxyItemize}\mbox{\Hypertarget{utils_8h_a5d8f8c2e7ec676ad08fa8ade604216fb}\label{utils_8h_a5d8f8c2e7ec676ad08fa8ade604216fb}} 
+\index{utils.h@{utils.h}!requestBytes@{requestBytes}}
+\index{requestBytes@{requestBytes}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{requestBytes()}{requestBytes()}}
+{\footnotesize\ttfamily int request\+Bytes (\begin{DoxyParamCaption}\item[{byte $\ast$}]{buf,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Request the device for len bytes per single request.
+
+Length of the requested data must not be greater than 32, because it cannot response more. \mbox{\Hypertarget{utils_8h_a5d9ff40ba7bef208a962317e842284db}\label{utils_8h_a5d9ff40ba7bef208a962317e842284db}} 
+\index{utils.h@{utils.h}!requestWord@{requestWord}}
+\index{requestWord@{requestWord}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{requestWord()}{requestWord()}}
+{\footnotesize\ttfamily word request\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read word from the Device in Little Endian and return as normal word.
+
+If response\+: \mbox{[}0xaa, 0x\+AA\mbox{]} then return\+: 0x\+AAaa \mbox{\Hypertarget{utils_8h_a5cc15e17500209faf992c3d5d4bce1c1}\label{utils_8h_a5cc15e17500209faf992c3d5d4bce1c1}} 
+\index{utils.h@{utils.h}!sendCommand@{sendCommand}}
+\index{sendCommand@{sendCommand}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{sendCommand()}{sendCommand()}}
+{\footnotesize\ttfamily int send\+Command (\begin{DoxyParamCaption}\item[{byte}]{reg,  }\item[{word}]{command }\end{DoxyParamCaption})}
+
+Send word command in Little Endian to the register.
+
+Bytes of command should be in normal ordering. Ordering will be changed to Little Endian by the function.
+
+0x4321 to REG\+: \begin{quote}
+write\+: \mbox{[} REG, 0x21, 0x43 \mbox{]} \end{quote}
+
+
+Sending word command in Little Endian to the register.
+
+Bytes of command should be in normal ordering. Ordering will be changed to Little Endian by the function.
+
+0x4321 to REG\+: \begin{quote}
+write\+: \mbox{[} REG, 0x21, 0x43 \mbox{]} \end{quote}
+\mbox{\Hypertarget{utils_8h_a054c20ae7578ffd109c157c559fd4d5f}\label{utils_8h_a054c20ae7578ffd109c157c559fd4d5f}} 
+\index{utils.h@{utils.h}!sendData@{sendData}}
+\index{sendData@{sendData}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{sendData()}{sendData()}}
+{\footnotesize\ttfamily int send\+Data (\begin{DoxyParamCaption}\item[{byte}]{reg,  }\item[{byte $\ast$}]{data,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Send byte array data with specified length into specified register.
+
+Order of the bytes in the data array should be prepared to sending.
+
+The length should not be greater than 32 and less than 1. \mbox{\Hypertarget{utils_8h_a218d4f1dab339922199b187e6d6d3411}\label{utils_8h_a218d4f1dab339922199b187e6d6d3411}} 
+\index{utils.h@{utils.h}!stringFromProgmem@{stringFromProgmem}}
+\index{stringFromProgmem@{stringFromProgmem}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{stringFromProgmem()}{stringFromProgmem()}}
+{\footnotesize\ttfamily String string\+From\+Progmem (\begin{DoxyParamCaption}\item[{PGM\+\_\+P}]{string\+Ptr }\end{DoxyParamCaption})}
+
+Read string from PROGMEM and return as String in RAM. \mbox{\Hypertarget{utils_8h_ae72f6c67363bb0236ffafd699864eed0}\label{utils_8h_ae72f6c67363bb0236ffafd699864eed0}} 
+\index{utils.h@{utils.h}!validate@{validate}}
+\index{validate@{validate}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily bool validate (\begin{DoxyParamCaption}\item[{byte $\ast$}]{data }\end{DoxyParamCaption})}
+
+Validate the data via checksum\+: the sum of the data bytes and the checksum should equal a full byte.
+
+Length of the data array according to the Block Protocol should be equal 36.
+
+The last two bytes should represent the checksum and the total length. 

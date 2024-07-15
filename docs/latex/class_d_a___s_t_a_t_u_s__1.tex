@@ -1,0 +1,107 @@
+\hypertarget{class_d_a___s_t_a_t_u_s__1}{}\doxysection{DA\+\_\+\+STATUS\+\_\+1 Class Reference}
+\label{class_d_a___s_t_a_t_u_s__1}\index{DA\_STATUS\_1@{DA\_STATUS\_1}}
+
+
+12.\+2.\+37 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0071 \mbox{\hyperlink{alt__manufacturer__access_8cpp_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1()}}  
+
+
+
+
+{\ttfamily \#include $<$globals.\+h$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_a86ec103f08083fa500b1ea421d9f8e01}{CELL\+\_\+\+VOLTAGE\+\_\+1}} = 0
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_ad0998dec972f5c7e49bfcd7b4965ebc5}{CELL\+\_\+\+VOLTAGE\+\_\+2}} = 2
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_a619c7ef75e6e6abb2d5f1dd83de8aef8}{BAT\+\_\+\+VOLTAGE}} = 8
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_a7779c4b0cc56551e2c9b91f8f1b8ccb0}{PACK\+\_\+\+VOLTAGE}} = 10
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_ad999b4aec3c11df27e6fc2143f6095e5}{CELL\+\_\+\+CURRENT\+\_\+1}} = 12
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_abd797c62510d13b183ec638cd38b4f83}{CELL\+\_\+\+CURRENT\+\_\+2}} = 14
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_a13f9bd1d6b0d043a0d6d9d23639655b6}{CELL\+\_\+\+POWER\+\_\+1}} = 20
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_acd3422a3724cfa155101c1536ce37ec4}{CELL\+\_\+\+POWER\+\_\+2}} = 22
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_aa0c9f6c388730955ea10b94b9544ada3}{POWER}} = 28
+\item 
+static const byte \mbox{\hyperlink{class_d_a___s_t_a_t_u_s__1_af878586f62b572d8619098b36a1d00d2}{AVG\+\_\+\+POWER}} = 30
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+12.\+2.\+37 \mbox{\hyperlink{alt__manufacturer__access_8cpp_ab30f45d45249d982ae8e5fc89403c400}{Alt\+Manufacturer\+Access()}} 0x0071 \mbox{\hyperlink{alt__manufacturer__access_8cpp_af8b9c312271e1ce5600f794f6d94e208}{DAStatus1()}} 
+
+Indexes of the output data. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_af878586f62b572d8619098b36a1d00d2}\label{class_d_a___s_t_a_t_u_s__1_af878586f62b572d8619098b36a1d00d2}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!AVG\_POWER@{AVG\_POWER}}
+\index{AVG\_POWER@{AVG\_POWER}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{AVG\_POWER}{AVG\_POWER}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+AVG\+\_\+\+POWER = 30\hspace{0.3cm}{\ttfamily [static]}}
+
+PPpp\+: Average Power. Calculated by \mbox{\hyperlink{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}{Voltage()}} × \mbox{\hyperlink{std__data__commands_8cpp_ad2ecff5053257e61c28fbf42a48fff3e}{Average\+Current()}} \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_a619c7ef75e6e6abb2d5f1dd83de8aef8}\label{class_d_a___s_t_a_t_u_s__1_a619c7ef75e6e6abb2d5f1dd83de8aef8}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!BAT\_VOLTAGE@{BAT\_VOLTAGE}}
+\index{BAT\_VOLTAGE@{BAT\_VOLTAGE}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{BAT\_VOLTAGE}{BAT\_VOLTAGE}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+BAT\+\_\+\+VOLTAGE = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+EEee\+: BAT Voltage \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_ad999b4aec3c11df27e6fc2143f6095e5}\label{class_d_a___s_t_a_t_u_s__1_ad999b4aec3c11df27e6fc2143f6095e5}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!CELL\_CURRENT\_1@{CELL\_CURRENT\_1}}
+\index{CELL\_CURRENT\_1@{CELL\_CURRENT\_1}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{CELL\_CURRENT\_1}{CELL\_CURRENT\_1}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+CELL\+\_\+\+CURRENT\+\_\+1 = 12\hspace{0.3cm}{\ttfamily [static]}}
+
+GGgg\+: Cell Current 1. Simultaneous current measured during Cell Voltage1 measurement \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_abd797c62510d13b183ec638cd38b4f83}\label{class_d_a___s_t_a_t_u_s__1_abd797c62510d13b183ec638cd38b4f83}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!CELL\_CURRENT\_2@{CELL\_CURRENT\_2}}
+\index{CELL\_CURRENT\_2@{CELL\_CURRENT\_2}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{CELL\_CURRENT\_2}{CELL\_CURRENT\_2}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+CELL\+\_\+\+CURRENT\+\_\+2 = 14\hspace{0.3cm}{\ttfamily [static]}}
+
+HHhh\+: Cell Current 2. Simultaneous current measured during Cell Voltage2 measurement \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_a13f9bd1d6b0d043a0d6d9d23639655b6}\label{class_d_a___s_t_a_t_u_s__1_a13f9bd1d6b0d043a0d6d9d23639655b6}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!CELL\_POWER\_1@{CELL\_POWER\_1}}
+\index{CELL\_POWER\_1@{CELL\_POWER\_1}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{CELL\_POWER\_1}{CELL\_POWER\_1}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+CELL\+\_\+\+POWER\+\_\+1 = 20\hspace{0.3cm}{\ttfamily [static]}}
+
+KKkk\+: Cell Power 1. Calculated using Cell Voltage1 and Cell Current 1 data \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_acd3422a3724cfa155101c1536ce37ec4}\label{class_d_a___s_t_a_t_u_s__1_acd3422a3724cfa155101c1536ce37ec4}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!CELL\_POWER\_2@{CELL\_POWER\_2}}
+\index{CELL\_POWER\_2@{CELL\_POWER\_2}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{CELL\_POWER\_2}{CELL\_POWER\_2}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+CELL\+\_\+\+POWER\+\_\+2 = 22\hspace{0.3cm}{\ttfamily [static]}}
+
+LLll\+: Cell Power 2. Calculated using Cell Voltage2 and Cell Current 2 data \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_a86ec103f08083fa500b1ea421d9f8e01}\label{class_d_a___s_t_a_t_u_s__1_a86ec103f08083fa500b1ea421d9f8e01}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!CELL\_VOLTAGE\_1@{CELL\_VOLTAGE\_1}}
+\index{CELL\_VOLTAGE\_1@{CELL\_VOLTAGE\_1}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{CELL\_VOLTAGE\_1}{CELL\_VOLTAGE\_1}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+CELL\+\_\+\+VOLTAGE\+\_\+1 = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+AAaa\+: Cell Voltage 1 \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_ad0998dec972f5c7e49bfcd7b4965ebc5}\label{class_d_a___s_t_a_t_u_s__1_ad0998dec972f5c7e49bfcd7b4965ebc5}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!CELL\_VOLTAGE\_2@{CELL\_VOLTAGE\_2}}
+\index{CELL\_VOLTAGE\_2@{CELL\_VOLTAGE\_2}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{CELL\_VOLTAGE\_2}{CELL\_VOLTAGE\_2}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+CELL\+\_\+\+VOLTAGE\+\_\+2 = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+BBbb\+: Cell Voltage 2 \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_a7779c4b0cc56551e2c9b91f8f1b8ccb0}\label{class_d_a___s_t_a_t_u_s__1_a7779c4b0cc56551e2c9b91f8f1b8ccb0}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!PACK\_VOLTAGE@{PACK\_VOLTAGE}}
+\index{PACK\_VOLTAGE@{PACK\_VOLTAGE}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{PACK\_VOLTAGE}{PACK\_VOLTAGE}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+PACK\+\_\+\+VOLTAGE = 10\hspace{0.3cm}{\ttfamily [static]}}
+
+FFff\+: PACK Voltage \mbox{\Hypertarget{class_d_a___s_t_a_t_u_s__1_aa0c9f6c388730955ea10b94b9544ada3}\label{class_d_a___s_t_a_t_u_s__1_aa0c9f6c388730955ea10b94b9544ada3}} 
+\index{DA\_STATUS\_1@{DA\_STATUS\_1}!POWER@{POWER}}
+\index{POWER@{POWER}!DA\_STATUS\_1@{DA\_STATUS\_1}}
+\doxysubsubsection{\texorpdfstring{POWER}{POWER}}
+{\footnotesize\ttfamily const byte DA\+\_\+\+STATUS\+\_\+1\+::\+POWER = 28\hspace{0.3cm}{\ttfamily [static]}}
+
+OOoo\+: Power calculated by \mbox{\hyperlink{std__data__commands_8cpp_aed0ec659e0cca636a716c482db4f560d}{Voltage()}} × \mbox{\hyperlink{std__data__commands_8cpp_ac56c1d075bdc355c84d8a341676a92c1}{Current()}} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{globals_8h}{globals.\+h}}\end{DoxyCompactItemize}

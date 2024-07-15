@@ -1,0 +1,101 @@
+\hypertarget{class_s_o_c_flag_config_a_flags}{}\doxysection{SOCFlag\+Config\+AFlags Class Reference}
+\label{class_s_o_c_flag_config_a_flags}\index{SOCFlagConfigAFlags@{SOCFlagConfigAFlags}}
+
+
+Data Flash\+: Settings; Configuration; 0x4632; SOC \mbox{\hyperlink{struct_flag}{Flag}} Config A; H2.  
+
+
+
+
+{\ttfamily \#include $<$flags.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_aca3a37fa2f8c587ab36d213222fa1534}\label{class_s_o_c_flag_config_a_flags_aca3a37fa2f8c587ab36d213222fa1534}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TDSETV} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_a28eab79a28d2c8e50f7e92e77b01da09}\label{class_s_o_c_flag_config_a_flags_a28eab79a28d2c8e50f7e92e77b01da09}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TDCLEARV} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_af6f0550d56185b90581f4af63f7eb70a}\label{class_s_o_c_flag_config_a_flags_af6f0550d56185b90581f4af63f7eb70a}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TDSETRSOC} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_a6b52e229500d9ccb9793e23c769da5cc}\label{class_s_o_c_flag_config_a_flags_a6b52e229500d9ccb9793e23c769da5cc}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TDCLEARRSOC} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_a540b55b6c48bd372b13cccbfea255939}\label{class_s_o_c_flag_config_a_flags_a540b55b6c48bd372b13cccbfea255939}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TCSETV} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_a0d7a1e6a3fdd5caf499fb0ad53a6308f}\label{class_s_o_c_flag_config_a_flags_a0d7a1e6a3fdd5caf499fb0ad53a6308f}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TCCLEARV} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_a29d92abe0d4b1ec75a83825f5ffb2531}\label{class_s_o_c_flag_config_a_flags_a29d92abe0d4b1ec75a83825f5ffb2531}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TCSETRSOC} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_ab0619f634e0db047380428631ed30224}\label{class_s_o_c_flag_config_a_flags_ab0619f634e0db047380428631ed30224}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TCCLEARRSOC} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_ae37c014557875ffe84618f0d960fe54b}\label{class_s_o_c_flag_config_a_flags_ae37c014557875ffe84618f0d960fe54b}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries FCSETVCT} ()
+\item 
+\mbox{\Hypertarget{class_s_o_c_flag_config_a_flags_ad3ede561b1c47b401601111587e2f51a}\label{class_s_o_c_flag_config_a_flags_ad3ede561b1c47b401601111587e2f51a}} 
+static \mbox{\hyperlink{struct_flag}{Flag}} {\bfseries TCSETVCT} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Flash\+: Settings; Configuration; 0x4632; SOC \mbox{\hyperlink{struct_flag}{Flag}} Config A; H2. 
+
+
+\begin{DoxyItemize}
+\item Default\+: 0x0\+C8C;
+\item JBL\+: 0001 0011 1000 0011;
+\end{DoxyItemize}
+
+
+\begin{DoxyPre}
+Bit 0: TDSETV—Enables the TD flag set by the cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 1: TDCLEARV—Enables the TD flag clear by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 2: TDSETRSOC—Enables the TD flag set by RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 3: TDCLEARRSOC—Enables the TD flag cleared by the RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 4: TCSETV—Enables the TC flag set by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 5: TCCLEARV—Enables the TC flag clear by cell voltage threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 6: TCSETRSOC—Enables the TC flag set by the RSOC threshold
+  0 = Disabled (default)
+  1 = Enabled
+Bit 7: TCCLEARRSOC—Enables the TC flag cleared by the RSOC threshold
+  0 = Disabled
+  1 = Enabled (default)
+Bit 8: Reserved
+Bit 9: Reserved
+Bit 10: FCSETVCT—Enables the FC flag set by primary charge termination
+  0 = Disabled
+  1 = Enabled (default)
+Bit 11: TCSETVCT—Enables the TC flag set by primary charge termination
+  0 = Disabled
+  1 = Enabled (default)
+Bit 15: 12: Reserved
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{data__flash__access_8cpp_aade8fbc61ff76c0f3f86c595d839e057}{df\+Read\+Soc\+Flag\+Config\+A()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flags_8h}{flags.\+h}}\end{DoxyCompactItemize}
