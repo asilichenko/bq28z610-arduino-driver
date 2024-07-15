@@ -57,7 +57,7 @@ Output directory for the generated documentation is "[/docs/](docs)".
 
 ## 📄 std_data_commands
 
-Functions described in the section "_12.1 Standard Data Commands headers_" of the Technical Reference Manual.
+Functions described in the section "_12.1 Standard Data Commands_" of the Technical Reference Manual.
 
 🔗 [std_data_commands.h](std_data_commands.h) | [std_data_commands.cpp](std_data_commands.cpp)
 
