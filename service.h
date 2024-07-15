@@ -191,7 +191,12 @@ void fetsStatus();
 
 /**
   @brief Enable or Disable turning charging FET off at 60% SOC
-  @see https://www.linkedin.com/pulse/how-stop-battery-charging-specific-percentage-oleksii-sylichenko-vpmkf
+  @see How to Stop Battery Charging at a Specific Percentage:
+       https://www.linkedin.com/pulse/how-stop-battery-charging-specific-percentage-oleksii-sylichenko-vpmkf
+  @see dfWriteFetOptionsCHGFET()
+  @see dfWriteTcSetRsocThreshold()
+  @see dfWriteTcClearRsocThreshold()
+  @see dfWriteSocFlagConfigA()
 */
 void setEnabledChargingSocThreshold(bool enabled);
 
