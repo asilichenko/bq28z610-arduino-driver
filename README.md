@@ -167,7 +167,7 @@ Csv-file which contains list of Data Flash entities taken from the table "_14.1 
 
 ## 📂 dump files
 
-I included several dump files of my BQ28Z610 device:
+I included several Data Flash dump files of my BQ28Z610 device:
 
 - [dump-original.txt](extras/data_flash/data/dump/dump-original.txt) - a dump before any changes over Data Flash were made
 - [dump-20240710.txt](extras/data_flash/data/dump/dump-20240710.txt) - a dump after some changes have been written to the Data Flash
