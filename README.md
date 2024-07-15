@@ -38,6 +38,10 @@ For a complete description of all functions, follow the link: https://asilichenk
 
 The main Arduino sketch file.
 
+1. Wait 5 seconds to prevent launching the code when resetting while uploading new sketch to Arduino.
+2. Init Serial port.
+3. Init Wire (I2C) interface.
+
 There is some sample code in the setup function:
 
 - Calling "read and print" functions from different sections.
