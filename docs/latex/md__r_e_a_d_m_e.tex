@@ -1,3 +1,207 @@
-This repository contains an Arduino driver for the BQ28\+Z610 battery management IC.
 
-It provides functions to interface with the BQ28\+Z610 over I2C, allowing users to monitor and manage battery parameters on Arduino-\/based projects. 
+
+This is a driver for Arduino that provides functions to interface with the BQ28\+Z610 battery gas gauge device over I2C protocol.
+
+With this driver, you can operate the BQ28\+Z610 device via the serial port from your computer using Arduino.
+
+Functions were implemented based on the documentation\+:
+
+
+\begin{DoxyItemize}
+\item Technical Reference Manual (c) Texas Instruments, Literature Number\+: SLUUA65E, \href{https://www.ti.com/lit/ug/sluua65e/sluua65e.pdf}{\texttt{ https\+://www.\+ti.\+com/lit/ug/sluua65e/sluua65e.\+pdf}}
+\end{DoxyItemize}
+
+Not all functions described in the Technical Reference Manual were implemented, but most of them.
+
+The driver also includes some additional service functions for more usability.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Project Files}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item \href{\#-bq28z610-arduino-driverino}{\texttt{ bq28z610-\/arduino-\/driver.\+ino}}
+\item \href{\#-doxyfile}{\texttt{ doxyfile}}
+\item \mbox{[}std\+\_\+data\+\_\+commands\mbox{]}(std\+\_\+data\+\_\+commands)
+\item \href{\#-alt_manufacturer_access}{\texttt{ alt\+\_\+manufacturer\+\_\+access}}
+\item \href{\#-data_flash_access}{\texttt{ data\+\_\+flash\+\_\+access}}
+\item \href{\#-service}{\texttt{ service}}
+\item \href{\#-utils}{\texttt{ utils}}
+\item \href{\#-flagsh}{\texttt{ flags.\+h}}
+\item \href{\#-globalsh}{\texttt{ globals.\+h}}
+\item /extras/data\+\_\+flash/\+:
+\begin{DoxyItemize}
+\item \href{\#-data_flashpy}{\texttt{ data\+\_\+flash.\+py}}
+\item \href{\#-data_descriptionscsv}{\texttt{ data/data\+\_\+descriptions.\+csv}}
+\item \href{\#-dump-files}{\texttt{ dump files}}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Next, I will provide a brief description of the file contents.
+
+For a complete description of all functions, follow the link\+: \href{https://asilichenko.github.io/bq28z610-arduino-driver/files.html}{\texttt{ https\+://asilichenko.\+github.\+io/bq28z610-\/arduino-\/driver/files.\+html}}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{📄 bq28z610-\/arduino-\/driver.\+ino}\label{md__r_e_a_d_m_e_autotoc_md2}
+The main Arduino sketch file.
+
+
+\begin{DoxyEnumerate}
+\item Wait 5 seconds to prevent launching the code when resetting while uploading new sketch to Arduino.
+\item Init Serial port.
+\item Init Wire (I2C) interface.
+\end{DoxyEnumerate}
+
+There is some sample code in the setup function\+:
+
+
+\begin{DoxyItemize}
+\item Calling \char`\"{}read and print\char`\"{} functions from different sections.
+\item Example of using the SILENCE constant and printing the results of the called functions.
+\end{DoxyItemize}
+
+An example of the output result in the serial port from executing this code can be viewed at the link\+: \href{extras/example-output.txt}{\texttt{ example-\/output.\+txt}}
+
+🔗 \href{bq28z610-arduino-driver.ino}{\texttt{ bq28z610-\/arduino-\/driver.\+ino}}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{📄 doxyfile}\label{md__r_e_a_d_m_e_autotoc_md3}
+This file describes the settings to be used by the documentation system doxygen (www.\+doxygen.\+org) for a project.
+
+Output directory for the generated documentation is \char`\"{}\mbox{[}/docs/\mbox{]}(docs)\char`\"{}.
+
+🔗 \mbox{[}doxyfile\mbox{]}(doxyfile)\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{📄 std\+\_\+data\+\_\+commands}\label{md__r_e_a_d_m_e_autotoc_md4}
+Functions described in the section \char`\"{}\+\_\+12.\+1 Standard Data Commands\+\_\+\char`\"{} of the Technical Reference Manual.
+
+🔗 \href{std_data_commands.h}{\texttt{ std\+\_\+data\+\_\+commands.\+h}} $\vert$ \href{std_data_commands.cpp}{\texttt{ std\+\_\+data\+\_\+commands.\+cpp}}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{📄 alt\+\_\+manufacturer\+\_\+access}\label{md__r_e_a_d_m_e_autotoc_md5}
+Functions described in the section \char`\"{}\+\_\+12.\+2 0x3\+E, 0x3\+F Alt\+Manufacturer\+Access()\+\_\+\char`\"{} of the Technical Reference Manual.
+
+🔗 \href{alt_manufacturer_access.h}{\texttt{ alt\+\_\+manufacturer\+\_\+access.\+h}} $\vert$ \href{alt_manufacturer_access.cpp}{\texttt{ alt\+\_\+manufacturer\+\_\+access.\+cpp}}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{📄 data\+\_\+flash\+\_\+access}\label{md__r_e_a_d_m_e_autotoc_md6}
+Functions to read data from the Data Flash and write to the Data Flash, according to\+:
+
+
+\begin{DoxyItemize}
+\item 12.\+2.\+45 Data Flash Access() 0x4000–0x5\+FFF
+\item 13 Data Flash Values
+\item 14 Data Flash Summary
+\end{DoxyItemize}
+
+To access the data flash, your device needs to be in an UNSEALED state (UNSEALED is enough; Full Access state is not necessary).
+
+The default Unseal Key is defined in the class \mbox{\hyperlink{class_device_security}{Device\+Security}} in the file \href{globals.h}{\texttt{ globals.\+h}}.
+
+Contains such constants and functions as\+:
+
+
+\begin{DoxyItemize}
+\item Data Flash addresses constants
+\item Read and write single byte, word and array (maximum 32 bytes)
+\item Read data in the String format
+\item Read and write values for named Data Flash data
+\item Print Ra Table
+\item Reset Ra Table flags
+\item Print Data Flash dump
+\end{DoxyItemize}
+
+The Technical Reference Manual only contains descriptions up to address 0x4727, but there is some data in the rest of the Data Flash.
+
+Some addresses within the standard region are prohibited from writing, although I am not sure about the exact ranges of these addresses. For example, around the address 0x5\+A5A, there is no data (bytes are 0x\+FF) and they cannot be overwritten.
+
+🔗 \href{data_flash_access.h}{\texttt{ data\+\_\+flash\+\_\+access.\+h}} $\vert$ \href{data_flash_access.cpp}{\texttt{ data\+\_\+flash\+\_\+access.\+cpp}}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{📄 service}\label{md__r_e_a_d_m_e_autotoc_md7}
+Additional service functions for the device, like\+:
+
+
+\begin{DoxyItemize}
+\item Unsealing the device
+\item Check if the device is in the Permanent Fail state
+\item Get current security mode
+\item Put Charge or Discharge FET into the specific state
+\item Get specific data from raw-\/data commands like DAStatus and ITStatus
+\item Print current state of the flags important for some protections (Undervoltage, Overtemperature, Short circuit in charge and discharge, etc.)
+\item Print flags that correspond to the FETs status, to determine whether they are enabled and why
+\item Enable or Disable turning charging FET off at 60\% SOC (see\+: \href{https://www.linkedin.com/pulse/how-stop-battery-charging-specific-percentage-oleksii-sylichenko-vpmkf}{\texttt{ https\+://www.\+linkedin.\+com/pulse/how-\/stop-\/battery-\/charging-\/specific-\/percentage-\/oleksii-\/sylichenko-\/vpmkf}})
+\item Init the device before the Learning Cycle (see\+: \href{https://www.linkedin.com/pulse/gas-gauging-device-bq28z610-learning-cycle-practical-guide-oleksii-ngk8f}{\texttt{ https\+://www.\+linkedin.\+com/pulse/gas-\/gauging-\/device-\/bq28z610-\/learning-\/cycle-\/practical-\/guide-\/oleksii-\/ngk8f}})
+\item Print information important to be checked periodically during the learning cycle (see\+: \href{https://www.linkedin.com/pulse/gas-gauging-device-bq28z610-learning-cycle-practical-guide-oleksii-ngk8f}{\texttt{ https\+://www.\+linkedin.\+com/pulse/gas-\/gauging-\/device-\/bq28z610-\/learning-\/cycle-\/practical-\/guide-\/oleksii-\/ngk8f}})
+\item Get and set some thresholds
+\end{DoxyItemize}
+
+🔗 \href{service.h}{\texttt{ service.\+h}} $\vert$ \href{service.cpp}{\texttt{ service.\+cpp}}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{📄 utils}\label{md__r_e_a_d_m_e_autotoc_md8}
+Util functions for\+:
+
+
+\begin{DoxyItemize}
+\item Printing into serial port
+\item Composing full values from bytes
+\item Sending and receiving data via I2C protocol
+\item Implementation of the high-\/level Block Protocol of the device
+\end{DoxyItemize}
+
+🔗 \href{utils.h}{\texttt{ utils.\+h}} $\vert$ \href{utils.cpp}{\texttt{ utils.\+cpp}}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{📄 flags.\+h}\label{md__r_e_a_d_m_e_autotoc_md9}
+Definition of the flag constants with the descriptions.
+
+🔗 \href{flags.h}{\texttt{ flags.\+h}}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{📄 globals.\+h}\label{md__r_e_a_d_m_e_autotoc_md10}
+Definition of the global constants except flags, like\+:
+
+
+\begin{DoxyItemize}
+\item I2C address of the Device
+\item Security modes
+\item Unseal keys
+\item Block protocol parameters
+\item Codes of the \char`\"{}\+\_\+12.\+1 Standard Data Commands\+\_\+\char`\"{}
+\item Codes of the \char`\"{}\+\_\+12.\+2 0x3\+E, 0x3\+F Alt Manufacturer Access Commands\+\_\+\char`\"{}
+\item Constants for some raw data commands like DAStatus and ITStatus
+\item Strings that represent units of measurement
+\end{DoxyItemize}
+
+🔗 \href{globals.h}{\texttt{ globals.\+h}}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{📄 data\+\_\+flash.\+py}\label{md__r_e_a_d_m_e_autotoc_md11}
+Python script for processing the Data Flash dump, printed by the function from the data\+\_\+flash\+\_\+access\+:
+
+
+\begin{DoxyItemize}
+\item Load from the text file
+\item Print data detailed -\/ values with addresses and captions from the \char`\"{}\+\_\+14.\+1 Data Flash Table\+\_\+\char`\"{} of the Technical Manual
+\item Compare two dumps and print the differences
+\end{DoxyItemize}
+
+🔗 \href{extras/data_flash/data_flash.py}{\texttt{ data\+\_\+flash.\+py}}\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{📄 data\+\_\+descriptions.\+csv}\label{md__r_e_a_d_m_e_autotoc_md12}
+Csv-\/file which contains list of Data Flash entities taken from the table \char`\"{}\+\_\+14.\+1 Data Flash Table\+\_\+\char`\"{}\+:
+
+
+\begin{DoxyItemize}
+\item Physical address
+\item Data format (I4, U2, H1, F4, S5, etc.) that represents column \char`\"{}\+Type\char`\"{}
+\item Description which is a join of the columns\+: \char`\"{}\+Class\char`\"{}, \char`\"{}\+Subclass\char`\"{} and \char`\"{}\+Name\char`\"{} separated by \char`\"{}/\char`\"{} symbol
+\end{DoxyItemize}
+
+🔗 \href{extras/data_flash/data/data_descriptions.csv}{\texttt{ data\+\_\+descriptions.\+csv}}\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{📂 dump files}\label{md__r_e_a_d_m_e_autotoc_md13}
+I included several Data Flash dump files of my BQ28\+Z610 device\+:
+
+
+\begin{DoxyItemize}
+\item \href{extras/data_flash/data/dump/dump-original.txt}{\texttt{ dump-\/original.\+txt}} -\/ a dump before any changes over Data Flash were made
+\item \href{extras/data_flash/data/dump/dump-20240710.txt}{\texttt{ dump-\/20240710.\+txt}} -\/ a dump after some changes have been written to the Data Flash
+\item \href{extras/data_flash/data/dump/dump-20240710-after-lifetime-reset.txt}{\texttt{ dump-\/20240710-\/after-\/lifetime-\/reset.\+txt}} -\/ a dump to check how the function \char`\"{}\+\_\+12.\+2.\+19 Alt\+Manufacturer\+Access() 0x0028 Lifetime Data Reset\+\_\+\char`\"{} works
+\item \href{extras/data_flash/data/output/dump-original-detailed.txt}{\texttt{ dump-\/original-\/detailed.\+txt}} -\/ the result of detailing a raw dump
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{Arduino Nano Connection}\label{md__r_e_a_d_m_e_autotoc_md14}
+
+\begin{DoxyItemize}
+\item GND -\/$>$ black
+\item A4 = SDA -\/$>$ white
+\item A5 = SCL -\/$>$ yellow
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{Author}\label{md__r_e_a_d_m_e_autotoc_md15}
+\href{https://github.com/asilichenko}{\texttt{ @asilichenko}}\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysection{License}\label{md__r_e_a_d_m_e_autotoc_md16}
+\mbox{[}MIT license\mbox{]}(LICENSE)\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysection{References}\label{md__r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyItemize}
+\item Texas Instruments BQ28\+Z610 Technical Reference Manual\+: \href{https://www.ti.com/lit/ug/sluua65e/sluua65e.pdf}{\texttt{ https\+://www.\+ti.\+com/lit/ug/sluua65e/sluua65e.\+pdf}}
+\item BQ28\+Z610 product\+: \href{https://www.ti.com/product/BQ28Z610}{\texttt{ https\+://www.\+ti.\+com/product/\+BQ28\+Z610}}
+\item Texas Instruments Power Management Forum\+: \href{https://e2e.ti.com/support/power-management-group/power-management/f/power-management-forum}{\texttt{ https\+://e2e.\+ti.\+com/support/power-\/management-\/group/power-\/management/f/power-\/management-\/forum}}
+\item How to Stop Battery Charging at a Specific Percentage\+: \href{https://www.linkedin.com/pulse/how-stop-battery-charging-specific-percentage-oleksii-sylichenko-vpmkf}{\texttt{ https\+://www.\+linkedin.\+com/pulse/how-\/stop-\/battery-\/charging-\/specific-\/percentage-\/oleksii-\/sylichenko-\/vpmkf}}
+\item Gas Gauging Device BQ28\+Z610 Learning Cycle\+: Practical Guide\+: \href{https://www.linkedin.com/pulse/gas-gauging-device-bq28z610-learning-cycle-practical-guide-oleksii-ngk8f}{\texttt{ https\+://www.\+linkedin.\+com/pulse/gas-\/gauging-\/device-\/bq28z610-\/learning-\/cycle-\/practical-\/guide-\/oleksii-\/ngk8f}}
+\item Doxygen, documentation generator tool\+: \href{https://www.doxygen.nl}{\texttt{ https\+://www.\+doxygen.\+nl}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysection{Sources}\label{md__r_e_a_d_m_e_autotoc_md18}
+
+\begin{DoxyItemize}
+\item \href{bq28z610-arduino-driver.ino}{\texttt{ bq28z610-\/arduino-\/driver.\+ino}}
+\item \mbox{[}doxyfile\mbox{]}(doxyfile)
+\item \href{std_data_commands.h}{\texttt{ std\+\_\+data\+\_\+commands.\+h}} $\vert$ \href{std_data_commands.cpp}{\texttt{ std\+\_\+data\+\_\+commands.\+cpp}}
+\item \href{alt_manufacturer_access.h}{\texttt{ alt\+\_\+manufacturer\+\_\+access.\+h}} $\vert$ \href{alt_manufacturer_access.cpp}{\texttt{ alt\+\_\+manufacturer\+\_\+access.\+cpp}}
+\item \href{data_flash_access.h}{\texttt{ data\+\_\+flash\+\_\+access.\+h}} $\vert$ \href{data_flash_access.cpp}{\texttt{ data\+\_\+flash\+\_\+access.\+cpp}}
+\item \href{service.h}{\texttt{ service.\+h}} $\vert$ \href{service.cpp}{\texttt{ service.\+cpp}}
+\item \href{utils.h}{\texttt{ utils.\+h}} $\vert$ \href{utils.cpp}{\texttt{ utils.\+cpp}}
+\item \href{flags.h}{\texttt{ flags.\+h}}
+\item \href{globals.h}{\texttt{ globals.\+h}}
+\item \href{extras/data_flash/data_flash.py}{\texttt{ data\+\_\+flash.\+py}}
+\item Documentation generated by Doxygen\+: \href{https://asilichenko.github.io/bq28z610-arduino-driver/}{\texttt{ https\+://asilichenko.\+github.\+io/bq28z610-\/arduino-\/driver/}} 
+\end{DoxyItemize}

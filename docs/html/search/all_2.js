@@ -5,6 +5,5 @@ var searchData=
   ['batterystatus_15',['BatteryStatus',['../std__data__commands_8cpp.html#a1a8585cc05785ecc45c88035791eb6b1',1,'BatteryStatus():&#160;std_data_commands.cpp'],['../std__data__commands_8h.html#a1a8585cc05785ecc45c88035791eb6b1',1,'BatteryStatus():&#160;std_data_commands.cpp']]],
   ['batterystatusflags_16',['BatteryStatusFlags',['../class_battery_status_flags.html',1,'']]],
   ['batvoltage_17',['batVoltage',['../service_8cpp.html#a13f266bda15b8e4e7e1fc7dfb616d923',1,'batVoltage():&#160;service.cpp'],['../service_8h.html#a13f266bda15b8e4e7e1fc7dfb616d923',1,'batVoltage():&#160;service.cpp']]],
-  ['blockprotocol_18',['BlockProtocol',['../class_block_protocol.html',1,'']]],
-  ['bq28z610_20arduino_20driver_19',['BQ28Z610 Arduino Driver',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['blockprotocol_18',['BlockProtocol',['../class_block_protocol.html',1,'']]]
 ];
