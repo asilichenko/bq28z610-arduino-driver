@@ -6,6 +6,8 @@ This is a driver for Arduino that provides functions to interface with the BQ28Z
 
 With this driver, you can operate the BQ28Z610 device via the serial port from your computer using Arduino.
 
+This way, Arduino can be a much cheaper replacement for the standard EV2300 device.
+
 Functions were implemented based on the documentation:
 
 * Technical Reference Manual (c) Texas Instruments, Literature Number: SLUUA65E, https://www.ti.com/lit/ug/sluua65e/sluua65e.pdf
