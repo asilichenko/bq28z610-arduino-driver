@@ -373,6 +373,38 @@ class IT_STATUS_2 {
 class IT_STATUS_3 {
   public:
     /**
+      AAaa: QMax 1. QMax of Cell 1
+    */
+    static const byte QMax_1 = 0;
+    /**
+      BBbb: QMax 2. QMax of Cell 2
+    */
+    static const byte QMax_2 = 2;
+    /**
+      CCcc: QMaxDOD0_1. Cell 1 DOD for Qmax
+    */
+    static const byte QMaxDOD0_1 = 4;
+    /**
+      DDdd: QMaxDOD0_2. Cell 2 DOD for Qmax
+    */
+    static const byte QMaxDOD0_2 = 6;
+    /**
+      EEee: QMaxPassedQ. Passed charge since DOD for Qmax recorded (mAh)
+    */
+    static const byte QMaxPassedQ = 8;
+    /**
+      FFff: QMaxTime. Time since DOD for Qmax recorded (hour / 16 units)
+    */
+    static const byte QMaxTime = 10;
+    /**
+      GGgg: Tk. Thermal model “k”
+    */
+    static const byte Tk = 12;
+    /**
+      HHhh: Ta. Thermal model “a”
+    */
+    static const byte Ta = 14;
+    /**
       IIii: RawDOD0_1. Cell 1 raw DOD0 measurement
     */
     static const byte RAW_DOD0_1 = 16;
