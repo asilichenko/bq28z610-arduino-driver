@@ -356,13 +356,50 @@ class DA_STATUS_1 {
   @brief 12.2.40 AltManufacturerAccess() 0x0074 ITStatus2()
 
   Indexes of the output data.
+
+  24 bytes of output data in the following format:
+
+  <pre>
+  AA BB CC DD EE FF ggGG hhHH iiII jjJJ kkKK llLL mmMM nnNN ooOO
+  00 01 02 03 04 05 0607 0809 1011 1213 1415 1617 1819 2021 2223
+  </pre>
 */
 class IT_STATUS_2 {
   public:
     /**
+      IIii: DOD0_1. Depth of discharge for Cell1
+    */
+    static const byte DOD0_1 = 10;
+
+    /**
+      JJjj: DOD0_2. Depth of discharge for Cell2
+    */
+    static const byte DOD0_2 = 12;
+
+    /**
       KKkk: DOD0 Passed Q. Passed charge since DOD0
     */
-    static const byte DOD0_PASSED_Q = 14;
+    static const byte DOD0_Passed_Q = 14;
+
+    /**
+      LLll: DOD0 Passed Energy. Passed energy since the last DOD0 update
+    */
+    static const byte DOD0_Passed_Energy = 16;
+
+    /**
+      MMmm: DOD0 Time. Time passed since the last DOD0 update
+    */
+    static const byte DOD0_Time = 18;
+
+    /**
+      NNnn: DODEOC_1. Cell 1 DOD@EOC
+    */
+    static const byte DODEOC_1 = 20;
+
+    /**
+      OOoo: DODEOC_2. Cell 2 DOD@EOC
+    */
+    static const byte DODEOC_2 = 22;
 };
 
 /**

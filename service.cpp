@@ -481,7 +481,7 @@ void setEnabledChargingSocThreshold(bool enabled) {
   if (RESUME_THRESHOLD != clearThreshold) dfWriteTcClearRsocThreshold(RESUME_THRESHOLD);
 
   word socFlagConfigA = dfReadSocFlagConfigA();
-  const word temp = socFlagConfigA;
+  const word _socFlagConfigA = socFlagConfigA;
 
   bitClear(socFlagConfigA, SOCFlagConfigAFlags::TCSETV().n);  // Disable the TC flag set by cell voltage threshold
   bitClear(socFlagConfigA, SOCFlagConfigAFlags::TCCLEARV().n);  // Disable the TC flag clear by cell voltage threshold
@@ -489,7 +489,7 @@ void setEnabledChargingSocThreshold(bool enabled) {
   bitSet(socFlagConfigA, SOCFlagConfigAFlags::TCSETRSOC().n);  // Enables the TC flag set by the RSOC threshold
   bitSet(socFlagConfigA, SOCFlagConfigAFlags::TCCLEARRSOC().n);  // Enables the TC flag cleared by the RSOC threshold
 
-  if (temp != socFlagConfigA) dfWriteSocFlagConfigA(socFlagConfigA);
+  if (_socFlagConfigA != socFlagConfigA) dfWriteSocFlagConfigA(socFlagConfigA);
 }
 
 /**
@@ -500,7 +500,7 @@ int dod0PassedQ() {
   byte buf[BlockProtocol::RESPONSE_MAX_SIZE];
   memset(buf, 0, sizeof(buf));
   ITStatus2(buf);
-  return composeWord(buf, IT_STATUS_2::DOD0_PASSED_Q);  // KKkk: DOD0 Passed Q. Passed charge since DOD0
+  return composeWord(buf, IT_STATUS_2::DOD0_Passed_Q);  // KKkk: DOD0 Passed Q. Passed charge since DOD0
 }
 
 /**
