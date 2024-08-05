@@ -133,21 +133,22 @@ void dfReadBytes(word addr, byte *retval, int len) {
 void dfWriteBytes(word addr, byte *data, int len) {
   if (!_isAddrValid(addr) || !isAllowedRequestPayloadSize(len) || _isDeviceSealed()) return;
 
-  byte buf[BlockProtocol::ADDR_SIZE + len];
+  const byte workloadSize = BlockProtocol::ADDR_SIZE + len;
+  byte workload[workloadSize];
 
   // put the DF address into buffer in Little Endian:
-  buf[0] = addr & 0xFF;
-  buf[1] = (addr >> 8) & 0xFF;
+  workload[0] = addr & 0xFF;
+  workload[1] = (addr >> 8) & 0xFF;
 
   // fill the buffer with the data:
-  for (int i = 0; i < len; i++) buf[BlockProtocol::ADDR_SIZE + i] = data[i];
+  for (int i = 0; i < len; i++) workload[BlockProtocol::ADDR_SIZE + i] = data[i];
 
   // send buffer to the 0x3E AltManufacturerAccess()
-  sendData(StdCommands::ALT_MANUFACTURER_ACCESS, buf, sizeof(buf));
+  sendData(StdCommands::ALT_MANUFACTURER_ACCESS, workload, workloadSize);
 
   // calculate the checksum and length:
-  const byte _checksum = checksum(buf, sizeof(buf));
-  const byte _length = len + BlockProtocol::SERVICE_SIZE;
+  const byte _checksum = checksum(workload, workloadSize);
+  const byte _length = workloadSize;
   const byte checksumAndLength[BlockProtocol::SERVICE_SIZE] = {_checksum, _length};
 
   // send the checksum and length at once:
