@@ -63,6 +63,14 @@ void setup() {
   while (!Serial) {};  // wait until serial port is ready
   Serial.println(stringFromProgmem(START_MESSAGE));
 
+  // Check device is connected
+  Wire.beginTransmission(DEVICE_ADDR);
+  const byte error = Wire.endTransmission();
+  if (error > 0) {
+    Serial.print("BQ28Z610 not found.");
+    return;
+  }
+  
   //
   // Sample code
   //
