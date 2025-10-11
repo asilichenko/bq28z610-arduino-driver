@@ -200,6 +200,7 @@ I included several Data Flash dump files of my BQ28Z610 device:
 - How to Stop Battery Charging at a Specific Percentage: https://www.linkedin.com/pulse/how-stop-battery-charging-specific-percentage-oleksii-sylichenko-vpmkf
 - Gas Gauging Device BQ28Z610 Learning Cycle: Practical Guide: https://www.linkedin.com/pulse/gas-gauging-device-bq28z610-learning-cycle-practical-guide-oleksii-ngk8f
 - Doxygen, documentation generator tool: https://www.doxygen.nl
+- [Arduino I2C Tester](https://github.com/asilichenko/i2c_tester) - Scans for I2C devices and performs read/write operations based on commands from the Serial Monitor.
 
 # Sources
 
