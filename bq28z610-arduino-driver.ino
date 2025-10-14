@@ -66,19 +66,23 @@ void setup() {
   // Check device is connected
   Wire.beginTransmission(DEVICE_ADDR);
   const byte error = Wire.endTransmission();
-  if (error > 0) {
-    Serial.print("Error: failed to connect to the device. Code: " + String(error));
-    /*
-      0: success.
-      1: data too long to fit in transmit buffer.
-      2: received NACK on transmit of address. = device not found
-      3: received NACK on transmit of data.
-      4: other error.
-      5: timeout
-    */
+  /* 0: success.
+     1: data too long to fit in transmit buffer.
+     2: received NACK on transmit of address. = device not found
+     3: received NACK on transmit of data.
+     4: other error.
+     5: timeout */
+  if (0 == error) {
+    Serial.println("Device connection: ok");
+  } else {
+    Serial.print("Error: ");
+    if (2 == error) {
+      Serial.println("Device not found.");
+    } else {
+      Serial.println(error);
+    }
     return;
-  }
-  Serial.println("Device connection: ok");
+  }  
 
   int deviceType = DeviceType();
   if (0 == deviceType) {
