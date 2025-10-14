@@ -67,7 +67,22 @@ void setup() {
   Wire.beginTransmission(DEVICE_ADDR);
   const byte error = Wire.endTransmission();
   if (error > 0) {
-    Serial.print("BQ28Z610 not found.");
+    Serial.print("Error: failed to connect to the device. Code: " + String(error));
+    /*
+      0: success.
+      1: data too long to fit in transmit buffer.
+      2: received NACK on transmit of address. = device not found
+      3: received NACK on transmit of data.
+      4: other error.
+      5: timeout
+    */
+    return;
+  }
+  Serial.println("Device connection: ok");
+
+  int deviceType = DeviceType();
+  if (0 == deviceType) {
+    Serial.println("Error: failed to determine device type.");
     return;
   }
   
