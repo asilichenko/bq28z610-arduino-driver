@@ -42,7 +42,7 @@ SILENCE,
 */
 DEBUG;
 
-const char START_MESSAGE[] PROGMEM = "\n============ START: [BQ28Z610 Driver] ============\nLicense: MIT License\nCopyright (c) 2025 Oleksii Sylichenko\n==================================================\n";
+const char START_MESSAGE[] PROGMEM = "\n============ START: [BQ28Z610 Driver] ============\nLicense: MIT License\nCopyright (c) 2024-2025 Oleksii Sylichenko\n==================================================\n";
 
 /**
   @brief Standard BQ28Z610 Device I2C Address
