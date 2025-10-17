@@ -48,7 +48,7 @@ const char START_MESSAGE[] PROGMEM = "\n============ START: [BQ28Z610 Driver] ==
   @brief Standard BQ28Z610 Device I2C Address
   @see 12.1 Standard Data Commands
 */
-const int DEVICE_ADDR = 0x55;
+extern int DEVICE_ADDR;
 
 /**
   @brief Constants for securityMode() result

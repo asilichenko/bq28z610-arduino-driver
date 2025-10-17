@@ -54,14 +54,30 @@
 bool SILENCE = false,  // true = do not print results inside functions
      DEBUG = false;    // true = print extra raw data
 
+/**
+  @brief Standard BQ28Z610 Device I2C Address
+  @see 12.1 Standard Data Commands
+*/
+int DEVICE_ADDR = 0x55;
+
 void setup() {
+  Serial.begin(9600);  // start serial for output
+  while (!Serial) {};  // wait until serial port is ready
+  Serial.println(stringFromProgmem(START_MESSAGE));
+
+  Serial.println("Wait 5 seconds...\n");
   delay(5000);  // Prevent running when resetting while uploading sketch to Arduino
 
   Wire.begin();  // initializes the Wire library and join the I2C bus as a controller device
 
-  Serial.begin(9600);  // start serial for output
-  while (!Serial) {};  // wait until serial port is ready
-  Serial.println(stringFromProgmem(START_MESSAGE));
+  int address = searchDevice();
+  if (0 == address) {
+    Serial.println("Error: I2C device not found.");
+    return;
+  } else {
+    DEVICE_ADDR = address;
+    Serial.println("I2C device found at address: 0x" + String(address, HEX));
+  }
 
   // Check device is connected
   Wire.beginTransmission(DEVICE_ADDR);
@@ -76,20 +92,19 @@ void setup() {
     Serial.println("Device connection: ok");
   } else {
     Serial.print("Error: ");
-    if (2 == error) {
-      Serial.println("Device not found.");
-    } else {
-      Serial.println(error);
-    }
+    if (2 == error) Serial.println("Device not found.");
+    else Serial.println(error);
     return;
-  }  
+  }
 
   int deviceType = DeviceType();
   if (0 == deviceType) {
     Serial.println("Error: failed to determine device type.");
     return;
   }
-  
+
+  dfDeviceName();
+
   //
   // Sample code
   //
@@ -195,8 +210,16 @@ void setup() {
   Serial.println("chargingVoltage: " + String(chargingVoltage));
   Serial.println("fullChargeCapacity: " + String(fullChargeCapacity));
   Serial.println("designCapacity: " + String(designCapacity));
-  
+
   PGM_PRINTLN("\nDONE #####################\n");
+}
+
+int searchDevice() {
+  for (byte address = 1; address < 127; ++address) {
+    Wire.beginTransmission(address);
+    if (0 == Wire.endTransmission()) return address;
+  }
+  return 0;
 }
 
 void loop() {
