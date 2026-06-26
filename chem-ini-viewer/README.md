@@ -36,9 +36,11 @@ You can find this file in the bqStudio installation folder, for example:
 6. Make exe
    ```
    python build.py
-   ``` 
+   ```
 
 # Sources
+
 - Chem.ini - original TI file
 - app.py - main script to run
 - build.py - script to make exe
+- dist/ChemIniViewer/ChemIniViewer.exe
