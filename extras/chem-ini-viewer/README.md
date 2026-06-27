@@ -6,6 +6,9 @@ You can find this file in the bqStudio installation folder, for example:
 
 `C:\Program Files (x86)\bqStudio\BatteryManagementStudio\chemistry\`
 
+<img width="600" alt="main window" src="https://github.com/user-attachments/assets/e40ce6b9-14f0-4acf-9efe-933d2b75438f" />
+
+
 # Build process
 
 1. Create virtual environment
@@ -15,7 +18,7 @@ You can find this file in the bqStudio installation folder, for example:
 
 2. Activate virtual environment
     ```
-    .venv\Scripts\activate.bat
+    .venv\Scripts\activate
     ```
 
 3. Upgrade pip and wheel
@@ -40,7 +43,7 @@ You can find this file in the bqStudio installation folder, for example:
 
 # Sources
 
-- Chem.ini - original TI file
-- app.py - main script to run
-- build.py - script to make exe
-- dist/ChemIniViewer/ChemIniViewer.exe
+- [Chem.ini](chem_ini_viewer/Chem.ini) - original TI file
+- [app.py](chem_ini_viewer/app.py) - main script to run
+- [build.py](build.py) - script to make exe
+- [ChemIniViewer.exe](dist/ChemIniViewer/ChemIniViewer.exe) - executable
